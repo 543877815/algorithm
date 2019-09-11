@@ -1,32 +1,34 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int cmp(const void *a, const void *b){
-	return *(int *) b - *(int *) a;
+int min(int a, int b) {
+	return a > b ? b : a;
 }
+
+typedef struct E {
+	int w;
+	int v;
+} List;
 
 int main(){
 	int total, num;
-	while(scanf("%d", &total) != EOF) {
-		scanf("%d", &num);
-		int *arr = (int *)malloc(sizeof(int)*num);
-		for (int i = 0; i < num; i++) {
-			scanf("%d", &arr[i]);
-		} 
-		qsort(arr, num, sizeof(int), cmp);
-		int ans = 0;
-		int sum = 0;
-		for (int i = 0; i < num; i++) {
-			if (sum + arr[i] <= total) {
-				sum += arr[i];
-				ans++;
+	while(scanf("%d\n%d", &total, &num) != EOF) {
+		int *dp = (int *)malloc(sizeof(int)*(total+1));
+		List *list = (List *)malloc(sizeof(List)*(num+1));
+		for (int i = 1; i <= total; i++) {
+			dp[i] = 1000;
+		}
+		dp[0] = 0;
+		for (int i = 1; i <= num; i++) {
+			scanf("%d", &list[i].w);
+			list[i].v = 1;
+			for (int j = total; j >= list[i].w; j--) {
+				dp[j] = min(dp[j], dp[j-list[i].w] + list[i].v);
 			}
-		}
-		if (sum < total) {
-			printf("0\n");
-			continue;
-		}
-		printf("%d\n", ans);
+		} 
+		if (dp[total] == 1000) dp[total] = 0;
+		printf("%d\n", dp[total]);
+		
 	}
 	return 0;
 }

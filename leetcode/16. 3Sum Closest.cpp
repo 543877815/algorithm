@@ -18,7 +18,6 @@ int threeSumClosest(int* nums, int numsSize, int target){
                 minDis = abs(nums[i] + nums[left] + nums[right] - target);
                 sum = nums[i] + nums[left] + nums[right];
             }
-                
             if (nums[i] + nums[left] + nums[right] > target) {
                 right --;
             } else {

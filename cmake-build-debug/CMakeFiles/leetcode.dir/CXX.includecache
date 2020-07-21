@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/54387/Desktop/algorithm/leetcode/main.cpp
+string
+-
+vector
+-
+iostream
+-
+unordered_map
+-
+map
+-
+algorithm
+-
+set
+-
+unordered_set
+-
+stack
+-
+math.h
+-
+

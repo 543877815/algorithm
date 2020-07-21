@@ -3,7 +3,7 @@
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
-int* spiralOrder(int** matrix, int matrixSize, int* matrixColSize, int* returnSize){
+int *spiralOrder(int **matrix, int matrixSize, int *matrixColSize, int *returnSize) {
     int *arr;
     if (matrixSize == 0) {
         *returnSize = 0;
@@ -17,19 +17,19 @@ int* spiralOrder(int** matrix, int matrixSize, int* matrixColSize, int* returnSi
     int col = 0;
     int flag = 1;
     *returnSize = matrixSize * (*matrixColSize);
-    arr = (int *) malloc(sizeof(int)*(*returnSize));
+    arr = (int *) malloc(sizeof(int) * (*returnSize));
     for (int i = 0; i < *returnSize; i++) {
         arr[i] = matrix[row][col];
         if (flag == 1 && col < right) {
             col++;
             continue;
-        } else if(flag == 2 && row < bottom) {
+        } else if (flag == 2 && row < bottom) {
             row++;
             continue;
-        } else if(flag == 3 && col > left) {
+        } else if (flag == 3 && col > left) {
             col--;
             continue;
-        } else if(flag == 4 && row > top) {
+        } else if (flag == 4 && row > top) {
             row--;
             continue;
         }
@@ -50,7 +50,7 @@ int* spiralOrder(int** matrix, int matrixSize, int* matrixColSize, int* returnSi
             col = left;
             flag = 1;
         }
-    } 
+    }
     return arr;
 }
 

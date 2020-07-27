@@ -53,3 +53,24 @@
 21. Merge Two Sorted Lists
 147. Insertion Sort List
 148. Sort List
+237. Delete Node in a Linked List
+19. Remove Nth Node From End of List
+5.6 链表和双指针
+61. Rotate List
+143. Reorder List
+234. Palindrome Linked List
+6.1 栈
+20. Valid Parentheses
+150. Evaluate Reverse Polish Notation
+71. Simplify Path
+6.2 栈和递归的紧密关系
+94. Binary Tree Inorder Traversal
+144. Binary Tree Preorder Traversal
+145. Binary Tree Postorder Traversal
+339. Nested List Weight Sum
+341. Flatten Nested List Iterator
+6.4 队列
+102. Binary Tree Level Order Traversal
+107. Binary Tree Level Order Traversal II
+103. Binary Tree Zigzag Level Order Traversal
+199. Binary Tree Right Side View

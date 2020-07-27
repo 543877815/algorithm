@@ -11,7 +11,8 @@
 
 using namespace std;
 
-
+// 时间复杂度：O(n)
+// 空间复杂度：O(n)
 class Solution {
 public:
     string simplifyPath(string path) {

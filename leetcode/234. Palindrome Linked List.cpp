@@ -20,6 +20,8 @@ struct ListNode* reverseList(struct ListNode* head){
     return prev;
 }
 
+// 空间复杂度：O(1)
+// 时间复杂度：O(n)
 bool isPalindrome(struct ListNode* head){
     if (!head || !head->next) return true;
     struct ListNode *slow = head;

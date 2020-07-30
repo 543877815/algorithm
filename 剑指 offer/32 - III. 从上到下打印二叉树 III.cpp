@@ -1,9 +1,18 @@
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 // 标准层次遍历后奇偶翻转
 // 时间复杂度：O(n)
 // 空间复杂度：O(n)
 class Solution {
 public:
-    vector <vector<int>> zigzagLevelOrder(TreeNode *root) {
+    vector<vector<int>> levelOrder(TreeNode* root) {
         vector <vector<int>> res;
         if (!root) return res;
         int level;

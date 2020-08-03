@@ -79,3 +79,19 @@
 127. Word Ladder
 126. Word Ladder II
 6.6 优先队列
+347. Top K Frequent Elements
+23. Merge k Sorted Lists
+7.1 二叉树与递归
+104. Maximum Depth of Binary Tree
+111. Minimum Depth of Binary Tree
+226. Invert Binary Tree
+100. Same Tree
+101. Symmetric Tree
+222. Count Complete Tree Nodes
+110. Balanced Binary Tree
+112. Path Sum
+404. Sum of Left Leaves
+257. Binary Tree Path
+113. Path Sum II
+129. Sum Root to Leaf Numbers
+437. Path Sum III

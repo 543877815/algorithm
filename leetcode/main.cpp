@@ -53,49 +53,84 @@ struct TreeNode {
 //    }
 //};
 
+
+struct ListNode {
+    int val;
+    ListNode *next;
+
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+ListNode *createLinkedList(int arr[], int n) {
+
+    if (n == 0)
+        return NULL;
+
+    ListNode *head = new ListNode(arr[0]);
+    ListNode *curNode = head;
+    for (int i = 1; i < n; i++) {
+        curNode->next = new ListNode(arr[i]);
+        curNode = curNode->next;
+    }
+
+    return head;
+}
+
 class Solution {
 public:
-    vector<int> smallestRange(vector<vector<int>> &nums) {
-        int rangeLeft = 0, rangeRight = INT_MAX;
-        int size = nums.size();
-        vector<int> next(size);
-
-        auto cmp = [&](const int &u, const int &v) {
-            return nums[u][next[u]] > nums[v][next[v]];
-        };
-        priority_queue<int, vector<int>, decltype(cmp)> pq(cmp);
-        int minValue = 0, maxValue = INT_MIN;
-        for (int i = 0; i < size; ++i) {
-            pq.emplace(i);
-            maxValue = max(maxValue, nums[i][0]);
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if (!root || !p || !q) return NULL;
+        vector<TreeNode*> p_r;
+        vector<TreeNode*> q_r;
+        TreeNode *curr = root;
+        while(curr->val != p->val) {
+            p_r.push_back(curr);
+            if (curr->val > p->val) {
+                curr = curr->left;
+            } else {
+                curr = curr->right;
+            }
         }
 
-        while (true) {
-            int row = pq.top();
-            pq.pop();
-            minValue = nums[row][next[row]];
-            if (maxValue - minValue < rangeRight - rangeLeft) {
-                rangeLeft = minValue;
-                rangeRight = maxValue;
+        *curr = root;
+        while(curr->val != q->val) {
+            q_r.push_back(curr);
+            if (curr->val > q->val) {
+                curr = curr->left;
+            } else {
+                curr = curr->right;
             }
-            if (next[row] == nums[row].size() - 1) {
-                break;
-            }
-            ++next[row];
-            maxValue = max(maxValue, nums[row][next[row]]);
-            pq.emplace(row);
         }
 
-        return {rangeLeft, rangeRight};
+        unordered_map<int, int> record;
+        for (int i = p_r.size() - 1; i >= 0; i--) {
+            record[p_r[i]->val]++;
+        }
+
+        for (int i = q_r.size() - 1; i >= 0; i--) {
+            record[q_r[i]->val]--;
+            if(record[q_r[i]->val] == 0) return q_r[i];
+        }
+
+        return NULL;
     }
 };
 
-
 int main() {
-//    string num1 = "123", num2 = "456";
-    vector<vector<int>> smallestRange = {{4, 10, 15, 24, 26},
-                                         {0, 9,  12, 20},
-                                         {5, 18, 22, 30}};
-    Solution c = Solution();
-    c.smallestRange(smallestRange);
+    int a[3] = {1, 4, 5};
+    int b[3] = {1, 3, 4};
+    int c[2] = {2, 6};
+
+    ListNode *aa = createLinkedList(a, 3);
+    ListNode *bb = createLinkedList(b, 3);
+    ListNode *cc = createLinkedList(c, 2);
+
+    vector<ListNode *> lists = {aa, bb, cc};
+    cout << (1&4) << (1 & 1) << (1 & 6) ;
+    Solution solution = Solution();
+    vector <int> d = {4,1,4,6};
+    solution.lowestCommonAncestor(d);
+
+
 }
+

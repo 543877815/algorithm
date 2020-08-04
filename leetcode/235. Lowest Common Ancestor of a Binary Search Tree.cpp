@@ -74,17 +74,17 @@ public:
 // 空间复杂度：O(1)
 class Solution {
 public:
-    TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
-        TreeNode *node = root;
-        while (node) {
-            if (node->val < p->val && node->val < q->val) {
-                node = node->right;
-            } else if (node->val > p->val && node->val > q->val) {
-                node = node->left;
-            } else {
-                return node;
+    int firstMissingPositive(vector<int> &nums) {
+        int len = nums.size();
+        for (int i = 0; i < len; i++) {
+            while (nums[i] < len && nums[i] > 0 && nums[i] != nums[nums[i] - 1]) {
+                swap(nums[i], nums[nums[i] - 1]);
             }
         }
-        return NULL;
+        for (int i = 0; i < len; i++) {
+            if (nums[i] != i + 1) return i + 1;
+        }
+
+        return len + 1;
     }
 };

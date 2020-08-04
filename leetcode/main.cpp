@@ -77,60 +77,59 @@ ListNode *createLinkedList(int arr[], int n) {
 }
 
 class Solution {
+private:
+    vector<vector<string>> res;
 public:
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if (!root || !p || !q) return NULL;
-        vector<TreeNode*> p_r;
-        vector<TreeNode*> q_r;
-        TreeNode *curr = root;
-        while(curr->val != p->val) {
-            p_r.push_back(curr);
-            if (curr->val > p->val) {
-                curr = curr->left;
-            } else {
-                curr = curr->right;
+    bool isPalindrome(string s) {
+        int left = 0;
+        int right = s.size() - 1;
+        while (left < right) {
+            while(left < right && !isalnum(s[left])) {
+                left ++;
+            }
+            while(left < right && !isalnum(s[right])) {
+                right --;
+            }
+            if (left < right) {
+                if (tolower(s[left]) != tolower(s[right])) {
+                    return false;
+                }
+                left ++;
+                right --;
+            }
+        }
+        return true;
+    }
+
+    void DFS(const string &s, int begin, vector<string> &tmp) {
+        if (s.size() == begin) {
+            res.push_back(tmp);
+            return;
+        }
+
+        for (int i = 1; i + begin <= s.size(); i++) {
+            string substring = s.substr(begin, i);
+            if (!substring.empty() && isPalindrome(substring)) {
+                tmp.push_back(substring);
+                DFS(s, i + begin, tmp);
+                tmp.pop_back();
             }
         }
 
-        *curr = root;
-        while(curr->val != q->val) {
-            q_r.push_back(curr);
-            if (curr->val > q->val) {
-                curr = curr->left;
-            } else {
-                curr = curr->right;
-            }
-        }
+    }
 
-        unordered_map<int, int> record;
-        for (int i = p_r.size() - 1; i >= 0; i--) {
-            record[p_r[i]->val]++;
-        }
-
-        for (int i = q_r.size() - 1; i >= 0; i--) {
-            record[q_r[i]->val]--;
-            if(record[q_r[i]->val] == 0) return q_r[i];
-        }
-
-        return NULL;
+    vector<vector<string>> partition(string s) {
+        if (s.empty()) return res;
+        vector<string> tmp;
+        DFS(s, 0, tmp);
+        return res;
     }
 };
 
 int main() {
-    int a[3] = {1, 4, 5};
-    int b[3] = {1, 3, 4};
-    int c[2] = {2, 6};
-
-    ListNode *aa = createLinkedList(a, 3);
-    ListNode *bb = createLinkedList(b, 3);
-    ListNode *cc = createLinkedList(c, 2);
-
-    vector<ListNode *> lists = {aa, bb, cc};
-    cout << (1&4) << (1 & 1) << (1 & 6) ;
     Solution solution = Solution();
-    vector <int> d = {4,1,4,6};
-    solution.lowestCommonAncestor(d);
-
-
+    string a = "aab";
+    vector<int> d = {-1, 4, 2, 1, 9, 10};
+    solution.partition(a);
 }
 

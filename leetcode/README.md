@@ -112,9 +112,18 @@
 8.4 组合问题
 77. Combinations
 39. Combination Sum
-
 40. Combination Sum II
 216. Combination Sum III
 78. SubSets
 90. SubSets II
 401. Binary Watch
+8.6 二维回溯
+79. Word Search
+8.7 floodfill
+200. Number of Islands
+130. Surrounded Regions
+417. Pacific Atlantic Water Flow
+51. N-Queens
+52. N-Queens II
+
+37. Sudoku Solver

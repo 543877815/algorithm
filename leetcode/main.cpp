@@ -78,50 +78,57 @@ ListNode *createLinkedList(int arr[], int n) {
 
 class Solution {
 private:
-    vector<vector<string>> res;
+    int d[4][2] = {
+            {1,  0},
+            {-1, 0},
+            {0,  1},
+            {0,  -1}};
+    vector<vector<int>> res;
+    int n, m;
+    bool left_up;
+    bool right_down;
+    vector<vector<bool>> visited;
+
+    bool isArea(int x, int y) {
+        return x >= 0 && y >= 0 && x < n && y < m;
+    }
+
+    void DFS(vector<vector<int>> &matrix, int x, int y) {
+        if (x == 0 || y == 0) left_up = true;
+        if (x == n - 1 || y == m - 1) right_down = true;
+        if (left_up && right_down) return;
+
+        for (int i = 0; i < 4; i++) {
+            int newx = x + d[i][0];
+            int newy = y + d[i][1];
+            if (isArea(newx, newy) && !visited[newx][newy] && matrix[x][y] >= matrix[newx][newy]) {
+                visited[x][y] = true;
+                DFS(matrix, newx, newy);
+                visited[x][y] = false;
+            }
+        }
+    }
+
 public:
-    bool isPalindrome(string s) {
-        int left = 0;
-        int right = s.size() - 1;
-        while (left < right) {
-            while(left < right && !isalnum(s[left])) {
-                left ++;
-            }
-            while(left < right && !isalnum(s[right])) {
-                right --;
-            }
-            if (left < right) {
-                if (tolower(s[left]) != tolower(s[right])) {
-                    return false;
+    vector<vector<int>> pacificAtlantic(vector<vector<int>> &matrix) {
+        n = matrix.size();
+        if (n == 0) return res;
+        m = matrix[0].size();
+        if (m == 0) return res;
+        if (n == 1 || m == 1) return matrix;
+        visited = vector<vector<bool>>(n, vector<bool>(m, false));
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                left_up = false;
+                right_down = false;
+                if (i == 2 && j == 3) {
+                    DFS(matrix, i, j);
                 }
-                left ++;
-                right --;
-            }
-        }
-        return true;
-    }
-
-    void DFS(const string &s, int begin, vector<string> &tmp) {
-        if (s.size() == begin) {
-            res.push_back(tmp);
-            return;
-        }
-
-        for (int i = 1; i + begin <= s.size(); i++) {
-            string substring = s.substr(begin, i);
-            if (!substring.empty() && isPalindrome(substring)) {
-                tmp.push_back(substring);
-                DFS(s, i + begin, tmp);
-                tmp.pop_back();
+                if (left_up, right_down)
+                    res.push_back({i, j});
             }
         }
 
-    }
-
-    vector<vector<string>> partition(string s) {
-        if (s.empty()) return res;
-        vector<string> tmp;
-        DFS(s, 0, tmp);
         return res;
     }
 };
@@ -129,7 +136,11 @@ public:
 int main() {
     Solution solution = Solution();
     string a = "aab";
-    vector<int> d = {-1, 4, 2, 1, 9, 10};
-    solution.partition(a);
+    vector<vector<int>> d = {{1, 2, 2, 3, 5},
+                             {3, 2, 3, 4, 4},
+                             {2, 4, 5, 3, 1},
+                             {6, 7, 1, 4, 5},
+                             {5, 1, 1, 2, 4}};
+    solution.pacificAtlantic(d);
 }
 

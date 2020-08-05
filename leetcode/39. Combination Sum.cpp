@@ -1,4 +1,6 @@
 // 回溯
+// 时间复杂度：O(n^n)
+// 空间复杂度：O(target)
 class Solution {
 private:
     vector <vector<int>> res;
@@ -27,6 +29,8 @@ public:
 };
 
 // 传引用优化
+// 时间复杂度：O(n^n)
+// 空间复杂度：O(target)
 class Solution {
 private:
     vector <vector<int>> res;

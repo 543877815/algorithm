@@ -78,54 +78,73 @@ ListNode *createLinkedList(int arr[], int n) {
 
 class Solution {
 private:
-    int d[4][2] = {
-            {1,  0},
-            {-1, 0},
-            {0,  1},
-            {0,  -1}};
-    vector<vector<int>> res;
-    int n, m;
-    bool left_up;
-    bool right_down;
-    vector<vector<bool>> visited;
+    vector<string> reverseWord;
+    unordered_map<string, int> wordId;
 
-    bool isArea(int x, int y) {
-        return x >= 0 && y >= 0 && x < n && y < m;
-    }
-
-    void DFS(vector<vector<int>> &matrix, int x, int y) {
-        if (x == 0 || y == 0) left_up = true;
-        if (x == n - 1 || y == m - 1) right_down = true;
-        if (left_up && right_down) return;
-
-        for (int i = 0; i < 4; i++) {
-            int newx = x + d[i][0];
-            int newy = y + d[i][1];
-            if (isArea(newx, newy) && !visited[newx][newy] && matrix[x][y] >= matrix[newx][newy]) {
-                visited[x][y] = true;
-                DFS(matrix, newx, newy);
-                visited[x][y] = false;
+    bool isPalindrome(string s) {
+        int left = 0;
+        int right = s.size() - 1;
+        while (left < right) {
+            while (left < right && !isalnum(s[left])) {
+                left++;
+            }
+            while (left < right && !isalnum(s[right])) {
+                right--;
+            }
+            if (left < right) {
+                if (tolower(s[left]) != tolower(s[right])) {
+                    return false;
+                }
+                left++;
+                right--;
             }
         }
+        return true;
     }
 
 public:
-    vector<vector<int>> pacificAtlantic(vector<vector<int>> &matrix) {
-        n = matrix.size();
-        if (n == 0) return res;
-        m = matrix[0].size();
-        if (m == 0) return res;
-        if (n == 1 || m == 1) return matrix;
-        visited = vector<vector<bool>>(n, vector<bool>(m, false));
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                left_up = false;
-                right_down = false;
-                if (i == 2 && j == 3) {
-                    DFS(matrix, i, j);
+    vector<vector<int>> palindromePairs(vector<string> &words) {
+        vector<vector<int>> res;
+        if (words.size() <= 1) return res;
+        for (string word: words) {
+            reverseWord.push_back(word);
+            reverse(reverseWord.back().begin(), reverseWord.back().end());
+        }
+
+        int id = 0;
+        for (string word: reverseWord) {
+            wordId[word] = id++;
+        }
+
+        for (int i = 0; i < words.size(); i++) {
+            for (int j = i + 1; j < words.size(); j++) {
+                int long_index = words[i].size() >= words[j].size() ? i : j;
+                int short_index = words[i].size() < words[j].size() ? i : j;
+                string long_words = words[long_index];
+                string short_words = words[short_index];
+
+                // 截取前缀
+                int dis = long_words.size() - short_words.size();
+                string left = long_words.substr(0, dis);
+                string right = long_words.substr(dis);
+                if (isPalindrome(left)) {
+                    auto iter = wordId.find(right);
+                    if (iter != wordId.end()) {
+                        res.push_back({short_index, long_index});
+                    }
                 }
-                if (left_up, right_down)
-                    res.push_back({i, j});
+
+                // 截取后缀
+                left = long_words.substr(0, short_words.size());
+                right = long_words.substr(short_words.size());
+                if (isPalindrome(right)) {
+                    auto iter = wordId.find(left);
+                    if (iter != wordId.end()) {
+                        res.push_back({long_index, short_index});
+                    }
+                }
+
+
             }
         }
 
@@ -135,12 +154,20 @@ public:
 
 int main() {
     Solution solution = Solution();
-    string a = "aab";
-    vector<vector<int>> d = {{1, 2, 2, 3, 5},
-                             {3, 2, 3, 4, 4},
-                             {2, 4, 5, 3, 1},
-                             {6, 7, 1, 4, 5},
-                             {5, 1, 1, 2, 4}};
-    solution.pacificAtlantic(d);
+    vector<string> a = {"bat", "tab", "cat"};
+//    vector<string> a = {"abcd","dcba","lls","s","sssll"};
+    solution.palindromePairs(a);
 }
 
+//{{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+//{'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+//{'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+//{'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+//{'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+//{'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+//{'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+//{'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+//{'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
+
+//[["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
+//[["8","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]

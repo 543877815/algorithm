@@ -75,88 +75,38 @@ ListNode *createLinkedList(int arr[], int n) {
 
     return head;
 }
-
 class Solution {
-private:
-    vector<string> reverseWord;
-    unordered_map<string, int> wordId;
+public:
 
-    bool isPalindrome(string s) {
-        int left = 0;
-        int right = s.size() - 1;
-        while (left < right) {
-            while (left < right && !isalnum(s[left])) {
-                left++;
-            }
-            while (left < right && !isalnum(s[right])) {
-                right--;
-            }
-            if (left < right) {
-                if (tolower(s[left]) != tolower(s[right])) {
-                    return false;
-                }
-                left++;
-                right--;
-            }
-        }
-        return true;
+    int legal(string &s, int index) {
+        int num = (s[index-1] - '0') * 10 + s[index] - '0';
+        if (num / 10 >= 3 && num % 10 == 0) return 0;
+        else return 1;
     }
 
-public:
-    vector<vector<int>> palindromePairs(vector<string> &words) {
-        vector<vector<int>> res;
-        if (words.size() <= 1) return res;
-        for (string word: words) {
-            reverseWord.push_back(word);
-            reverse(reverseWord.back().begin(), reverseWord.back().end());
+    int numDecodings(string s) {
+        if (s[0] == '0') return 0;
+        int m = s.size();
+
+        for (int i = 1; i < m; i++) {
+            if (!legal(s, i)) return 0;
         }
+        vector<int> dp(m+1, 2);
 
-        int id = 0;
-        for (string word: reverseWord) {
-            wordId[word] = id++;
-        }
-
-        for (int i = 0; i < words.size(); i++) {
-            for (int j = i + 1; j < words.size(); j++) {
-                int long_index = words[i].size() >= words[j].size() ? i : j;
-                int short_index = words[i].size() < words[j].size() ? i : j;
-                string long_words = words[long_index];
-                string short_words = words[short_index];
-
-                // 截取前缀
-                int dis = long_words.size() - short_words.size();
-                string left = long_words.substr(0, dis);
-                string right = long_words.substr(dis);
-                if (isPalindrome(left)) {
-                    auto iter = wordId.find(right);
-                    if (iter != wordId.end()) {
-                        res.push_back({short_index, long_index});
-                    }
-                }
-
-                // 截取后缀
-                left = long_words.substr(0, short_words.size());
-                right = long_words.substr(short_words.size());
-                if (isPalindrome(right)) {
-                    auto iter = wordId.find(left);
-                    if (iter != wordId.end()) {
-                        res.push_back({long_index, short_index});
-                    }
-                }
-
-
-            }
-        }
-
-        return res;
+        dp[0] = 1;
+        dp[1] = dp[0] + legal(s, 1);
+        // for (int i = begin; i < m; i++) {
+        //     dp[i] = dp[i - 1] + + legal(s, i);
+        // }
+        return dp[m - 1];
     }
 };
 
+
 int main() {
     Solution solution = Solution();
-    vector<string> a = {"bat", "tab", "cat"};
-//    vector<string> a = {"abcd","dcba","lls","s","sssll"};
-    solution.palindromePairs(a);
+    string a = "226";
+    solution.numDecodings(a);
 }
 
 //{{'5', '3', '.', '.', '7', '.', '.', '.', '.'},

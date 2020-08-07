@@ -125,5 +125,14 @@
 417. Pacific Atlantic Water Flow
 51. N-Queens
 52. N-Queens II
-
 37. Sudoku Solver
+9.2 动态规划
+70. Climbing Stairs
+120. Triangle
+64. Minimum Path Sum
+343. Integer Break
+279. Perfect Squares
+91. Decode Ways
+62. Unique Paths
+63. Unique Paths II
+198. House Robber

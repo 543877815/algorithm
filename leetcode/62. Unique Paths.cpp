@@ -1,4 +1,3 @@
-int count = 0;
 
 int uniquePaths(int m, int n){
     int dp[m][n];

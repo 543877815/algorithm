@@ -136,3 +136,19 @@
 62. Unique Paths
 63. Unique Paths II
 198. House Robber
+213. House Robber II
+337. House Roober III
+121. Best Time to Buy and Sell Stock
+122. Best Time to Buy and Sell Stock II
+123. Best Time to Buy and Sell Stock III
+188. Best Time to Buy and Sell Stock IV
+309. Best Time to Buy and Sell Stock with Cooldown
+714. Best Time to Buy and Sell Stock with Transaction Fee
+9.5 动态规划之0-1背包问题
+416. Partition Equal Subset Sum
+
+322. Coin Change
+377. Combination Sum IV
+474. Ones and Zeroes
+139. Word Break;
+494. Target Sum;

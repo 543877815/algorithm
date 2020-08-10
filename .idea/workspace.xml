@@ -38,9 +38,10 @@
     <session id="-824826815">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.100" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.225" value="1" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.39" value="1" />
@@ -48,22 +49,23 @@
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.56" value="2" />
           <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.67" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cp" value="2" />
-          <entry key="cpp" value="332" />
+          <entry key="cpp" value="356" />
           <entry key="filters" value="1" />
-          <entry key="h" value="36" />
-          <entry key="leetcode (disassembly)" value="13" />
+          <entry key="h" value="37" />
+          <entry key="leetcode (disassembly)" value="17" />
           <entry key="md" value="8" />
           <entry key="py" value="1" />
           <entry key="txt" value="2" />
@@ -72,19 +74,19 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="Disassembly" value="13" />
+          <entry key="Disassembly" value="17" />
           <entry key="Markdown" value="6" />
-          <entry key="ObjectiveC" value="370" />
+          <entry key="ObjectiveC" value="395" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Python" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="21009" />
+          <entry key="cpp" value="22631" />
           <entry key="dummy" value="1" />
-          <entry key="md" value="3482" />
-          <entry key="mm" value="150" />
+          <entry key="md" value="3619" />
+          <entry key="mm" value="158" />
           <entry key="txt" value="28" />
         </counts>
       </usages-collector>
@@ -92,8 +94,8 @@
         <counts>
           <entry key="CMakeLists.txt" value="12" />
           <entry key="Doxygen file" value="44" />
-          <entry key="Markdown" value="2597" />
-          <entry key="ObjectiveC" value="21115" />
+          <entry key="Markdown" value="2734" />
+          <entry key="ObjectiveC" value="22745" />
           <entry key="PLAIN_TEXT" value="902" />
         </counts>
       </usages-collector>
@@ -105,8 +107,8 @@
         <entry file="file://$PROJECT_DIR$/leetcode/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="208">
-                <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
+              <first_editor relative-caret-position="-127">
+                <caret line="129" column="19" lean-forward="true" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
               </first_editor>
               <second_editor />
             </state>
@@ -114,22 +116,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leetcode/main.cpp">
+        <entry file="file://$PROJECT_DIR$/leetcode/435. Non-overlapping Intervals.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="44">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leetcode/416. Partition Equal Subset Sum.cpp">
+        <entry file="file://$PROJECT_DIR$/leetcode/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="83">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,6 +159,8 @@
       <find>cost</find>
       <find>remain</find>
       <find>find</find>
+      <find>index</find>
+      <find>sum</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\54387\Desktop\algorithm\leetcode</dir>
@@ -169,22 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/leetcode/46. Permutations.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/47. Permutations II.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/77. Combinations.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/337. House Robber III.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/39. Combination Sum.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/40. Combination Sum II.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/216. Combination Sum III.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/78. Subsets.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/90. Subsets II.cpp" />
-        <option value="$PROJECT_DIR$/剑指 offer（第2版）/12. 矩阵中的路径.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/401. Binary Watch.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/79. Word Search.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/212. Word Search II.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/200. Number of Islands.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/130. Surrounded Regions.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/417. Pacific Atlantic Water Flow.cpp" />
         <option value="$PROJECT_DIR$/leetcode/51. N-Queens.cpp" />
         <option value="$PROJECT_DIR$/leetcode/52. N-Queens II.cpp" />
         <option value="$PROJECT_DIR$/leetcode/36. Valid Sudoku.cpp" />
@@ -214,11 +202,27 @@
         <option value="$PROJECT_DIR$/leetcode/239. Sliding Window Maximum.cpp" />
         <option value="$PROJECT_DIR$/剑指 offer（第2版）/59 - II. 队列的最大值.cpp" />
         <option value="$PROJECT_DIR$/剑指 offer（第2版）/61. 扑克牌中的顺子.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/main.cpp" />
         <option value="$PROJECT_DIR$/剑指 offer（第2版）/60. n个骰子的点数.cpp" />
         <option value="$PROJECT_DIR$/剑指 offer（第2版）/54. 二叉搜索树的第k大节点.cpp" />
         <option value="$PROJECT_DIR$/剑指 offer（第2版）/47. 礼物的最大价值.cpp" />
         <option value="$PROJECT_DIR$/leetcode/416. Partition Equal Subset Sum.cpp" />
+        <option value="$PROJECT_DIR$/剑指 offer（第2版）/20. 表示数值的字符串.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/65. Valid Number.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/LCP 01. 猜数字.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/696. Count Binary Substrings.cpp" />
+        <option value="$PROJECT_DIR$/程序员面试金典（第6版）/08.12. 八皇后.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/322. Coin Change.cpp" />
+        <option value="$PROJECT_DIR$/剑指 offer（第2版）/66. 构建乘积数组.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/139. Word Break.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/377. Combination Sum IV.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/494. Target Sum.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/474. Ones and Zeroes.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/300. Longest Increasing Subsequence.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/376. Wiggle Subsequence.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/1143. Longest Common Subsequence.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/455. Assign Cookies.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/main.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/435. Non-overlapping Intervals.cpp" />
         <option value="$PROJECT_DIR$/leetcode/README.md" />
       </list>
     </option>
@@ -231,16 +235,17 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="518" />
-    <option name="y" value="243" />
-    <option name="width" value="1021" />
-    <option name="height" value="899" />
+    <option name="x" value="860" />
+    <option name="y" value="180" />
+    <option name="width" value="947" />
+    <option name="height" value="914" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,20 +253,14 @@
               <item name="quickzhao_codes" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithm" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="quickzhao_codes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="inor&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/94. Binary Tree Inorder Traversal.cpp&#10;236&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/236. Lowest Common Ancestor of a Binary Tree.cpp&#10;inorder&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/94. Binary Tree Inorder Traversal.cpp&#10;121&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/121. Best Time to Buy and Sell Stock.cpp&#10;123&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/123. Best Time to Buy and Sell Stock III.cpp&#10;122&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/122. Best Time to Buy and Sell Stock II.cpp&#10;main&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/main.cpp&#10;198&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/198. House Robber.cpp&#10;337&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/337. House Robber III.cpp&#10;213&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/nowcoder/21333.cpp&#10;62&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/62. Unique Paths.cpp&#10;61&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/61. Rotate List.cpp&#10;50&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/剑指 offer（第2版）/50. 第一个只出现一次的字符.cpp&#10;279&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/279. Perfect Squares.cpp&#10;ma&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/main.cpp&#10;130&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/130. Surrounded Regions.cpp&#10;200&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/200. Number of Islands.cpp&#10;79&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/79. Word Search.cpp&#10;401&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/401. Binary Watch.cpp&#10;40&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/40. Combination Sum II.cpp&#10;RE&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/README.md&#10;39&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/39. Combination Sum.cpp&#10;per&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/47. Permutations II.cpp&#10;234&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/234. Palindrome Linked List.cpp&#10;ancest&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/235. Lowest Common Ancestor of a Binary Search Tree.cpp&#10;113&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/113. Path Sum II.cpp&#10;257&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/257. Binary Tree Paths.cpp&#10;preorder&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/144. Binary Tree Preorder Traversal.cpp&#10;pre&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/105. Construct Binary Tree from Preorder and Inorder Traversal.cpp&#10;max depth&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/104. Maximum Depth of Binary Tree.cpp&#10;min dep&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/111. Minimum Depth of Binary Tree.cpp&#10;127&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/127. Word Ladder.cpp" />
+    <property name="SearchEverywhereHistoryKey" value="300&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/300. Longest Increasing Subsequence.cpp&#10;494&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/494. Target Sum.cpp&#10;main&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/main.cpp&#10;377&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/377. Combination Sum IV.cpp&#10;51&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/51. N-Queens.cpp&#10;inor&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/94. Binary Tree Inorder Traversal.cpp&#10;236&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/236. Lowest Common Ancestor of a Binary Tree.cpp&#10;inorder&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/94. Binary Tree Inorder Traversal.cpp&#10;121&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/121. Best Time to Buy and Sell Stock.cpp&#10;123&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/123. Best Time to Buy and Sell Stock III.cpp&#10;122&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/122. Best Time to Buy and Sell Stock II.cpp&#10;198&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/198. House Robber.cpp&#10;337&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/337. House Robber III.cpp&#10;213&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/nowcoder/21333.cpp&#10;62&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/62. Unique Paths.cpp&#10;61&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/61. Rotate List.cpp&#10;50&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/剑指 offer（第2版）/50. 第一个只出现一次的字符.cpp&#10;279&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/279. Perfect Squares.cpp&#10;ma&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/main.cpp&#10;130&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/130. Surrounded Regions.cpp&#10;200&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/200. Number of Islands.cpp&#10;79&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/79. Word Search.cpp&#10;401&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/401. Binary Watch.cpp&#10;40&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/40. Combination Sum II.cpp&#10;RE&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/README.md&#10;39&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/39. Combination Sum.cpp&#10;per&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/47. Permutations II.cpp&#10;234&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/234. Palindrome Linked List.cpp&#10;ancest&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/235. Lowest Common Ancestor of a Binary Search Tree.cpp&#10;113&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/113. Path Sum II.cpp&#10;257&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/257. Binary Tree Paths.cpp&#10;preorder&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/144. Binary Tree Preorder Traversal.cpp&#10;pre&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/105. Construct Binary Tree from Preorder and Inorder Traversal.cpp&#10;max depth&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/104. Maximum Depth of Binary Tree.cpp&#10;min dep&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/111. Minimum Depth of Binary Tree.cpp&#10;127&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/127. Word Ladder.cpp" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="D:/Git/git-bash.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -320,29 +319,31 @@
       <workItem from="1596348578375" duration="611000" />
       <workItem from="1596360176300" duration="59108000" />
       <workItem from="1596616098440" duration="33460000" />
-      <workItem from="1596775445756" duration="45380000" />
+      <workItem from="1596775445756" duration="45431000" />
+      <workItem from="1596970497424" duration="2532000" />
+      <workItem from="1596989140232" duration="646000" />
+      <workItem from="1597028918159" duration="21141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347577000" />
+    <option name="totallyTimeSpent" value="371947000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="518" y="243" width="1021" height="899" extended-state="0" />
-    <editor active="true" />
+    <frame x="860" y="180" width="947" height="914" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24557753" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28297633" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329235" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30489075" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.34424084" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3080873" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.40166494" />
+      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.4762516" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3298647" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
@@ -372,36 +373,27 @@
           <line>26</line>
           <option name="timeStamp" value="194" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/leetcode/main.cpp</url>
-          <line>68</line>
-          <option name="timeStamp" value="253" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/leetcode/main.cpp</url>
-          <line>89</line>
-          <option name="timeStamp" value="271" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/leetcode/main.cpp</url>
-          <line>96</line>
-          <option name="timeStamp" value="272" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/leetcode/main.cpp</url>
-          <line>99</line>
-          <option name="timeStamp" value="273" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="nums" />
+        <watch expression="nums[6]" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>a</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>index</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>wordId</expression-string>
         <language-id>ObjectiveC</language-id>
@@ -442,146 +434,9 @@
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>visited</expression-string>
-        <language-id>ObjectiveC</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>res</expression-string>
-        <language-id>ObjectiveC</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/leetcode/401. Binary Watch.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/130. Surrounded Regions.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/200. Number of Islands.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/417. Pacific Atlantic Water Flow.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/36. Valid Sudoku.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19426">
-          <caret line="883" selection-start-line="883" selection-end-line="883" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/336. Palindrome Pairs.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/51. N-Queens.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/52. N-Queens II.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="42" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/37. Sudoku Solver.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="805" selection-start-line="805" selection-end-line="805" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/1137. N-th Tribonacci Number.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/279. Perfect Squares.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/13. 机器人的运动范围.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/MinGW/mingw32/i686-w64-mingw32/include/svrapi.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="233" column="9" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/50. 第一个只出现一次的字符.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/50. Pow(x, n).cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/120. Triangle.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/64. Minimum Path Sum.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -625,13 +480,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nowcoder/21333.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/213. House Robber II.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -791,13 +640,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/main.cpp">
+    <entry file="file://$PROJECT_DIR$/leetcode/LCP 01. 猜数字.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="22">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/696. Count Binary Substrings.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/65. Valid Number.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/20. 表示数值的字符串.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -805,6 +672,114 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/程序员面试金典（第6版）/08.12. 八皇后.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/51. N-Queens.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/66. 构建乘积数组.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/322. Coin Change.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-194">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="933" selection-start-line="933" selection-end-line="933" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/139. Word Break.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/377. Combination Sum IV.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/494. Target Sum.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/474. Ones and Zeroes.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/376. Wiggle Subsequence.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/300. Longest Increasing Subsequence.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/1143. Longest Common Subsequence.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/455. Assign Cookies.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/435. Non-overlapping Intervals.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -816,8 +791,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="208">
-            <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
+          <first_editor relative-caret-position="-127">
+            <caret line="129" column="19" lean-forward="true" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
           </first_editor>
           <second_editor />
         </state>

@@ -126,7 +126,7 @@
 51. N-Queens
 52. N-Queens II
 37. Sudoku Solver
-9.2 动态规划
+9.2 动态规划(难)
 70. Climbing Stairs
 120. Triangle
 64. Minimum Path Sum
@@ -146,9 +146,16 @@
 714. Best Time to Buy and Sell Stock with Transaction Fee
 9.5 动态规划之0-1背包问题
 416. Partition Equal Subset Sum
-
 322. Coin Change
 377. Combination Sum IV
 474. Ones and Zeroes
 139. Word Break;
 494. Target Sum;
+9.8 最长上升子序列
+300. Longest Increasing Subsequence
+376. Wiggle Subsequence
+9.9 最长公共子序列
+1143. Longest Common Subsequence
+10.1 贪心算法
+455. Assign Cookies
+435. Non-overlapping Intervals

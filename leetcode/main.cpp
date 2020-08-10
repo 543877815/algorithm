@@ -22,38 +22,6 @@ struct TreeNode {
 };
 
 
-//class Solution {
-//public:
-//    string multiply(string num1, string num2) {
-//        reverse(num1.begin(), num1.end());
-//        reverse(num2.begin(), num2.end());
-//        int index1 = 0, index2 = 0, count = 0;
-//        string res;
-//        while (index1 < num1.size() && index2 < num2.size()) {
-//            int next = (num1[index1++] - '0') * (num2[index2++] - '0') + count;
-//            count = next / 10;
-//            res += to_string(next % 10);
-//        }
-//
-//        while (index1 < num1.size()) {
-//            int next = num1[index1++] - '0' + count;
-//            count = next / 10;
-//            res += to_string(next % 10);
-//        }
-//
-//        while (index2 < num2.size()) {
-//            int next = num2[index2++] - '0' + count;
-//            count = next / 10;
-//            res += to_string(next % 10);
-//        }
-//
-//        reverse(res.begin(), res.end());
-//
-//        return res;
-//    }
-//};
-
-
 struct ListNode {
     int val;
     ListNode *next;
@@ -76,32 +44,51 @@ ListNode *createLinkedList(int arr[], int n) {
     return head;
 }
 
+struct Interval {
+    int start;
+    int end;
+
+    Interval() : start(0), end(0) {}
+
+    Interval(int s, int e) : start(s), end(e) {}
+};
+
+bool compare(const Interval &a, const Interval &b) {
+    if (a.end != b.end) return a.end < b.end;
+    return a.end < b.end;
+}
 
 class Solution {
 public:
-    vector<double> twoSum(int n) {
-        vector<double> dp;
-        if (n <= 0) return dp;
-        dp = vector<double>(6 * n + 1, 0);
-        for (int i = 1; i <= 6; i++) dp[i] = 1;
-        for (int i = 2; i <= n; i++) { // 骰子个数
-            for (int j = i * 6; j >= i; j--) { // 旧的筛子
-                double sum = 0;
-                for (int k = 1; k <= 6; k++) { // 新的筛子
-                    if (j - k >= i - 1) sum += dp[j - k];
-                    else break;
+    int eraseOverlapIntervals(vector<Interval> &intervals) {
+        int n = intervals.size();
+        if (n == 0) return 0;
+
+        sort(intervals.begin(), intervals.end(), compare);
+
+        // dp[i]表示使用intervals[0...i]的区间能构成的最长不重叠序列
+        vector<int> dp(n, 1);
+        for (int i = 1; i < n; i++) {
+            // dp[i]
+            for (int j = 0; j < i; j++) {
+                if (intervals[i].start >= intervals[j].end) {
+                    dp[i] = max(dp[i], dp[i] + 1);
                 }
-                dp[j] = sum;
             }
         }
-        for (double &i : dp) {
-            i /= (pow(6, n));
+        int res = 0;
+        for (int i = 0; i < n; i++) {
+            res = max(res, dp[i]);
         }
-        return dp;
+
+        return n - res;
     }
 };
 
+
 int main() {
     Solution solution = Solution();
-    solution.twoSum(2);
+    vector<vector<int>> nums = {{1,2}, {2,3}, {3,4}, {1,3}};
+    int S = 3;
+    solution.eraseOverlapIntervals(nums);
 }

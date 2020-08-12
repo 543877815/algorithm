@@ -44,51 +44,45 @@ ListNode *createLinkedList(int arr[], int n) {
     return head;
 }
 
-struct Interval {
-    int start;
-    int end;
-
-    Interval() : start(0), end(0) {}
-
-    Interval(int s, int e) : start(s), end(e) {}
-};
-
-bool compare(const Interval &a, const Interval &b) {
-    if (a.end != b.end) return a.end < b.end;
-    return a.end < b.end;
-}
-
 class Solution {
 public:
-    int eraseOverlapIntervals(vector<Interval> &intervals) {
-        int n = intervals.size();
-        if (n == 0) return 0;
+    bool verify(vector<int> &postorder, int start, int end) {
+        if (postorder.empty() || start == end) return true;
+        cout << postorder.empty() << endl;
+        if (postorder.empty() || end - start < 0) return false;
+        int root = postorder[end];
 
-        sort(intervals.begin(), intervals.end(), compare);
-
-        // dp[i]表示使用intervals[0...i]的区间能构成的最长不重叠序列
-        vector<int> dp(n, 1);
-        for (int i = 1; i < n; i++) {
-            // dp[i]
-            for (int j = 0; j < i; j++) {
-                if (intervals[i].start >= intervals[j].end) {
-                    dp[i] = max(dp[i], dp[i] + 1);
-                }
-            }
-        }
-        int res = 0;
-        for (int i = 0; i < n; i++) {
-            res = max(res, dp[i]);
+        // 二叉搜索树中左子树节点的值小于根节点的值
+        int i = start;
+        for (; i <= end; i++) {
+            if (postorder[i] > root) break;
         }
 
-        return n - res;
+        // // 二叉搜索树中右子树节点的值大于根节点的值
+        int j = i;
+        for (; j <= end; j++) {
+            if (postorder[j] < root) return false;
+        }
+
+        // // 判断左子树是不是二叉搜索树
+        bool left = true;
+        if (i != j && i > 0) left = verify(postorder, start, i - 1);
+
+        bool right = true;
+        if (i < end - 1) right = verify(postorder, i, end - 1);
+
+        return left && right;
+    }
+
+    bool verifyPostorder(vector<int> &postorder) {
+        int n = postorder.size();
+        return verify(postorder, 0, n - 1);
     }
 };
 
-
 int main() {
     Solution solution = Solution();
-    vector<vector<int>> nums = {{1,2}, {2,3}, {3,4}, {1,3}};
-    int S = 3;
-    solution.eraseOverlapIntervals(nums);
+    vector<int> postorder = {};
+    // 4, 8, 6, 12, 16, 14, 10
+    solution.verifyPostorder(postorder);
 }

@@ -48,8 +48,8 @@ class Solution {
 public:
     bool verify(vector<int> &postorder, int start, int end) {
         if (postorder.empty() || start == end) return true;
-        cout << postorder.empty() << endl;
-        if (postorder.empty() || end - start < 0) return false;
+        if (end - start < 0) return false;
+
         int root = postorder[end];
 
         // 二叉搜索树中左子树节点的值小于根节点的值
@@ -60,16 +60,18 @@ public:
 
         // // 二叉搜索树中右子树节点的值大于根节点的值
         int j = i;
-        for (; j <= end; j++) {
+        for (; j < end; j++) {
             if (postorder[j] < root) return false;
         }
+
+        if (j != end - 1) return false;
 
         // // 判断左子树是不是二叉搜索树
         bool left = true;
         if (i != j && i > 0) left = verify(postorder, start, i - 1);
 
         bool right = true;
-        if (i < end - 1) right = verify(postorder, i, end - 1);
+        if (i != j) right = verify(postorder, i, end - 1);
 
         return left && right;
     }
@@ -79,10 +81,8 @@ public:
         return verify(postorder, 0, n - 1);
     }
 };
-
 int main() {
     Solution solution = Solution();
-    vector<int> postorder = {};
-    // 4, 8, 6, 12, 16, 14, 10
+    vector<int> postorder = {1,3,2,6,5};
     solution.verifyPostorder(postorder);
 }

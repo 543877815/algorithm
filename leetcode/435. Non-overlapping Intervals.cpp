@@ -1,7 +1,7 @@
 // 贪心算法，计算保留的区间再相减
 // 时间复杂度：O(n)
 // 空间复杂度：O(1)
-bool compare(vector<int> &a, const vector<int> &b) {
+bool compare(const vector<int> &a, const vector<int> &b) {
     if (a[1] != b[1]) return a[1] < b[1];
     return a[0] < b[0];
 }

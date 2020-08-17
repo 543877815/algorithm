@@ -38,7 +38,7 @@
     <session id="-824826815">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -52,19 +52,19 @@
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.56" value="2" />
           <entry key="project.open.time.57" value="1" />
-          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.67" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cp" value="2" />
-          <entry key="cpp" value="380" />
+          <entry key="cpp" value="388" />
           <entry key="filters" value="1" />
           <entry key="h" value="39" />
           <entry key="leetcode (disassembly)" value="17" />
@@ -78,26 +78,26 @@
           <entry key="CMakeLists.txt" value="1" />
           <entry key="Disassembly" value="17" />
           <entry key="Markdown" value="8" />
-          <entry key="ObjectiveC" value="421" />
+          <entry key="ObjectiveC" value="429" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Python" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="24560" />
+          <entry key="cpp" value="26219" />
           <entry key="dummy" value="1" />
           <entry key="md" value="3619" />
-          <entry key="mm" value="168" />
+          <entry key="mm" value="185" />
           <entry key="txt" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="12" />
-          <entry key="Doxygen file" value="45" />
+          <entry key="Doxygen file" value="47" />
           <entry key="Markdown" value="2734" />
-          <entry key="ObjectiveC" value="24683" />
+          <entry key="ObjectiveC" value="26357" />
           <entry key="PLAIN_TEXT" value="911" />
         </counts>
       </usages-collector>
@@ -108,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+            <state relative-caret-position="836">
+              <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -117,29 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leetcode/426. Convert Binary Search Tree to Sorted Doubly Linked List.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="29" column="26" selection-end-line="51" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/36. 二叉搜索树与双向链表.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/leetcode/733. Flood Fill.cpp">
+        <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/41. 数据流中的中位数.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="424">
+              <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -181,11 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/leetcode/122. Best Time to Buy and Sell Stock II.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/309. Best Time to Buy and Sell Stock with Cooldown.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/121. Best Time to Buy and Sell Stock.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/123. Best Time to Buy and Sell Stock III.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/188. Best Time to Buy and Sell Stock IV.cpp" />
         <option value="$PROJECT_DIR$/leetcode/99. Recover Binary Search Tree.cpp" />
         <option value="$PROJECT_DIR$/剑指 offer（第2版）/68 - II. 二叉树的最近公共祖先.cpp" />
         <option value="$PROJECT_DIR$/剑指 offer（第2版）/59 - I. 滑动窗口的最大值.cpp" />
@@ -226,12 +203,17 @@
         <option value="$PROJECT_DIR$/leetcode/557. Reverse Words in a String III.cpp" />
         <option value="$PROJECT_DIR$/leetcode/238. Product of Array Except Self.cpp" />
         <option value="$PROJECT_DIR$/leetcode/546. Remove Boxes.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/main.cpp" />
         <option value="$PROJECT_DIR$/剑指 offer（第2版）/33. 二叉搜索树的后序遍历序列.cpp" />
         <option value="$PROJECT_DIR$/剑指 offer（第2版）/35. 复杂链表的复制.cpp" />
         <option value="$PROJECT_DIR$/leetcode/426. Convert Binary Search Tree to Sorted Doubly Linked List.cpp" />
         <option value="$PROJECT_DIR$/剑指 offer（第2版）/36. 二叉搜索树与双向链表.cpp" />
         <option value="$PROJECT_DIR$/leetcode/733. Flood Fill.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/695. Max Area of Island.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/297. Serialize and Deserialize Binary Tree.cpp" />
+        <option value="$PROJECT_DIR$/剑指 offer（第2版）/37. 序列化二叉树.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/main.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/295. Find Median from Data Stream.cpp" />
+        <option value="$PROJECT_DIR$/剑指 offer（第2版）/41. 数据流中的中位数.cpp" />
       </list>
     </option>
   </component>
@@ -243,9 +225,9 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="271" />
-    <option name="y" value="6" />
-    <option name="width" value="1474" />
+    <option name="x" value="228" />
+    <option name="y" value="4" />
+    <option name="width" value="1147" />
     <option name="height" value="1055" />
   </component>
   <component name="ProjectView">
@@ -339,29 +321,29 @@
       <workItem from="1597203687032" duration="26513000" />
       <workItem from="1597468607574" duration="3401000" />
       <workItem from="1597472080073" duration="2146000" />
-      <workItem from="1597509444435" duration="235000" />
+      <workItem from="1597509444435" duration="2095000" />
+      <workItem from="1597635071740" duration="9595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404242000" />
+    <option name="totallyTimeSpent" value="415697000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="271" y="6" width="1474" height="1055" extended-state="0" />
-    <editor active="true" />
+    <frame x="228" y="4" width="1147" height="1055" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28288543" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24931003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329235" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30489075" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.53369564" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4054348" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.20434782" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.19354838" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3298647" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
@@ -393,19 +375,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/main.cpp</url>
-          <line>49</line>
-          <option name="timeStamp" value="223" />
+          <line>106</line>
+          <option name="timeStamp" value="235" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="postorder" language="ObjectiveC" />
+        <watch expression="max_area" language="ObjectiveC" />
+        <watch expression="visited" language="ObjectiveC" />
+        <watch expression="visited" />
+        <watch expression="m" language="ObjectiveC" />
+        <watch expression="n" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>n</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>m</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>visited</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>max_area</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>postorder</expression-string>
         <language-id>ObjectiveC</language-id>
@@ -413,11 +419,6 @@
       </expression>
       <expression>
         <expression-string>res</expression-string>
-        <language-id>ObjectiveC</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>visited</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -441,73 +442,9 @@
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>iter</expression-string>
-        <language-id>ObjectiveC</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>reverseWord</expression-string>
-        <language-id>ObjectiveC</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>valid</expression-string>
-        <language-id>ObjectiveC</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/59 - I. 滑动窗口的最大值.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="22" lean-forward="true" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/59 - II. 队列的最大值.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/60. n个骰子的点数.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/47. 礼物的最大价值.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/54. 二叉搜索树的第k大节点.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/94. Binary Tree Inorder Traversal.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/61. 扑克牌中的顺子.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/LCP 01. 猜数字.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -793,20 +730,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/main.cpp">
+    <entry file="file://$PROJECT_DIR$/leetcode/733. Flood Fill.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/426. Convert Binary Search Tree to Sorted Doubly Linked List.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="26" selection-end-line="51" selection-end-column="2" />
+        <state relative-caret-position="44">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -817,10 +744,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/733. Flood Fill.cpp">
+    <entry file="file://$PROJECT_DIR$/leetcode/426. Convert Binary Search Tree to Sorted Doubly Linked List.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/695. Max Area of Island.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/297. Serialize and Deserialize Binary Tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="19" selection-start-line="19" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/37. 序列化二叉树.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/download/baiduNetdisk/电子书/剑指offer第二版(PDF+源码)/CodingInterviewChinese2/37_SerializeBinaryTrees/SerializeBinaryTrees.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="61" column="20" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/download/baiduNetdisk/电子书/剑指offer第二版(PDF+源码)/CodingInterviewChinese2/41_StreamMedian/StreamMedian.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="74" column="12" lean-forward="true" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
+          <folding>
+            <element signature="e#848#860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/295. Find Median from Data Stream.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="16" column="11" selection-end-line="104" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/41. 数据流中的中位数.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
         </state>
       </provider>
     </entry>

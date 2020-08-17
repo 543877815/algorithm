@@ -44,45 +44,66 @@ ListNode *createLinkedList(int arr[], int n) {
     return head;
 }
 
-class Solution {
+class MedianFinder {
+private:
+    vector<int> min_heap;
+    vector<int> max_heap;
 public:
-    bool verify(vector<int> &postorder, int start, int end) {
-        if (postorder.empty() || start == end) return true;
-        if (end - start < 0) return false;
+    /** initialize your data structure here. */
+    MedianFinder() {
 
-        int root = postorder[end];
-
-        // 二叉搜索树中左子树节点的值小于根节点的值
-        int i = start;
-        for (; i <= end; i++) {
-            if (postorder[i] > root) break;
-        }
-
-        // // 二叉搜索树中右子树节点的值大于根节点的值
-        int j = i;
-        for (; j < end; j++) {
-            if (postorder[j] < root) return false;
-        }
-
-        if (j != end - 1) return false;
-
-        // // 判断左子树是不是二叉搜索树
-        bool left = true;
-        if (i != j && i > 0) left = verify(postorder, start, i - 1);
-
-        bool right = true;
-        if (i != j) right = verify(postorder, i, end - 1);
-
-        return left && right;
     }
 
-    bool verifyPostorder(vector<int> &postorder) {
-        int n = postorder.size();
-        return verify(postorder, 0, n - 1);
+    void addNum(int num) {
+        // 如果是偶数
+        if ((min_heap.size() + max_heap.size() && 1) == 0) {
+            if (max_heap.size() > 0 && num < max_heap[0]) {
+                max_heap.push_back(num);
+                push_heap(max_heap.begin(), max_heap.end(), less<int>());
+
+                num = max_heap[0];
+
+                pop_heap(max_heap.begin(), max_heap.end(), less<int>());
+                max_heap.pop_back();
+            }
+            min_heap.push_back(num);
+            push_heap(min_heap.begin(), min_heap.end(), greater<int>());
+        } else { // 如果是奇数
+            if (min_heap.size() > 0 && min_heap[0] < num) {
+                min_heap.push_back(num);
+                push_heap(min_heap.begin(), min_heap.end(), greater<int>());
+
+                num = min_heap[0];
+
+                pop_heap(min_heap.begin(), min_heap.end(), greater<int>());
+                min_heap.pop_back();
+            }
+            max_heap.push_back(num);
+            push_heap(max_heap.begin(), max_heap.end(), less<int>());
+        }
+    }
+
+    double findMedian() {
+        int size = min_heap.size() + max_heap.size();
+
+        double median = 0;
+        if ((size & 1) == 1) median = min_heap[0]; // 如果是奇数
+        else median = (min_heap[0] + max_heap[0]) / 2; // 如果是偶数
+        return median;
     }
 };
+
 int main() {
-    Solution solution = Solution();
-    vector<int> postorder = {1,3,2,6,5};
-    solution.verifyPostorder(postorder);
+    Codec solution = Codec();
+    TreeNode *root = new TreeNode(-1);
+    TreeNode *two = new TreeNode(0);
+    TreeNode *three = new TreeNode(1);
+    TreeNode *four = new TreeNode(4);
+    TreeNode *five = new TreeNode(5);
+    root->left = two;
+    root->right = three;
+    three->left = four;
+    three->right = five;
+    string res = solution.serialize(root);
+    TreeNode *aaa = solution.deserialize(res);
 }

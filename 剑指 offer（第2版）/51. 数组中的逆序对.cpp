@@ -1,49 +1,7 @@
-#include <string>
-#include <vector>
-#include <iostream>
-#include <unordered_map>
-#include <map>
-#include <algorithm>
-#include <set>
-#include <unordered_set>
-#include <stack>
-#include <math.h>
-#include <queue>
-#include <assert.h>
-
-using namespace std;
-
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-
-struct ListNode {
-    int val;
-    ListNode *next;
-
-    ListNode(int x) : val(x), next(NULL) {}
-};
-
-ListNode *createLinkedList(int arr[], int n) {
-
-    if (n == 0)
-        return NULL;
-
-    ListNode *head = new ListNode(arr[0]);
-    ListNode *curNode = head;
-    for (int i = 1; i < n; i++) {
-        curNode->next = new ListNode(arr[i]);
-        curNode = curNode->next;
-    }
-
-    return head;
-}
-
+// base 遍历两边 时间复杂度：O(n^2)
+// 归并排序
+// 时间复杂度：O(nlogn)
+// 空间复杂度：O(n)
 class Solution {
 private:
     int reversePairsCore(vector<int> &nums, vector<int> &copy, int start, int end) {
@@ -88,9 +46,3 @@ public:
         return reversePairsCore(nums, copy, 0, n - 1);
     }
 };
-
-int main() {
-    vector<int> a = {7,5,6,4};
-    Solution solution = Solution();
-    solution.reversePairs(a);
-}

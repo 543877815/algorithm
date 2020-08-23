@@ -44,53 +44,54 @@ ListNode *createLinkedList(int arr[], int n) {
     return head;
 }
 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
 class Solution {
-private:
-    int reversePairsCore(vector<int> &nums, vector<int> &copy, int start, int end) {
-        if (start == end) {
-            copy[start] = nums[start];
-            return 0;
-        }
-
-        int length = (end - start) / 2;
-
-        int left = reversePairsCore(copy, nums, start, start + length);
-        int right = reversePairsCore(copy, nums, start + length + 1, end);
-
-        // i 初始化为前半段最后一个数字的下标
-        int i = start + length;
-        // j 初始化为后半段最后一个数字的下标
-        int j = end;
-        int indexCopy = end;
-        int count = 0;
-
-        while (i >= start && j >= start + length + 1) {
-            if (nums[i] > nums[j]) {
-                copy[indexCopy--] = nums[i--];
-                count += j - start - length;
-            } else {
-                copy[indexCopy--] = nums[j--];
-            }
-        }
-
-        for (; i >= start; i--) copy[indexCopy--] = nums[i];
-        for (; j >= start + length + 1; j--) copy[indexCopy--] = nums[j];
-
-        return left + right + count;
-    }
-
 public:
-    int reversePairs(vector<int> &nums) {
-        int n = nums.size();
-        if (n == 0) return 0;
-        vector<int> copy(n);
-        for (int i = 0; i < n; i++) copy[i] = nums[i];
-        return reversePairsCore(nums, copy, 0, n - 1);
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode* res = l1;
+        ListNode *pre = NULL;
+        int count = 0;
+        while (l1 && l2) {
+            int sum = l1->val + l2->val + count;
+            count = sum / 10;
+            l1->val = sum % 10;
+            if (!l1->next) pre = l1;
+            l1 = l1->next;
+            l2 = l2->next;
+        }
+
+        while (l1) {
+            int sum = l1->val + count;
+            count = sum / 10;
+            l1->val = sum % 10;
+            if (!l1->next) pre = l1;
+            l1 = l1->next;
+        }
+
+        while (l2) {
+            int sum = l2->val + count;
+            count = sum / 10;
+            pre->next = new ListNode(sum % 10);
+            pre = pre->next;
+            l2 = l2->next;
+        }
+
+        if (count != 0) pre->next = new ListNode(count);
+
+        return res;
     }
 };
 
 int main() {
-    vector<int> a = {7,5,6,4};
+    ListNode *a = new ListNode(5);
+    ListNode *b = new ListNode(5);
     Solution solution = Solution();
-    solution.reversePairs(a);
+    solution.addTwoNumbers(a, b);
 }

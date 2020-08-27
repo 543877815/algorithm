@@ -67,3 +67,35 @@ int** generateMatrix(int n, int* returnSize, int** returnColumnSizes){
     return arr;
 }
 
+
+// c++
+class Solution {
+public:
+    vector<vector<int>> generateMatrix(int n) {
+        vector<vector<int>> res(n, vector<int>(n));
+        int num = 1, i = 0, j = 0;
+        int up = 0, down = n - 1, left = 0, right = n - 1;
+        bool UP = false, DOWN = false, LEFT = false, RIGHT = true;
+        while (num <= n * n) {
+            if (RIGHT) {
+                res[i][j] = num;
+                if (j == right) {RIGHT = false; DOWN = true; up++; i++;}
+                else j++;
+            } else if (DOWN) {
+                res[i][j] = num;
+                if (i == down) {DOWN = false; LEFT = true; right--; j--;}
+                else i++;
+            } else if (LEFT) {
+                res[i][j] = num;
+                if (j == left) {LEFT = false; UP = true; down--; i--;}
+                else j--;
+            } else if (UP) {
+                res[i][j] = num;
+                if (i == up) {UP = false; RIGHT = true; left++; j++;}
+                else i--;
+            }
+            num ++;
+        }
+        return res;
+    }
+};

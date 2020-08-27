@@ -53,45 +53,83 @@ ListNode *createLinkedList(int arr[], int n) {
  * };
  */
 class Solution {
+private:
+    int m;
+    vector<string> res;
+    unordered_map<string, int> ticketsId;
+    vector<string> idTickets;
+    unordered_map<int, vector<int>> graph;
+    unordered_map<int, vector<bool>> visited;
+
 public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode* res = l1;
-        ListNode *pre = NULL;
-        int count = 0;
-        while (l1 && l2) {
-            int sum = l1->val + l2->val + count;
-            count = sum / 10;
-            l1->val = sum % 10;
-            if (!l1->next) pre = l1;
-            l1 = l1->next;
-            l2 = l2->next;
+    void DFS(int from) {
+        if (res.size() == 0) res.push_back(idTickets[from]);
+        for (int to = 0; to < graph[from].size(); to++) {
+            if (!visited[from][to]) {
+                visited[from][to] = true;
+                res.push_back(idTickets[graph[from][to]]);
+                DFS(graph[from][to]);
+                if (res.size() == m) return;
+                res.pop_back();
+                visited[from][to] = false;
+            }
+        }
+    }
+
+    vector<string> findItinerary(vector<vector<string>> &tickets) {
+        int n = tickets.size();
+        if (n == 0) return res;
+
+        // 去重
+        unordered_set<string> ticketsSet;
+        for (int i = 0; i < n; i++) {
+            ticketsSet.insert(tickets[i][0]);
+            ticketsSet.insert(tickets[i][1]);
         }
 
-        while (l1) {
-            int sum = l1->val + count;
-            count = sum / 10;
-            l1->val = sum % 10;
-            if (!l1->next) pre = l1;
-            l1 = l1->next;
+        // 排序
+        for (auto &i : ticketsSet) {
+            idTickets.push_back(i);
+        }
+        ticketsSet.clear();
+        sort(idTickets.begin(), idTickets.end(), greater<string>());
+        sort(tickets.begin(), tickets.end(),
+             [](const vector<string> &a, const vector<string> &b) { return a[1] > b[1]; });
+
+        // 编号
+        for (int i = 0; i < idTickets.size(); i++) {
+            ticketsId[idTickets[i]] = i;
         }
 
-        while (l2) {
-            int sum = l2->val + count;
-            count = sum / 10;
-            pre->next = new ListNode(sum % 10);
-            pre = pre->next;
-            l2 = l2->next;
+        for (int i = 0; i < n; i++) {
+            graph[ticketsId[tickets[i][1]]].push_back(ticketsId[tickets[i][0]]);
+            visited[ticketsId[tickets[i][1]]].push_back(false);
+        }
+        m = n + 1; // 2 * n - (n - 1);
+
+        for (auto &i : graph) {
+            if (res.size() != m) {
+                res.clear();
+                DFS(i.first);
+            }
         }
 
-        if (count != 0) pre->next = new ListNode(count);
+        reverse(res.begin(), res.end());
 
         return res;
     }
 };
 
 int main() {
-    ListNode *a = new ListNode(5);
-    ListNode *b = new ListNode(5);
     Solution solution = Solution();
-    solution.addTwoNumbers(a, b);
+    vector<vector<string>> tickets = {{"JFK", "SFO"},
+                                      {"JFK", "ATL"},
+                                      {"SFO", "ATL"},
+                                      {"ATL", "JFK"},
+                                      {"ATL", "SFO"}};
+//            {{"MUC", "LHR"},
+//                                      {"JFK", "MUC"},
+//                                      {"SFO", "SJC"},
+//                                      {"LHR", "SFO"}};
+    solution.findItinerary(tickets);
 }

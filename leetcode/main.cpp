@@ -44,48 +44,30 @@ ListNode *createLinkedList(int arr[], int n) {
     return head;
 }
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
 class Solution {
 public:
-    string shortestPalindrome(string s) {
-        int m = s.size();
-        // 构建 next 数组
-        vector<int> next(m, -1);
-        int j = 0, i = -1;
-        while (j < m - 1) {
-            if (i == -1 || s[j] == s[i])
-                next[++j] = ++i;
-            else
-                j = next[j];
+    bool PredictTheWinner(vector<int> &nums) {
+        int n = nums.size();
+        if ((n & 1) == 0) return true;
+        // dp[i][j]表示第i到第j中可以获得的最大分数
+        vector<vector<int>> dp = vector<vector<int>>(n, vector<int>(n, 0));
+        for (int i = 0; i < n; i++) {
+            dp[i][i] = nums[i];
         }
-
-        // 逆序匹配
-        i = m - 1; // 主串位置
-        j = 0; // 模式串位置
-        while (i >= 0 && j < m) {
-            if (j == -1 || s[i] == s[j]) {
-                i--;
-                j++;
-            } else {
-                j = next[j];
+        for (int i = n - 2; i >= 0; i--) {
+            for (int j = i + 1; j < n; j++) {
+                if (j - i == 1)
+                    dp[i][j] = max(nums[i], nums[j]);
+                else if (j - i > 1)
+                    dp[i][j] = max(dp[i + 1][j] + nums[i], dp[i][j - 1] + nums[j]);
             }
         }
-        cout << j << " " << m;
-        string add = (j == m ? "" : s.substr(j, m));
-        reverse(add.begin(), add.end());
-        return add + s;
+        return dp[0][n - 1] > dp[1][n - 1] && dp[0][n - 1] > dp[0][n - 2];
     }
 };
 
 int main() {
     Solution solution = Solution();
-    string s = "aacecaaa";
-    solution.shortestPalindrome(s);
+    vector<int> rooms = {1, 5, 2};
+    solution.PredictTheWinner(rooms);
 }

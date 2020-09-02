@@ -44,30 +44,65 @@ ListNode *createLinkedList(int arr[], int n) {
     return head;
 }
 
-class Solution {
+class StackOfPlates {
+private:
+    int maxSize;
+    vector<stack<int>> stacks;
+
 public:
-    bool PredictTheWinner(vector<int> &nums) {
-        int n = nums.size();
-        if ((n & 1) == 0) return true;
-        // dp[i][j]表示第i到第j中可以获得的最大分数
-        vector<vector<int>> dp = vector<vector<int>>(n, vector<int>(n, 0));
-        for (int i = 0; i < n; i++) {
-            dp[i][i] = nums[i];
-        }
-        for (int i = n - 2; i >= 0; i--) {
-            for (int j = i + 1; j < n; j++) {
-                if (j - i == 1)
-                    dp[i][j] = max(nums[i], nums[j]);
-                else if (j - i > 1)
-                    dp[i][j] = max(dp[i + 1][j] + nums[i], dp[i][j - 1] + nums[j]);
+    StackOfPlates(int cap) {
+
+        maxSize = cap;
+    }
+
+    void push(int val) {
+        if (stacks.size() == 0) {
+            stack<int> s;
+            s.push(val);
+            stacks.push_back(s);
+        } else {
+            stack<int> *s = &stacks.back();
+            if (s->size() >= maxSize) {
+                stack<int> tmp;
+                tmp.push(val);
+                stacks.push_back(tmp);
+            } else {
+                stacks.back().push(val);
             }
         }
-        return dp[0][n - 1] > dp[1][n - 1] && dp[0][n - 1] > dp[0][n - 2];
+    }
+
+    int pop() {
+        if (stacks.empty()) return -1;
+        stack<int> *s = &stacks.back();
+        int num = s->top();
+        s->pop();
+        if (s->empty()) stacks.pop_back();
+        return num;
+    }
+
+    int popAt(int index) {
+        if (stacks.empty() || stacks.size() <= index) return -1;
+        stack<int> *s = &stacks[index];
+        if (s->empty()) return -1;
+        int num = s->top();
+        s->pop();
+        if (s->size() == 0) stacks.erase(remove(stacks.begin(), stacks.end(), *s), stacks.end());
+        return num;
     }
 };
 
 int main() {
-    Solution solution = Solution();
-    vector<int> rooms = {1, 5, 2};
-    solution.PredictTheWinner(rooms);
+    StackOfPlates *solution = new StackOfPlates(2);
+    solution->push(1);
+    solution->push(2);
+    solution->push(3);
+    solution->popAt(0);
+    solution->popAt(0);
+    solution->popAt(0);
+//    solution->push(1);
+//    solution->push(2);
+//    solution->popAt(1);
+//    solution->pop();
+//    solution->pop();
 }

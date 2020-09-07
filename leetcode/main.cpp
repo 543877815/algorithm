@@ -44,29 +44,65 @@ ListNode *createLinkedList(int arr[], int n) {
     return head;
 }
 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
+private:
+    vector<int> nums;
+
 public:
-    TreeNode* inorderSuccessor(TreeNode* root, TreeNode* p) {
-        if (!root) return NULL;
-        TreeNode *left = inorderSuccessor(root->left, p);
-        if (left) return left;
-        if (root->val > p->val) return root;
-        TreeNode *right = inorderSuccessor(root->right, p);
-        if (right) return right;
-        return NULL;
+    int pathSum(TreeNode *root, int sum) {
+        int res = 0;
+        if (root == nullptr) return res;
+        nums.push_back(root->val);
+        // 到达叶子结点
+        if (root->left == nullptr && root->right == nullptr) {
+            // 前缀和
+
+        }
+        if (root->left) {
+            res += pathSum(root->left, sum);
+            nums.pop_back();
+        }
+        if (root->right) {
+            res += pathSum(root->right, sum);
+            nums.pop_back();
+        }
+        return res;
     }
 };
-
 
 int main() {
     auto *solution = new Solution();
     TreeNode *five = new TreeNode(5);
-    TreeNode *three = new TreeNode(3);
+    TreeNode *four = new TreeNode(4);
+    TreeNode *eight = new TreeNode(8);
+    TreeNode *eleven = new TreeNode(11);
+    TreeNode *thirteen = new TreeNode(13);
+    TreeNode *four_1 = new TreeNode(4);
+    TreeNode *seven = new TreeNode(7);
     TreeNode *two = new TreeNode(2);
+    TreeNode *five_1 = new TreeNode(5);
     TreeNode *one = new TreeNode(1);
-    five->left = three;
-    three->left = two;
-    two->left = one;
-    TreeNode *p = new TreeNode(1);
-    solution->inorderSuccessor(five, p);
+
+    five->left = four;
+    five->right = eight;
+    four->left = eleven;
+    eight->left = thirteen;
+    eight->right = four_1;
+    eleven->left = seven;
+    eleven->right = two;
+    four_1->left = five_1;
+    four_1->right = one;
+
+    TreeNode *test = new TreeNode(1);
+
+    solution->pathSum(test, 0);
 }

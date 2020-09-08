@@ -38,7 +38,7 @@
     <session id="-824826815">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="37" />
+          <entry key="project.closed" value="39" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -63,14 +63,14 @@
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.67" value="1" />
           <entry key="project.open.time.7" value="4" />
-          <entry key="project.open.time.8" value="3" />
-          <entry key="project.opened" value="40" />
+          <entry key="project.open.time.8" value="4" />
+          <entry key="project.opened" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cp" value="2" />
-          <entry key="cpp" value="476" />
+          <entry key="cpp" value="480" />
           <entry key="filters" value="1" />
           <entry key="h" value="54" />
           <entry key="leetcode (disassembly)" value="22" />
@@ -84,14 +84,14 @@
           <entry key="CMakeLists.txt" value="1" />
           <entry key="Disassembly" value="22" />
           <entry key="Markdown" value="11" />
-          <entry key="ObjectiveC" value="532" />
+          <entry key="ObjectiveC" value="536" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Python" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="33980" />
+          <entry key="cpp" value="34144" />
           <entry key="dummy" value="1" />
           <entry key="md" value="3619" />
           <entry key="mm" value="252" />
@@ -103,7 +103,7 @@
           <entry key="CMakeLists.txt" value="12" />
           <entry key="Doxygen file" value="60" />
           <entry key="Markdown" value="2734" />
-          <entry key="ObjectiveC" value="34172" />
+          <entry key="ObjectiveC" value="34336" />
           <entry key="PLAIN_TEXT" value="911" />
         </counts>
       </usages-collector>
@@ -111,23 +111,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leetcode/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1166">
-              <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+            <state relative-caret-position="80">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/04.12. 求和路径.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -174,9 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/leetcode/679. 24 Game.cpp" />
-        <option value="$PROJECT_DIR$/程序员面试金典（第6版）/01.03. URL化.cpp" />
-        <option value="$PROJECT_DIR$/程序员面试金典（第6版）/03.02. 栈的最小值.cpp" />
         <option value="$PROJECT_DIR$/leetcode/67. Add Binary.cpp" />
         <option value="$PROJECT_DIR$/leetcode/989. Add to Array-Form of Integer.cpp" />
         <option value="$PROJECT_DIR$/程序员面试金典（第6版）/04.04. 检查平衡性.cpp" />
@@ -223,8 +211,11 @@
         <option value="$PROJECT_DIR$/leetcode周赛/5508. 数的平方等于两数乘积的方法数.cpp" />
         <option value="$PROJECT_DIR$/程序员面试金典（第6版）/04.08. 首个共同祖先.cpp" />
         <option value="$PROJECT_DIR$/程序员面试金典（第6版）/04.10. 检查子树.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/main.cpp" />
         <option value="$PROJECT_DIR$/剑指 offer（第2版）/04.12. 求和路径.cpp" />
+        <option value="$PROJECT_DIR$/程序员面试金典（第6版）/05.01. 插入.cpp" />
+        <option value="$PROJECT_DIR$/程序员面试金典（第6版）/05.02. 二进制数转字符串.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/main.cpp" />
+        <option value="$PROJECT_DIR$/程序员面试金典（第6版）/05.03. 翻转数位.cpp" />
       </list>
     </option>
   </component>
@@ -235,11 +226,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="713" />
-    <option name="y" value="-1101" />
-    <option name="width" value="1083" />
-    <option name="height" value="822" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="464" />
+    <option name="y" value="123" />
+    <option name="width" value="1381" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -257,7 +248,7 @@
             <path>
               <item name="quickzhao_codes" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="剑指 offer（第2版）" type="462c0819:PsiDirectoryNode" />
+              <item name="程序员面试金典（第6版）" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -272,6 +263,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\54387\Desktop\algorithm\程序员面试金典（第6版）" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -350,12 +346,13 @@
       <workItem from="1599042648327" duration="7232000" />
       <workItem from="1599139745019" duration="1212000" />
       <workItem from="1599191402658" duration="15060000" />
-      <workItem from="1599323745114" duration="10739000" />
+      <workItem from="1599323745114" duration="10981000" />
+      <workItem from="1599529736880" duration="3663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="523538000" />
+    <option name="totallyTimeSpent" value="527443000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,21 +364,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-1088" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="464" y="123" width="1381" height="810" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19514884" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26797882" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.21499014" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30489075" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.30905306" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37333333" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" order="7" visible="true" weight="0.3298647" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.37773153" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.33925927" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3748148" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3298647" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
@@ -440,8 +436,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/main.cpp</url>
-          <line>62</line>
-          <option name="timeStamp" value="274" />
+          <line>71</line>
+          <option name="timeStamp" value="277" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/main.cpp</url>
+          <line>58</line>
+          <option name="timeStamp" value="278" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -506,30 +507,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/leetcode/332. Reconstruct Itinerary.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/657. Robot Return to Origin.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/867. Transpose Matrix.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/48. Rotate Image.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/程序员面试金典（第6版）/01.07. 旋转矩阵.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -833,20 +810,44 @@
     <entry file="file://$PROJECT_DIR$/leetcode/112. Path Sum.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/main.cpp">
+    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/05.01. 插入.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/程序员面试金典（第6版）/05.01. 插入.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/剑指 offer（第2版）/04.12. 求和路径.cpp">
+    <entry file="file://$PROJECT_DIR$/程序员面试金典（第6版）/05.02. 二进制数转字符串.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="132">
+          <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/程序员面试金典（第6版）/04.12. 求和路径.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/程序员面试金典（第6版）/05.03. 翻转数位.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

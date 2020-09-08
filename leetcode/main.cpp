@@ -54,26 +54,33 @@ ListNode *createLinkedList(int arr[], int n) {
  * };
  */
 class Solution {
-private:
-    vector<int> nums;
-
 public:
-    int pathSum(TreeNode *root, int sum) {
-        int res = 0;
-        if (root == nullptr) return res;
-        nums.push_back(root->val);
-        // 到达叶子结点
-        if (root->left == nullptr && root->right == nullptr) {
-            // 前缀和
-
+    int reverseBits(int num) {
+        int count = 0;
+        vector<int> nums;
+        while (num) {
+            if (num & 1) {
+                count++;
+            } else {
+                nums.push_back(count);
+                count = 0;
+                nums.push_back(count);
+            }
+            num = num >> 1;
         }
-        if (root->left) {
-            res += pathSum(root->left, sum);
-            nums.pop_back();
-        }
-        if (root->right) {
-            res += pathSum(root->right, sum);
-            nums.pop_back();
+        nums.push_back(count);
+        int res = 1;
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] == 0) {
+                int tmp = 1;
+                if (i != 0) {
+                    tmp += nums[i - 1];
+                }
+                if (i != nums.size() - 1) {
+                    tmp += nums[i + 1];
+                }
+                res = max(res, tmp);
+            }
         }
         return res;
     }
@@ -81,28 +88,6 @@ public:
 
 int main() {
     auto *solution = new Solution();
-    TreeNode *five = new TreeNode(5);
-    TreeNode *four = new TreeNode(4);
-    TreeNode *eight = new TreeNode(8);
-    TreeNode *eleven = new TreeNode(11);
-    TreeNode *thirteen = new TreeNode(13);
-    TreeNode *four_1 = new TreeNode(4);
-    TreeNode *seven = new TreeNode(7);
-    TreeNode *two = new TreeNode(2);
-    TreeNode *five_1 = new TreeNode(5);
-    TreeNode *one = new TreeNode(1);
 
-    five->left = four;
-    five->right = eight;
-    four->left = eleven;
-    eight->left = thirteen;
-    eight->right = four_1;
-    eleven->left = seven;
-    eleven->right = two;
-    four_1->left = five_1;
-    four_1->right = one;
-
-    TreeNode *test = new TreeNode(1);
-
-    solution->pathSum(test, 0);
+    solution->reverseBits(7);
 }

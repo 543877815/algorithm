@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/54387/Desktop/algorithm/leetcode/main.cpp
+C:/Users/54387/Desktop/algorithm/leetcode/c++/main.cpp
 string
 -
 vector
@@ -30,5 +30,7 @@ math.h
 queue
 -
 assert.h
+-
+cstring
 -
 

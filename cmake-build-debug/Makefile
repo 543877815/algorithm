@@ -122,32 +122,32 @@ leetcode/fast:
 	$(MAKE) -f CMakeFiles\leetcode.dir\build.make CMakeFiles/leetcode.dir/build
 .PHONY : leetcode/fast
 
-leetcode/main.obj: leetcode/main.cpp.obj
+leetcode/c++/main.obj: leetcode/c++/main.cpp.obj
 
-.PHONY : leetcode/main.obj
+.PHONY : leetcode/c++/main.obj
 
 # target to build an object file
-leetcode/main.cpp.obj:
-	$(MAKE) -f CMakeFiles\leetcode.dir\build.make CMakeFiles/leetcode.dir/leetcode/main.cpp.obj
-.PHONY : leetcode/main.cpp.obj
+leetcode/c++/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\leetcode.dir\build.make CMakeFiles/leetcode.dir/leetcode/c++/main.cpp.obj
+.PHONY : leetcode/c++/main.cpp.obj
 
-leetcode/main.i: leetcode/main.cpp.i
+leetcode/c++/main.i: leetcode/c++/main.cpp.i
 
-.PHONY : leetcode/main.i
+.PHONY : leetcode/c++/main.i
 
 # target to preprocess a source file
-leetcode/main.cpp.i:
-	$(MAKE) -f CMakeFiles\leetcode.dir\build.make CMakeFiles/leetcode.dir/leetcode/main.cpp.i
-.PHONY : leetcode/main.cpp.i
+leetcode/c++/main.cpp.i:
+	$(MAKE) -f CMakeFiles\leetcode.dir\build.make CMakeFiles/leetcode.dir/leetcode/c++/main.cpp.i
+.PHONY : leetcode/c++/main.cpp.i
 
-leetcode/main.s: leetcode/main.cpp.s
+leetcode/c++/main.s: leetcode/c++/main.cpp.s
 
-.PHONY : leetcode/main.s
+.PHONY : leetcode/c++/main.s
 
 # target to generate assembly for a file
-leetcode/main.cpp.s:
-	$(MAKE) -f CMakeFiles\leetcode.dir\build.make CMakeFiles/leetcode.dir/leetcode/main.cpp.s
-.PHONY : leetcode/main.cpp.s
+leetcode/c++/main.cpp.s:
+	$(MAKE) -f CMakeFiles\leetcode.dir\build.make CMakeFiles/leetcode.dir/leetcode/c++/main.cpp.s
+.PHONY : leetcode/c++/main.cpp.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... leetcode
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... leetcode/main.obj
-	@echo ... leetcode/main.i
-	@echo ... leetcode/main.s
+	@echo ... leetcode/c++/main.obj
+	@echo ... leetcode/c++/main.i
+	@echo ... leetcode/c++/main.s
 .PHONY : help
 
 

@@ -38,7 +38,7 @@
     <session id="-824826815">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="50" />
+          <entry key="project.closed" value="54" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -47,7 +47,7 @@
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.36" value="3" />
           <entry key="project.open.time.37" value="2" />
-          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.39" value="3" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.42" value="2" />
           <entry key="project.open.time.43" value="1" />
@@ -59,22 +59,22 @@
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.56" value="2" />
           <entry key="project.open.time.57" value="1" />
-          <entry key="project.open.time.6" value="9" />
+          <entry key="project.open.time.6" value="11" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.67" value="1" />
           <entry key="project.open.time.7" value="6" />
           <entry key="project.open.time.75" value="1" />
-          <entry key="project.open.time.8" value="6" />
-          <entry key="project.opened" value="52" />
+          <entry key="project.open.time.8" value="7" />
+          <entry key="project.opened" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bash" value="2" />
           <entry key="cp" value="2" />
-          <entry key="cpp" value="501" />
+          <entry key="cpp" value="507" />
           <entry key="filters" value="1" />
           <entry key="h" value="54" />
           <entry key="leetcode (disassembly)" value="22" />
@@ -88,14 +88,14 @@
           <entry key="CMakeLists.txt" value="2" />
           <entry key="Disassembly" value="22" />
           <entry key="Markdown" value="12" />
-          <entry key="ObjectiveC" value="557" />
+          <entry key="ObjectiveC" value="563" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Python" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="35255" />
+          <entry key="cpp" value="35913" />
           <entry key="dummy" value="1" />
           <entry key="md" value="3619" />
           <entry key="mm" value="252" />
@@ -105,9 +105,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="16" />
-          <entry key="Doxygen file" value="62" />
+          <entry key="Doxygen file" value="65" />
           <entry key="Markdown" value="2734" />
-          <entry key="ObjectiveC" value="35445" />
+          <entry key="ObjectiveC" value="36100" />
           <entry key="PLAIN_TEXT" value="911" />
         </counts>
       </usages-collector>
@@ -115,14 +115,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/c++/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+            <state relative-caret-position="85">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetcode/c++/707. Design Linked List.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="83" column="3" selection-start-line="83" selection-start-column="3" selection-end-line="83" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode/c++/116. Populating Next Right Pointers in Each Node.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode/c++/117. Populating Next Right Pointers in Each Node II.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="118" column="2" selection-start-line="118" selection-start-column="2" selection-end-line="118" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode/c++/968. Binary Tree Cameras.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1300">
+              <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode/c++/617. Merge Two Binary Trees.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1250">
+              <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode/c++/501. Find Mode in Binary Search Tree.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -172,12 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/程序员面试金典（第6版）/02.01. 移除重复节点.cpp" />
-        <option value="$PROJECT_DIR$/程序员面试金典（第6版）/02.04. 分割链表.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/841. Keys and Rooms.cpp" />
-        <option value="$PROJECT_DIR$/程序员面试金典（第6版）/02.07. 链表相交.cpp" />
-        <option value="$PROJECT_DIR$/程序员面试金典（第6版）/02.08. 环路检测.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/142. Linked List Cycle II.cpp" />
         <option value="$PROJECT_DIR$/leetcode/486. Predict the Winner.cpp" />
         <option value="$PROJECT_DIR$/leetcode/877. Stone Game.cpp" />
         <option value="$PROJECT_DIR$/程序员面试金典（第6版）/03.01. 三合一.cpp" />
@@ -218,11 +266,17 @@
         <option value="$PROJECT_DIR$/leetcode周赛/5519. 重新排列单词间的空格.cpp" />
         <option value="$PROJECT_DIR$/leetcode周赛/5521. 矩阵的最大非负积.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/338. Counting Bits.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/c++/main.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/518. Coin Change 2.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/1038. Binary Search Tree to Greater Sum Tree.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/538. Convert BST to Greater Tree.cpp" />
         <option value="$PROJECT_DIR$/leetcode周赛/5520. 拆分字符串使唯一子字符串的数目最大.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/c++/968. Binary Tree Cameras.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/c++/617. Merge Two Binary Trees.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/c++/501. Find Mode in Binary Search Tree.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/c++/116. Populating Next Right Pointers in Each Node.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/c++/117. Populating Next Right Pointers in Each Node II.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/c++/main.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/c++/707. Design Linked List.cpp" />
       </list>
     </option>
   </component>
@@ -234,16 +288,17 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="363" />
-    <option name="y" value="136" />
+    <option name="x" value="431" />
+    <option name="y" value="297" />
     <option name="width" value="1381" />
-    <option name="height" value="756" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,11 +306,21 @@
               <item name="quickzhao_codes" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithm" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="quickzhao_codes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quickzhao_codes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="c++" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,11 +426,16 @@
       <workItem from="1600569749297" duration="2189000" />
       <workItem from="1600588394088" duration="3126000" />
       <workItem from="1600618144828" duration="1502000" />
+      <workItem from="1600740350673" duration="2300000" />
+      <workItem from="1600863968354" duration="872000" />
+      <workItem from="1600915562471" duration="854000" />
+      <workItem from="1601110023263" duration="605000" />
+      <workItem from="1601258997760" duration="3677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="546936000" />
+    <option name="totallyTimeSpent" value="555244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -377,15 +447,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="363" y="136" width="1381" height="756" extended-state="0" />
+    <frame x="73" y="-8" width="1855" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30582893" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24289693" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.21499014" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30489075" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3725286" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.41207075" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
@@ -430,6 +501,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/c++/main.cpp</url>
+          <line>61</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/c++/main.cpp</url>
+          <line>71</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="nums" language="ObjectiveC" />
@@ -491,36 +576,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="883" selection-start-line="883" selection-end-line="883" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="933" selection-start-line="933" selection-end-line="933" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/程序员面试金典（第6版）/04.01. 节点间通路.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/程序员面试金典（第6版）/04.02. 最小高度树.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/60. Permutation Sequence.cpp" />
-    <entry file="file://$PROJECT_DIR$/leetcode/73. Set Matrix Zeroes.cpp" />
     <entry file="file://$PROJECT_DIR$/程序员面试金典（第6版）/04.03. 特定深度节点链表.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
@@ -779,13 +834,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/968. Binary Tree Cameras.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1300">
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/617. Merge Two Binary Trees.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/501. Find Mode in Binary Search Tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/117. Populating Next Right Pointers in Each Node II.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="118" column="2" selection-start-line="118" selection-start-column="2" selection-end-line="118" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/116. Populating Next Right Pointers in Each Node.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/c++/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+        <state relative-caret-position="85">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/707. Design Linked List.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="83" column="3" selection-start-line="83" selection-start-column="3" selection-end-line="83" selection-end-column="3" />
         </state>
       </provider>
     </entry>

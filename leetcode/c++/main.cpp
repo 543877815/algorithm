@@ -23,12 +23,7 @@ struct TreeNode {
 };
 
 
-struct ListNode {
-    int val;
-    ListNode *next;
-
-    ListNode(int x) : val(x), next(NULL) {}
-};
+707. Design Linked List
 
 ListNode *createLinkedList(int arr[], int n) {
 
@@ -45,36 +40,70 @@ ListNode *createLinkedList(int arr[], int n) {
     return head;
 }
 
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
+
+class Node {
+public:
+    int val;
+    Node *left;
+    Node *right;
+    Node *next;
+
+    Node() : val(0), left(NULL), right(NULL), next(NULL) {}
+
+    Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {}
+
+    Node(int _val, Node *_left, Node *_right, Node *_next)
+            : val(_val), left(_left), right(_right), next(_next) {}
+};
+
 class Solution {
 public:
-    int change(int amount, vector<int>& coins) {
-        vector<int> dp(amount+1, 0);
-        dp[0] = 1;
-        for (int j = 0; j < coins.size(); j++) {
-            int coin = coins[j];
-            for (int i = 1; i <= amount; i++) {
-                if (i - coin >= 0) {
-                    dp[i] = dp[i] + dp[i-coins];
+    void handle(Node* &last, Node* &p, Node* &nextStart) {
+        if (last) {
+            last->next = p;
+        }
+        if (!nextStart) {
+            nextStart = p;
+        }
+        last = p;
+    }
+
+    Node* connect(Node* root) {
+        if (!root) {
+            return nullptr;
+        }
+        Node *start = root;
+        while (start) {
+            Node *last = nullptr, *nextStart = nullptr;
+            for (Node *p = start; p != nullptr; p = p->next) {
+                if (p->left) {
+                    handle(last, p->left, nextStart);
+                }
+                if (p->right) {
+                    handle(last, p->right, nextStart);
                 }
             }
+            start = nextStart;
         }
-        return dp[amount];
+        return root;
     }
 };
 
 
 int main() {
     auto *solution = new Solution();
-    int amount = 5;
-    vector<int> coins = {1, 2, 5};
-    solution->change(amount, coins);
+    Node* one = new Node(1);
+    Node* two = new Node(2);
+    Node* three = new Node(3);
+    Node* four = new Node(4);
+    Node* five = new Node(5);
+    Node* six = new Node(6);
+    Node* seven = new Node(7);
+    one->left = two;
+    one->right = three;
+    two->left = four;
+    two->right = five;
+    three->left = six;
+    three->right = seven;
+    solution->connect(one);
 }

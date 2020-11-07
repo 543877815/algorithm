@@ -24,30 +24,43 @@ struct TreeNode {
 
 class Solution {
 public:
-    int videoStitching(vector<vector<int>>& clips, int T) {
-        vector<int> maxn(T); // 我们记录以其为左端点的子区间中最远的右端点
-        int last=0, ret=0, pre=0;
-            for (vector<int> &it: clips) {
-                if (it[0] < T) {
-                    maxn[it[0]] = max(maxn[it[0]], it[1]);
+    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
+        int n = intervals.size();
+        // 插入有序数组
+        for (int i = 0; i < n; i++) {
+            if (i < n - 1) {
+                if (newInterval[0] >= intervals[i][0] && newInterval[0] <= intervals[i+1][0]) {
+                    intervals.insert(intervals.begin() + i + 1, newInterval);
                 }
             }
-            for (int i = 0; i < T; i++) {
-                last = max(last, maxn[i]);
-                if (i == last) return -1;
-                if (i == pre) {
-                    ret++;
-                    pre = last;
-                }
         }
-        return ret;
+        if (intervals.size() == n) {
+            if (intervals.empty()) intervals.push_back(newInterval);
+            else if (newInterval[0] >= intervals.back()[0]) intervals.push_back(newInterval);
+            else (intervals.insert(intervals.begin(), newInterval));
+        }
+
+
+        // 合并
+        vector<vector<int>> res;
+        for (int i = 0; i < intervals.size(); i++) {
+            if (i != n - 1 && intervals[i][1] >= intervals[i+1][0]) {
+                intervals[i+1][0] = intervals[i][0];
+                if (intervals[i][1] >= intervals[i+1][1]) {
+                    intervals[i+1][1] = intervals[i][1];
+                }
+            } else {
+                res.push_back({intervals[i][0], intervals[i][1]});
+            }
+        }
+        return res;
     }
 };
-
 int main() {
     auto *solution = new Solution();
-    vector<vector<int>> nums = {{0,2},{4,6},{8,10},{1,9},{1,5},{5,9}};
-    solution->videoStitching(nums, 10);
+    vector<vector<int>> intervals = {{2,3},{5,5},{6,6},{7,7},{8,11}};
+    vector<int> newInterval = {6,13};
+    solution->insert(intervals, newInterval);
 
 }
 

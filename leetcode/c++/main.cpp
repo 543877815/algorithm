@@ -24,43 +24,41 @@ struct TreeNode {
 
 class Solution {
 public:
-    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
-        int n = intervals.size();
-        // 插入有序数组
-        for (int i = 0; i < n; i++) {
-            if (i < n - 1) {
-                if (newInterval[0] >= intervals[i][0] && newInterval[0] <= intervals[i+1][0]) {
-                    intervals.insert(intervals.begin() + i + 1, newInterval);
-                }
-            }
-        }
-        if (intervals.size() == n) {
-            if (intervals.empty()) intervals.push_back(newInterval);
-            else if (newInterval[0] >= intervals.back()[0]) intervals.push_back(newInterval);
-            else (intervals.insert(intervals.begin(), newInterval));
-        }
-
-
-        // 合并
-        vector<vector<int>> res;
-        for (int i = 0; i < intervals.size(); i++) {
-            if (i != n - 1 && intervals[i][1] >= intervals[i+1][0]) {
-                intervals[i+1][0] = intervals[i][0];
-                if (intervals[i][1] >= intervals[i+1][1]) {
-                    intervals[i+1][1] = intervals[i][1];
-                }
+    string removeKdigits(string num, int k) {
+        int m = num.size();
+        vector<char> stk;
+        for (int i = 0; i < m; i++) {
+            if (!stk.empty() && k > 0 && stk.back() > num[i]) {
+                stk.pop_back();
+                k--;
+                i--;
             } else {
-                res.push_back({intervals[i][0], intervals[i][1]});
+                stk.push_back(num[i]);
             }
         }
-        return res;
+
+        while (k > 0) {
+            k--;
+            stk.pop_back();
+        }
+
+        string res;
+        bool zero = true;
+        for (char i : stk) {
+            if (zero && i == '0');
+            else {
+                zero = false;
+                res.push_back(i);
+            }
+        }
+
+        return res.empty() ? "0" : res;
     }
 };
+
 int main() {
     auto *solution = new Solution();
-    vector<vector<int>> intervals = {{2,3},{5,5},{6,6},{7,7},{8,11}};
-    vector<int> newInterval = {6,13};
-    solution->insert(intervals, newInterval);
+    solution->removeKdigits("123456432", 4);
 
 }
 

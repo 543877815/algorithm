@@ -12,6 +12,7 @@ set(CMAKE_C11_COMPILE_FEATURES "c_std_11;c_static_assert")
 
 set(CMAKE_C_PLATFORM_ID "MinGW")
 set(CMAKE_C_SIMULATE_ID "")
+set(CMAKE_C_COMPILER_FRONTEND_VARIANT "")
 set(CMAKE_C_SIMULATE_VERSION "")
 
 
@@ -21,6 +22,7 @@ set(CMAKE_C_COMPILER_AR "D:/MinGW/mingw32/bin/gcc-ar.exe")
 set(CMAKE_RANLIB "D:/MinGW/mingw32/bin/ranlib.exe")
 set(CMAKE_C_COMPILER_RANLIB "D:/MinGW/mingw32/bin/gcc-ranlib.exe")
 set(CMAKE_LINKER "D:/MinGW/mingw32/bin/ld.exe")
+set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
 set(CMAKE_C_COMPILER_WORKS TRUE)
@@ -68,6 +70,7 @@ endif()
 
 
 
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include;D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed;D:/MinGW/mingw32/i686-w64-mingw32/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0;D:/MinGW/mingw32/lib/gcc;D:/MinGW/mingw32/i686-w64-mingw32/lib;D:/MinGW/mingw32/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

@@ -1,3 +1,4 @@
+
 #include <string>
 #include <vector>
 #include <iostream>
@@ -24,41 +25,43 @@ struct TreeNode {
 
 class Solution {
 public:
-    string removeKdigits(string num, int k) {
-        int m = num.size();
-        vector<char> stk;
+    vector<vector<int>> reconstructQueue(vector<vector<int>>& people) {
+        int m = people.size();
+        vector<vector<int>> res = vector<vector<int>>(m, vector<int>(2));
+        sort(people.begin(), people.end(), [&](vector<int> &x, vector<int> &y) {
+            if (x[0] != y[0]) return x[0] < y[0];
+            else return x[1] > y[1];
+        });
+
+        /*for (int i = 0; i < m; i++) {
+            cout << people[i][0] << " " << people[i][1] << endl;
+        }*/
+
+        vector<bool> used = vector<bool>(m, false);
+
         for (int i = 0; i < m; i++) {
-            if (!stk.empty() && k > 0 && stk.back() > num[i]) {
-                stk.pop_back();
-                k--;
-                i--;
-            } else {
-                stk.push_back(num[i]);
+            int idx = people[i][1];
+            int j = 0;
+
+            while ((idx > 0 && j < m) || used[j]) {
+                if (!used[j]) {
+                    idx--;
+                }
+                j++;
+            }
+
+            if (j < m) {
+                used[j] = true;
+                res[j] = people[i];
             }
         }
-
-        while (k > 0) {
-            k--;
-            stk.pop_back();
-        }
-
-        string res;
-        bool zero = true;
-        for (char i : stk) {
-            if (zero && i == '0');
-            else {
-                zero = false;
-                res.push_back(i);
-            }
-        }
-
-        return res.empty() ? "0" : res;
+        return res;
     }
 };
 
 int main() {
     auto *solution = new Solution();
-    solution->removeKdigits("123456432", 4);
-
+    vector<vector<int>> array = {{7,0}, {4,4}, {7,1}, {5,0}, {6,1}, {5,2}};
+    solution->reconstructQueue(array);
 }
 

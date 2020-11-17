@@ -1,35 +1,14 @@
-#include <string>
-#include <vector>
-#include <iostream>
-#include <unordered_map>
-#include <map>
-#include <algorithm>
-#include <set>
-#include <unordered_set>
-#include <stack>
-#include <math.h>
-#include <queue>
-#include <assert.h>
-#include <cstring>
-
-using namespace std;
-
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
+// 广度优先遍历
+// 时间复杂度：O(nm)
+// 空间复杂度：O(nm)
 class Solution {
 private:
     int m, n;
     int dp[4][2] = {
-            {1,0},
-            {0,1},
             {-1,0},
-            {0,-1}
+            {0,-1},
+            {0,1},
+            {1,0}
     };
     queue<pair<int, int>> q;
     bool isArea(int x, int y) {
@@ -53,6 +32,7 @@ public:
                 int newy = y + dp[i][1];
                 if (isArea(newx, newy) && !visited[newx][newy]) {
                     q.push({newx, newy});
+                    visited[newx][newy] = true;
                     res.push_back({newx, newy});
                 }
             }
@@ -60,10 +40,3 @@ public:
         return res;
     }
 };
-
-int main() {
-    auto *solution = new Solution();
-    solution->allCellsDistOrder(2, 3, 1, 2);
-
-}
-

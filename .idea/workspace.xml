@@ -38,7 +38,7 @@
     <session id="-824826815">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="81" />
+          <entry key="project.closed" value="82" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.100" value="1" />
@@ -67,7 +67,7 @@
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.56" value="2" />
           <entry key="project.open.time.57" value="1" />
-          <entry key="project.open.time.6" value="12" />
+          <entry key="project.open.time.6" value="13" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.63" value="2" />
           <entry key="project.open.time.65" value="1" />
@@ -76,14 +76,14 @@
           <entry key="project.open.time.7" value="8" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.8" value="9" />
-          <entry key="project.opened" value="84" />
+          <entry key="project.opened" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bash" value="2" />
           <entry key="cp" value="2" />
-          <entry key="cpp" value="547" />
+          <entry key="cpp" value="549" />
           <entry key="filters" value="1" />
           <entry key="h" value="55" />
           <entry key="leetcode (disassembly)" value="22" />
@@ -97,14 +97,14 @@
           <entry key="CMakeLists.txt" value="2" />
           <entry key="Disassembly" value="22" />
           <entry key="Markdown" value="12" />
-          <entry key="ObjectiveC" value="604" />
+          <entry key="ObjectiveC" value="606" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Python" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="39045" />
+          <entry key="cpp" value="39119" />
           <entry key="dummy" value="1" />
           <entry key="md" value="3619" />
           <entry key="mm" value="268" />
@@ -116,7 +116,7 @@
           <entry key="CMakeLists.txt" value="16" />
           <entry key="Doxygen file" value="68" />
           <entry key="Markdown" value="2734" />
-          <entry key="ObjectiveC" value="39245" />
+          <entry key="ObjectiveC" value="39319" />
           <entry key="PLAIN_TEXT" value="911" />
         </counts>
       </usages-collector>
@@ -127,17 +127,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/c++/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+            <state relative-caret-position="174">
+              <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetcode/c++/1030. Matrix Cells in Distance Order.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/c++/402. Remove K Digits.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="203">
+              <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode/c++/117. Populating Next Right Pointers in Each Node II.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -178,6 +196,7 @@
       <find>cmp</find>
       <find>compare</find>
       <find>greater</find>
+      <find>queue</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\54387\Desktop\algorithm\剑指 offer（第2版）</dir>
@@ -193,7 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/leetcode周赛/5521. 矩阵的最大非负积.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/338. Counting Bits.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/518. Coin Change 2.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/1038. Binary Search Tree to Greater Sum Tree.cpp" />
@@ -242,8 +260,9 @@
         <option value="$PROJECT_DIR$/leetcode/c++/922. Sort Array By Parity II.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/905. Sort Array By Parity.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/1122. Relative Sort Array.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/c++/main.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/402. Remove K Digits.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/c++/main.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/c++/1030. Matrix Cells in Distance Order.cpp" />
       </list>
     </option>
   </component>
@@ -255,8 +274,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="234" />
-    <option name="y" value="354" />
+    <option name="x" value="429" />
+    <option name="y" value="268" />
     <option name="width" value="1472" />
     <option name="height" value="1087" />
   </component>
@@ -265,6 +284,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -287,7 +307,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -424,12 +443,13 @@
       <workItem from="1604938974109" duration="638000" />
       <workItem from="1605113710303" duration="394000" />
       <workItem from="1605322236935" duration="2179000" />
-      <workItem from="1605493012430" duration="5989000" />
+      <workItem from="1605493012430" duration="6593000" />
+      <workItem from="1605587395343" duration="473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="605782000" />
+    <option name="totallyTimeSpent" value="606859000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -441,16 +461,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="-8" width="1855" height="1096" extended-state="6" />
+    <frame x="429" y="268" width="1472" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14763232" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19050992" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.21382843" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.21323529" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3548387" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.603538" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4527311" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
@@ -479,11 +499,6 @@
           <url>file://$PROJECT_DIR$/leetcode/c++/1039. Minimum Score Triangulation of Polygon.cpp</url>
           <line>16</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/leetcode/c++/main.cpp</url>
-          <line>27</line>
-          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -548,20 +563,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/leetcode/c++/707. Design Linked List.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/c++/117. Populating Next Right Pointers in Each Node II.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2950">
-          <caret line="118" column="2" selection-start-line="118" selection-start-column="2" selection-end-line="118" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/c++/968. Binary Tree Cameras.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1300">
@@ -887,17 +888,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/c++/main.cpp">
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/117. Populating Next Right Pointers in Each Node II.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        <state relative-caret-position="74">
+          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/c++/402. Remove K Digits.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="203">
+          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/1030. Matrix Cells in Distance Order.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>

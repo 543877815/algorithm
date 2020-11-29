@@ -1,8 +1,6 @@
-cmake_minimum_required(VERSION 3.12)
-project(quickzhao_codes)
+cmake_minimum_required(VERSION 3.17)
+project(algorithm)
 
 set(CMAKE_CXX_STANDARD 14)
 
-
-
-add_executable(leetcode leetcode/c++/main.cpp)
+add_executable(algorithm main.cpp)

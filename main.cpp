@@ -8,9 +8,9 @@
 #include <set>
 #include <unordered_set>
 #include <stack>
-#include <math.h>
+#include <cmath>
 #include <queue>
-#include <assert.h>
+#include <cassert>
 #include <cstring>
 
 using namespace std;
@@ -20,7 +20,7 @@ struct TreeNode {
     TreeNode *left;
     TreeNode *right;
 
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
 bool compare(vector<int> &a, vector<int>&b) {
@@ -31,35 +31,26 @@ bool compare(vector<int> &a, vector<int>&b) {
 class Solution {
 public:
     int findMinArrowShots(vector<vector<int>>& points) {
-        vector<vector<int>> record;
         int m = points.size();
-
         sort(points.begin(), points.end(), compare);
-
-        int start = points[0][0], end = points[0][1];
-
-
+        int end = points[0][1];
+        int lastIndex = 0;
+        int res = 0;
         for (int i = 1; i < m; i++) {
-            if (points[i][0] <= end) {
-                end = points[i][1];
-            } else {
-                record.push_back({start, end});
-                start = points[i][0];
+            if (points[i][0] > end) {
+                res ++;
+                lastIndex = i;
                 end = points[i][1];
             }
         }
-
-        for (int i = 0; i < m; i++) {
-            cout << points[i][0] << " " << points[i][1] << endl;
-        }
-
-        return record.size();
+        res += m - lastIndex;
+        return res;
     }
 };
 
 int main() {
     auto *solution = new Solution();
-    vector<vector<<int>> point = {{10,16},{2,8},{1,6},{7,12}};
+    vector<vector<int>> points = {{1,2},{2,3},{3,4},{4,5}};
     solution->findMinArrowShots(points);
 }
 

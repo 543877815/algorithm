@@ -130,44 +130,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named leetcode
+# Target rules for targets named algorithm
 
 # Build rule for target.
-leetcode: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 leetcode
-.PHONY : leetcode
+algorithm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 algorithm
+.PHONY : algorithm
 
 # fast build rule for target.
-leetcode/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\leetcode.dir\build.make CMakeFiles/leetcode.dir/build
-.PHONY : leetcode/fast
+algorithm/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\algorithm.dir\build.make CMakeFiles/algorithm.dir/build
+.PHONY : algorithm/fast
 
-leetcode/c++/main.obj: leetcode/c++/main.cpp.obj
+main.obj: main.cpp.obj
 
-.PHONY : leetcode/c++/main.obj
+.PHONY : main.obj
 
 # target to build an object file
-leetcode/c++/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\leetcode.dir\build.make CMakeFiles/leetcode.dir/leetcode/c++/main.cpp.obj
-.PHONY : leetcode/c++/main.cpp.obj
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\algorithm.dir\build.make CMakeFiles/algorithm.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-leetcode/c++/main.i: leetcode/c++/main.cpp.i
+main.i: main.cpp.i
 
-.PHONY : leetcode/c++/main.i
+.PHONY : main.i
 
 # target to preprocess a source file
-leetcode/c++/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\leetcode.dir\build.make CMakeFiles/leetcode.dir/leetcode/c++/main.cpp.i
-.PHONY : leetcode/c++/main.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\algorithm.dir\build.make CMakeFiles/algorithm.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-leetcode/c++/main.s: leetcode/c++/main.cpp.s
+main.s: main.cpp.s
 
-.PHONY : leetcode/c++/main.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-leetcode/c++/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\leetcode.dir\build.make CMakeFiles/leetcode.dir/leetcode/c++/main.cpp.s
-.PHONY : leetcode/c++/main.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\algorithm.dir\build.make CMakeFiles/algorithm.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -177,10 +177,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... leetcode
-	@echo ... leetcode/c++/main.obj
-	@echo ... leetcode/c++/main.i
-	@echo ... leetcode/c++/main.s
+	@echo ... algorithm
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 

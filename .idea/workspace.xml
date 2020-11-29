@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="algorithm" targetName="algorithm" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a677e10d-a03d-4cb5-b614-10023fd633ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/leetcode/c++/452. Minimum Number of Arrows to Burst Balloons.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/c++/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/c++/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kfdgiCgAVCkVVAadNvuSLjGlpd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="algorithm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algorithm" TARGET_NAME="algorithm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algorithm" RUN_TARGET_NAME="algorithm">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a677e10d-a03d-4cb5-b614-10023fd633ba" name="Default Changelist" comment="" />
+      <created>1606095692266</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606095692266</updated>
+      <workItem from="1606095693421" duration="1063000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1346" height="312" key="GridCell.Tab.0.bottom" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.0.bottom/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.0.center" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.0.center/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.0.left" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.0.left/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.0.right" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.0.right/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.1.bottom" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.1.bottom/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.1.center" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.1.center/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.1.left" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.1.left/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.1.right" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.1.right/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state x="1002" y="321" width="672" height="678" key="search.everywhere.popup" timestamp="1606096699280">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state x="1002" y="321" width="672" height="678" key="search.everywhere.popup/94.0.1826.1080@94.0.1826.1080" timestamp="1606096699280" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>33</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

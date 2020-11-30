@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="quickzhao_codes" targetName="leetcode" />
+      <config projectName="algorithm" targetName="algorithm" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,29 +29,31 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bb4861d-65de-45f4-b7c1-ec5528593cc0" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="a677e10d-a03d-4cb5-b614-10023fd633ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/leetcode/c++/452. Minimum Number of Arrows to Burst Balloons.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/c++/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/c++/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+<<<<<<< HEAD
+=======
   <component name="FUSProjectUsageTrigger">
     <session id="-824826815">
       <usages-collector id="statistics.lifecycle.project">
@@ -263,10 +283,19 @@
       <dir>C:\Users\54387\Desktop\algorithm\leetcode\c++</dir>
     </dirStrings>
   </component>
+>>>>>>> 0fe13cf103d1b251d0fb904e48c33c2acc247d0d
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
+  <component name="ProjectId" id="1kfdgiCgAVCkVVAadNvuSLjGlpd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+=======
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -369,54 +398,36 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="147&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/c++/147. Insertion Sort List.cpp&#10;283&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/c++/283. Move Zeroes.cpp&#10;main&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/c++/main.cpp&#10;main.cpp&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/c++/main.cpp&#10;322&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/322. Coin Change.cpp&#10;pathSum&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/112. Path Sum.cpp&#10;inorder&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/94. Binary Tree Inorder Traversal.cpp&#10;graph&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/133. Clone Graph.cpp&#10;142&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/142. Linked List Cycle II.cpp&#10;141&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/141. Linked List Cycle.cpp&#10;28&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/28. Implement strStr().cpp&#10;459&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/459. Repeated Substring Pattern.cpp&#10;preorder&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/144. Binary Tree Preorder Traversal.cpp&#10;stack&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/155. Min Stack.cpp&#10;91&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/91. Decode Ways.cpp&#10;300&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/300. Longest Increasing Subsequence.cpp&#10;Palindrom&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/5. Longest Palindromic Substring.cpp&#10;435&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/435. Non-overlapping Intervals.cpp&#10;40&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/40. Combination Sum II.cpp&#10;39&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/39. Combination Sum.cpp&#10;133&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/133. Clone Graph.cpp&#10;494&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/494. Target Sum.cpp&#10;377&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/377. Combination Sum IV.cpp&#10;51&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/51. N-Queens.cpp&#10;inor&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/94. Binary Tree Inorder Traversal.cpp&#10;236&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/236. Lowest Common Ancestor of a Binary Tree.cpp&#10;121&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/121. Best Time to Buy and Sell Stock.cpp&#10;123&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/123. Best Time to Buy and Sell Stock III.cpp&#10;122&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/122. Best Time to Buy and Sell Stock II.cpp&#10;198&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/198. House Robber.cpp&#10;337&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/337. House Robber III.cpp&#10;213&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/nowcoder/21333.cpp&#10;62&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/62. Unique Paths.cpp&#10;61&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/61. Rotate List.cpp&#10;50&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/剑指 offer（第2版）/50. 第一个只出现一次的字符.cpp&#10;279&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/279. Perfect Squares.cpp&#10;ma&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/main.cpp&#10;130&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/130. Surrounded Regions.cpp&#10;200&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/200. Number of Islands.cpp&#10;79&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/79. Word Search.cpp&#10;401&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/401. Binary Watch.cpp&#10;RE&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/README.md&#10;per&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/47. Permutations II.cpp&#10;234&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/234. Palindrome Linked List.cpp&#10;ancest&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/235. Lowest Common Ancestor of a Binary Search Tree.cpp&#10;113&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/113. Path Sum II.cpp&#10;257&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/257. Binary Tree Paths.cpp&#10;pre&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/105. Construct Binary Tree from Preorder and Inorder Traversal.cpp&#10;max depth&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/104. Maximum Depth of Binary Tree.cpp&#10;min dep&#9;FILE&#9;file://C:/Users/54387/Desktop/algorithm/leetcode/111. Minimum Depth of Binary Tree.cpp" />
+>>>>>>> 0fe13cf103d1b251d0fb904e48c33c2acc247d0d
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/uestc_Internet_plus_course_project/data-structure" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="cf.first.check.clang-format" value="false" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\54387\Desktop\algorithm\程序员面试金典（第6版）" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.leetcode">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager">
+    <configuration name="algorithm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algorithm" TARGET_NAME="algorithm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algorithm" RUN_TARGET_NAME="algorithm">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="leetcode" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quickzhao_codes" TARGET_NAME="leetcode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="quickzhao_codes" RUN_TARGET_NAME="leetcode">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Build All" />
-      <item itemvalue="Application.leetcode" />
-    </list>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3bb4861d-65de-45f4-b7c1-ec5528593cc0" name="Default Changelist" comment="" />
-      <created>1594901288214</created>
+      <changelist id="a677e10d-a03d-4cb5-b614-10023fd633ba" name="Default Changelist" comment="" />
+      <created>1606095692266</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1606095692266</updated>
+      <workItem from="1606095693421" duration="1063000" />
+    </task>
+    <servers />
+  </component>
+=======
       <updated>1594901288214</updated>
       <workItem from="1594901289599" duration="61228000" />
       <workItem from="1595208531885" duration="52009000" />
@@ -549,19 +560,66 @@
       <window_info anchor="right" id="Database" order="3" weight="0.09247911" />
     </layout>
   </component>
+>>>>>>> 0fe13cf103d1b251d0fb904e48c33c2acc247d0d
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1346" height="312" key="GridCell.Tab.0.bottom" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.0.bottom/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.0.center" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.0.center/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.0.left" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.0.left/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.0.right" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.0.right/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.1.bottom" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.1.bottom/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.1.center" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.1.center/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.1.left" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.1.left/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state width="1346" height="312" key="GridCell.Tab.1.right" timestamp="1606096757240">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state width="1346" height="312" key="GridCell.Tab.1.right/94.0.1826.1080@94.0.1826.1080" timestamp="1606096757240" />
+    <state x="1002" y="321" width="672" height="678" key="search.everywhere.popup" timestamp="1606096699280">
+      <screen x="94" y="0" width="1826" height="1080" />
+    </state>
+    <state x="1002" y="321" width="672" height="678" key="search.everywhere.popup/94.0.1826.1080@94.0.1826.1080" timestamp="1606096699280" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/leetcode/c++/1039. Minimum Score Triangulation of Polygon.cpp</url>
-          <line>16</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>33</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/c++/main.cpp</url>
@@ -570,6 +628,8 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+<<<<<<< HEAD
+=======
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="i" language="ObjectiveC" />
@@ -987,5 +1047,6 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 0fe13cf103d1b251d0fb904e48c33c2acc247d0d
   </component>
 </project>

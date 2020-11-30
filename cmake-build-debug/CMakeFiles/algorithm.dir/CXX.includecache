@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Administrator/Desktop/algorithm/leetcode/c++/main.cpp
+C:/Users/Administrator/Desktop/algorithm/main.cpp
 string
 -
 vector
@@ -25,11 +25,11 @@ unordered_set
 -
 stack
 -
-math.h
+cmath
 -
 queue
 -
-assert.h
+cassert
 -
 cstring
 -

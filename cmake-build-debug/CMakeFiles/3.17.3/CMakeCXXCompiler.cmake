@@ -14,6 +14,7 @@ set(CMAKE_CXX20_COMPILE_FEATURES "cxx_std_20")
 
 set(CMAKE_CXX_PLATFORM_ID "MinGW")
 set(CMAKE_CXX_SIMULATE_ID "")
+set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "")
 set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
@@ -23,6 +24,7 @@ set(CMAKE_CXX_COMPILER_AR "D:/MinGW/mingw32/bin/gcc-ar.exe")
 set(CMAKE_RANLIB "D:/MinGW/mingw32/bin/ranlib.exe")
 set(CMAKE_CXX_COMPILER_RANLIB "D:/MinGW/mingw32/bin/gcc-ranlib.exe")
 set(CMAKE_LINKER "D:/MinGW/mingw32/bin/ld.exe")
+set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
 set(CMAKE_CXX_COMPILER_LOADED 1)
 set(CMAKE_CXX_COMPILER_WORKS TRUE)
@@ -40,8 +42,17 @@ if(CMAKE_COMPILER_IS_MINGW)
   set(MINGW 1)
 endif()
 set(CMAKE_CXX_COMPILER_ID_RUN 1)
+set(CMAKE_CXX_SOURCE_FILE_EXTENSIONS C;M;c++;cc;cpp;cxx;m;mm;CPP)
 set(CMAKE_CXX_IGNORE_EXTENSIONS inl;h;hpp;HPP;H;o;O;obj;OBJ;def;DEF;rc;RC)
-set(CMAKE_CXX_SOURCE_FILE_EXTENSIONS C;M;c++;cc;cpp;cxx;mm;CPP)
+
+foreach (lang C OBJC OBJCXX)
+  if (CMAKE_${lang}_COMPILER_ID_RUN)
+    foreach(extension IN LISTS CMAKE_${lang}_SOURCE_FILE_EXTENSIONS)
+      list(REMOVE_ITEM CMAKE_CXX_SOURCE_FILE_EXTENSIONS ${extension})
+    endforeach()
+  endif()
+endforeach()
+
 set(CMAKE_CXX_LINKER_PREFERENCE 30)
 set(CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES 1)
 
@@ -71,6 +82,7 @@ endif()
 
 
 
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++;D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32;D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward;D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include;D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed;D:/MinGW/mingw32/i686-w64-mingw32/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;mingw32;gcc_s;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex")
 set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "D:/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0;D:/MinGW/mingw32/lib/gcc;D:/MinGW/mingw32/i686-w64-mingw32/lib;D:/MinGW/mingw32/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

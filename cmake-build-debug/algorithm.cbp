@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="quickzhao_codes"/>
+		<Option title="algorithm"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -17,8 +17,8 @@
 					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="leetcode">
-				<Option output="C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/leetcode.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="algorithm">
+				<Option output="C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/algorithm.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/Administrator/Desktop/algorithm/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -32,14 +32,14 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 leetcode"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 algorithm"/>
 					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="leetcode/fast">
-				<Option output="C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/leetcode.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="algorithm/fast">
+				<Option output="C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/algorithm.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/Administrator/Desktop/algorithm/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -53,7 +53,7 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 leetcode/fast"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 algorithm/fast"/>
 					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/Desktop/algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -80,8 +80,8 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Administrator/Desktop/algorithm/leetcode/c++/main.cpp">
-			<Option target="leetcode"/>
+		<Unit filename="C:/Users/Administrator/Desktop/algorithm/main.cpp">
+			<Option target="algorithm"/>
 		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/algorithm/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

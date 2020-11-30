@@ -42,3 +42,39 @@ public:
     }
 };
 
+// 基于计数的贪心算法，m为字符集
+// 时间复杂度：O(n+m)
+// 空间复杂度：O(n+m)
+class Solution {
+public:
+    string reorganizeString(string S) {
+        int m = S.size();
+        if (m <= 2) return S;
+        vector<int> record(26, 0);
+        int maxcount = 0;
+        for (int i = 0; i < m; i++) {
+            int tmp = S[i] - 'a';
+            record[tmp] ++;
+            maxcount = max(maxcount, record[tmp]);
+        }
+        if (maxcount * 2 > m + 1) return "";
+        string new_S(m, ' ');
+        int evenIndex = 0, oddIndex = 1;
+        int halfLength = m / 2;
+        for (int i = 0; i < 26; i++) {
+            char c = ('a' + i);
+            while (record[i] > 0 && record[i] <= halfLength && oddIndex < m) {
+                new_S[oddIndex] = c;
+                record[i] --;
+                oddIndex += 2;
+            }
+            while (record[i] > 0) {
+                new_S[evenIndex] = c;
+                record[i] --;
+                evenIndex += 2;
+            }
+        }
+        return new_S;
+
+    }
+};

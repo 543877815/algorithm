@@ -58,7 +58,7 @@
     <session id="-824826815">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="86" />
+          <entry key="project.closed" value="87" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.100" value="1" />
@@ -80,7 +80,7 @@
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.46" value="3" />
           <entry key="project.open.time.47" value="1" />
-          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.49" value="2" />
           <entry key="project.open.time.50" value="2" />
           <entry key="project.open.time.51" value="3" />
           <entry key="project.open.time.52" value="2" />
@@ -94,17 +94,17 @@
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.67" value="1" />
-          <entry key="project.open.time.7" value="8" />
+          <entry key="project.open.time.7" value="9" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.8" value="9" />
-          <entry key="project.opened" value="88" />
+          <entry key="project.opened" value="90" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bash" value="2" />
           <entry key="cp" value="2" />
-          <entry key="cpp" value="553" />
+          <entry key="cpp" value="555" />
           <entry key="filters" value="1" />
           <entry key="h" value="55" />
           <entry key="leetcode (disassembly)" value="22" />
@@ -118,14 +118,14 @@
           <entry key="CMakeLists.txt" value="2" />
           <entry key="Disassembly" value="22" />
           <entry key="Markdown" value="12" />
-          <entry key="ObjectiveC" value="610" />
+          <entry key="ObjectiveC" value="612" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Python" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="39501" />
+          <entry key="cpp" value="39655" />
           <entry key="dummy" value="1" />
           <entry key="md" value="3619" />
           <entry key="mm" value="268" />
@@ -137,7 +137,7 @@
           <entry key="CMakeLists.txt" value="16" />
           <entry key="Doxygen file" value="68" />
           <entry key="Markdown" value="2734" />
-          <entry key="ObjectiveC" value="39701" />
+          <entry key="ObjectiveC" value="39855" />
           <entry key="PLAIN_TEXT" value="911" />
         </counts>
       </usages-collector>
@@ -175,7 +175,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/c++/147. Insertion Sort List.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="1900">
               <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
@@ -184,11 +184,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/c++/1370. Increasing Decreasing String.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="475">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode/c++/164. Maximum Gap.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetcode/c++/767. Reorganize String.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="17" selection-start-column="17" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -281,8 +299,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/leetcode周赛/5520. 拆分字符串使唯一子字符串的数目最大.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/c++/968. Binary Tree Cameras.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/617. Merge Two Binary Trees.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/501. Find Mode in Binary Search Tree.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/116. Populating Next Right Pointers in Each Node.cpp" />
@@ -332,6 +348,8 @@
         <option value="$PROJECT_DIR$/leetcode/c++/283. Move Zeroes.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/147. Insertion Sort List.cpp" />
         <option value="$PROJECT_DIR$/leetcode/c++/1370. Increasing Decreasing String.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/c++/164. Maximum Gap.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/c++/767. Reorganize String.cpp" />
       </list>
     </option>
   </component>
@@ -342,9 +360,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="416" />
-    <option name="y" value="56" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="13" />
+    <option name="y" value="80" />
     <option name="width" value="1263" />
     <option name="height" value="1087" />
   </component>
@@ -499,11 +517,13 @@
       <workItem from="1605715318064" duration="629000" />
       <workItem from="1605801938083" duration="625000" />
       <workItem from="1606271421849" duration="1631000" />
+      <workItem from="1606321937932" duration="423000" />
+      <workItem from="1606725351482" duration="214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="612301000" />
+    <option name="totallyTimeSpent" value="612938000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,10 +535,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="416" y="56" width="1263" height="1087" extended-state="0" />
+    <frame x="13" y="80" width="1263" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23857024" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2468828" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -671,20 +691,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/leetcode/c++/116. Populating Next Right Pointers in Each Node.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/c++/172. Factorial Trailing Zeroes.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/程序员面试金典（第6版）/16.05. 阶乘尾数.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -989,6 +995,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/147. Insertion Sort List.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1900">
+          <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/1370. Increasing Decreasing String.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/c++/1030. Matrix Cells in Distance Order.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
@@ -1010,20 +1033,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/c++/147. Insertion Sort List.cpp">
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/164. Maximum Gap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="250">
+          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/c++/1370. Increasing Decreasing String.cpp">
+    <entry file="file://$PROJECT_DIR$/leetcode/c++/767. Reorganize String.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>

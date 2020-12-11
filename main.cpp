@@ -8,9 +8,9 @@
 #include <set>
 #include <unordered_set>
 #include <stack>
-#include <cmath>
+#include <math.h>
 #include <queue>
-#include <cassert>
+#include <assert.h>
 #include <cstring>
 
 using namespace std;
@@ -20,50 +20,40 @@ struct TreeNode {
     TreeNode *left;
     TreeNode *right;
 
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+bool compare(vector<int> &a, vector<int>&b) {
+    if (a[1] != b[1]) return a[1] < b[1];
+    return a[0] < b[0];
+}
 
 class Solution {
 public:
-    bool isPossible(vector<int>& nums) {
-        unordered_map<int, int> countMap;
-        unordered_map<int, int> endMap;
-        for (auto& x: nums) {
-            countMap[x]++;
+    string predictPartyVictory(string senate) {
+        int n = senate.size();
+        queue<int> radiant, dire;
+        for (int i = 0; i < n; i++) {
+            if (senate[i] == 'R') radiant.push(i);
+            else dire.push(i);
         }
-
-        for (auto& x: nums) {
-            if (countMap[x] > 0) {
-                // 存在以x-1结尾的子序列，则将该元素加入该子序列中
-                if (endMap[x-1] > 0) {
-                    countMap[x]--;
-                    endMap[x-1]--;
-                    endMap[x]++;
-                } else {
-                    // 否则，x将作为子序列的第一个数
-                    // 为了得到长度至少为3的子序列
-                    // x+1和x+2都必须在子序列中
-                    if (countMap[x+1] > 0 && countMap[x+2] > 0) {
-                        countMap[x]--;
-                        countMap[x+1]--;
-                        countMap[x+2]--;
-                        endMap[x+2]++;
-                    // 否则，无法得到长度为3的子序列，返回false
-                    } else {
-                        return false;
-                    }
-                }
+        while (!radiant.empty() && !dire.empty()) {
+            if (radiant.front() < dire.front()) {
+                radiant.push(radiant.front() + n);
+            } else {
+                dire.push(dire.front() + n);
             }
+            radiant.pop();
+            dire.pop();
         }
-
-        return true;
+        return !radiant.empty() ? "Radiant" : "Dire";
     }
 };
 
 int main() {
     auto *solution = new Solution();
-    vector<int> points = {1,2,3,3,4,5};
-    solution->isPossible(points);
+    string input ="DRRDRDRDRDDRDRDR";
+    solution->predictPartyVictory(input);
+
 }
 

@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/54387/Desktop/algorithm/main.cpp
+string
+-
+vector
+-
+iostream
+-
+unordered_map
+-
+map
+-
+algorithm
+-
+set
+-
+unordered_set
+-
+stack
+-
+math.h
+-
+queue
+-
+assert.h
+-
+cstring
+-
+

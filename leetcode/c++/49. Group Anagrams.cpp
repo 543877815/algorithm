@@ -23,30 +23,6 @@ public:
     }
 };
 
-// 记数数组作索引
-// 时间复杂度：O(NK)
-// 空间复杂度：O(NK)
-class Solution {
-public:
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        map<string, vector<int>> sMat;
-        vector<vector<string>> result;
-        for(int i = 0; i < strs.size(); i++) {
-            string stmp = strs[i];
-            sort(stmp.begin(), stmp.end());
-            sMat[stmp].push_back(i);
-        }
-        for (auto &key : sMat) {
-            vector<string> str(key.second.size());
-            for (int value=0; value< key.second.size(); value++) {
-                str[value] = strs[key.second[value]];
-            }
-            result.push_back(str);
-            str.clear();
-        }
-        return result;
-    }
-};
 
 // 一个更好的写法
 class Solution {
@@ -113,6 +89,32 @@ public:
         }
         for(auto& n : m)                //n为键和值组成的pair
             res.push_back(n.second);
+        return res;
+    }
+};
+
+// 排序数组作索引
+// 时间复杂度：O(nklogk) n=strs.size()、k=max(str.size())
+// 空间复杂度: O(NK)
+class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        int n = strs.size();
+        vector<vector<string>> res;
+        unordered_map<string, int> hash;
+        int id = 1;
+        for (int i = 0; i < n; i++) {
+            string tmp = strs[i];
+            sort(tmp.begin(), tmp.end());
+            if (hash[tmp] == 0) {
+                vector<string> t;
+                t.push_back(strs[i]);
+                res.push_back(t);
+                hash[tmp] = id++;
+            } else {
+                res[hash[tmp]-1].push_back(strs[i]);
+            }
+        }
         return res;
     }
 };

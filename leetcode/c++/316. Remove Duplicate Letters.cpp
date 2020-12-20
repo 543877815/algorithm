@@ -1,33 +1,6 @@
-
-#include <string>
-#include <vector>
-#include <iostream>
-#include <unordered_map>
-#include <map>
-#include <algorithm>
-#include <set>
-#include <unordered_set>
-#include <stack>
-#include <math.h>
-#include <queue>
-#include <assert.h>
-#include <cstring>
-
-using namespace std;
-
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-bool compare(vector<int> &a, vector<int>&b) {
-    if (a[1] != b[1]) return a[1] < b[1];
-    return a[0] < b[0];
-}
-
+// 贪心+栈
+// 时间复杂度：O(n)
+// 空间复杂度：O(n)
 class Solution {
 public:
     string removeDuplicateLetters(string s) {
@@ -53,15 +26,6 @@ public:
             res = sk.top() + res;
             sk.pop();
         }
-
         return res;
     }
 };
-
-int main() {
-    auto *solution = new Solution();
-    string input ="bcabc";
-    solution->removeDuplicateLetters(input);
-
-}
-

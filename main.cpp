@@ -23,47 +23,37 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-bool compare(vector<int> &a, vector<int> &b) {
+bool compare(vector<int> &a, vector<int>&b) {
     if (a[1] != b[1]) return a[1] < b[1];
     return a[0] < b[0];
 }
 
 class Solution {
 public:
-    string removeDuplicateLetters(string s) {
-        vector<bool> on_stack(26, false);
-        vector<int> last(26, -1);
-        stack<int> sk;
-        int n = s.size();
-        // 记录最后一次出现的位置
+    string predictPartyVictory(string senate) {
+        int n = senate.size();
+        queue<int> radiant, dire;
         for (int i = 0; i < n; i++) {
-            last[s[i] - 'a'] = i;
+            if (senate[i] == 'R') radiant.push(i);
+            else dire.push(i);
         }
-        for (int i = 0; i < n; i++) {
-            if (on_stack[s[i] - 'a']) continue;
-            if (sk.empty() || last[s[i] - 'a'] == i) {
-                sk.push(s[i]);
-                on_stack[s[i] - 'a'] = true;
-            } else if (s[i] < sk.top() && last[s[i] - 'a'] != i) {
-                on_stack[sk.top()] = false;
-                sk.pop();
-                sk.push(s[i]);
-                on_stack[s[i]] = true;
+        while (!radiant.empty() && !dire.empty()) {
+            if (radiant.front() < dire.front()) {
+                radiant.push(radiant.front() + n);
+            } else {
+                dire.push(dire.front() + n);
             }
+            radiant.pop();
+            dire.pop();
         }
-        string res;
-        while (!sk.empty()) {
-            res += sk.top();
-            sk.pop();
-        }
-        return res;
+        return !radiant.empty() ? "Radiant" : "Dire";
     }
 };
 
 int main() {
     auto *solution = new Solution();
-    string input = "cdadabcc";
-    solution->removeDuplicateLetters(input);
+    string input ="DRRDRDRDRDDRDRDR";
+    solution->predictPartyVictory(input);
 
 }
 

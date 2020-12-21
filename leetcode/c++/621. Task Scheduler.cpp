@@ -28,12 +28,15 @@ public:
 
         // 任务总数
         int m = freq.size();
+        // nextValid表示任务i因冷却限制，最早可以执行的时间
+        // rest表示任务i在数组中tasks中出现的次数
         vector<int> nextValid, rest;
         for (auto [k, v]: freq) {
             nextValid.push_back(1);
             rest.push_back(v);
         }
 
+        // 时间
         int time = 0;
         for (int i = 0; i < tasks.size(); i++) {
             time++;

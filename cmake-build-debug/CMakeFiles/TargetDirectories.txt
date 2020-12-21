@@ -1,3 +1,0 @@
-C:/Users/54387/Desktop/algorithm/cmake-build-debug/CMakeFiles/algorithm.dir
-C:/Users/54387/Desktop/algorithm/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/54387/Desktop/algorithm/cmake-build-debug/CMakeFiles/rebuild_cache.dir

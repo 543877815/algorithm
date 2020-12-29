@@ -1,0 +1,21 @@
+// 时间复杂度：O(m+logn)
+// 空间复杂度：O(1)
+// 贪心算法
+class Solution {
+public:
+    int minPatches(vector<int>& nums, int n) {
+        int patches = 0;
+        long long x = 1;
+        int length = nums.size(), index = 0;
+        while (x <= n) {
+            if (index < length && nums[index] <= x) {
+                x += nums[index];
+                index++;
+            } else {
+                x <<= 1;
+                patches++;
+            }
+        }
+        return patches;
+    }
+};

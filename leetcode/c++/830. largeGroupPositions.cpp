@@ -37,3 +37,31 @@ int** largeGroupPositions(char * S, int* returnSize, int** returnColumnSizes){
     return returnArray;
 }
 
+
+// 时间复杂度：O(n)
+// 空间复杂度：O(n)
+class Solution {
+public:
+    vector<vector<int>> largeGroupPositions(string s) {
+        vector<vector<int>> res;
+        int n = s.size();
+        int last = -1;
+        for (int i = 0; i < n; i++){
+            if (i < n - 1) {
+                if (s[i] == s[i+1]) {
+                 if (last == -1) last = i;
+                } else {
+                    if (last != -1 && i - last >= 2) {
+                        res.push_back({last, i});
+                    }
+                    last = -1;
+                }
+            } else {
+                if (last != -1 && i - last >= 2) {
+                    res.push_back({last, i});
+                }
+            }
+        }
+        return res;
+    }
+};

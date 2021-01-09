@@ -46,3 +46,56 @@ public:
         return res;
     }
 };
+
+// 并查集
+// 时间复杂度：O(MN∗α(MN))
+// 空间复杂度：O(MN)
+class Solution {
+public:
+    vector<int> fa;
+    vector<int> rank;
+
+    int find(int x) {
+        return x == fa[x] ? x : (fa[x] = find(fa[x]));
+    }
+
+    void merge(int i, int j) {
+        int x = find(i), y = find(j);
+        if (rank[x] <= rank[y]) fa[x] = y;
+        else fa[y] = x;
+        if (rank[x] == rank[y] && x != y) rank[y]++;
+    }
+
+    int numIslands(vector<vector<char>>& grid) {
+        int n = grid.size();
+        if (n == 0) return 0;
+        int m = grid[0].size();
+        if (m == 0) return 0;
+
+        // 并查集初始化
+        fa.resize(n * m);
+        iota(fa.begin(), fa.end(), 0);
+        rank = vector<int>(n * m, 1);
+
+        // 构造并查集
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (grid[i][j] == '1') {
+                    if (i < n - 1 && grid[i+1][j] == '1') merge(i * m + j, (i + 1) * m + j);
+                    if (j < m - 1 && grid[i][j+1] == '1') merge(i * m + j, i * m + j + 1);
+                }
+            }
+        }
+
+        unordered_set<int> res;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (grid[i][j] == '1') {
+                    res.insert(find(i * m + j));
+                }
+            }
+        }
+
+        return res.size();
+    }
+};

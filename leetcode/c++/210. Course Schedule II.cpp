@@ -5,32 +5,59 @@ class Solution {
 public:
     vector<int> findOrder(int numCourses, vector <vector<int>> &prerequisites) {
         vector<int> res;
-        vector<int> in_degrees(numCourses, 0);
+        vector<int> inDegree(numCourses, 0);
 
-        // 构建邻接表并且记录入度
-        int index = 0;  // 记录图中线的数量
         unordered_map<int, vector<int>> pre2course;
         for (int i = 0; i < prerequisites.size(); i++) {
             pre2course[prerequisites[i][1]].push_back(prerequisites[i][0]);
-            in_degrees[prerequisites[i][0]]++;
-            index++;
+            inDegree[prerequisites[i][0]]++;
         }
 
         stack<int> s;
-        for (int i = 0; i < in_degrees.size(); i++) {
-            if (in_degrees[i] == 0) s.push(i);
+        for (int i = 0; i < inDegree.size(); i++) {
+            if (inDegree[i] == 0) s.push(i);
         }
 
         while (!s.empty()) {
             int curr = s.top();
-            res.push_back(curr);
             s.pop();
-            for (auto iter : pre2course[curr]) {
-                in_degrees[iter]--;
-                if (in_degrees[iter] == 0) s.push(iter);
-                index--;
+            res.push_back(curr);
+            for (auto a: pre2course[curr]) {
+                if (--inDegree[a] == 0) s.push(a);
             }
         }
-        return index == 0 ? res : vector<int>(0);
+
+        return res.size() == numCourses ? res : vector < int > {};
+    }
+};
+
+// queue
+class Solution {
+public:
+    vector<int> findOrder(int numCourses, vector <vector<int>> &prerequisites) {
+        vector<int> res;
+        vector<int> inDegree(numCourses, 0);
+
+        unordered_map<int, vector<int>> pre2course;
+        for (int i = 0; i < prerequisites.size(); i++) {
+            pre2course[prerequisites[i][1]].push_back(prerequisites[i][0]);
+            inDegree[prerequisites[i][0]]++;
+        }
+
+        queue<int> Q;
+        for (int i = 0; i < inDegree.size(); i++) {
+            if (inDegree[i] == 0) Q.push(i);
+        }
+
+        while (!Q.empty()) {
+            int curr = Q.front();
+            Q.pop();
+            res.push_back(curr);
+            for (auto a: pre2course[curr]) {
+                if (--inDegree[a] == 0) Q.push(a);
+            }
+        }
+
+        return res.size() == numCourses ? res : vector < int > {};
     }
 };

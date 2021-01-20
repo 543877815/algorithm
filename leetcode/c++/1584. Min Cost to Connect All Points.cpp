@@ -138,24 +138,27 @@ public:
 
 struct Edge {
     int len, x, y;
+
     Edge(int len, int x, int y) : len(len), x(x), y(y) {
     }
-    bool operator<(const Edge& a) const {
+
+    bool operator<(const Edge &a) const {
         return len < a.len;
     }
 };
 
 struct Pos {
     int id, x, y;
-    bool operator<(const Pos& a) const {
+
+    bool operator<(const Pos &a) const {
         return x == a.x ? y < a.y : x < a.x;
     }
 };
 
 class Solution {
 public:
-    vector<Edge> edges;
-    vector<Pos> pos;
+    vector <Edge> edges;
+    vector <Pos> pos;
 
     void build(int n) {
         sort(pos.begin(), pos.end());
@@ -179,7 +182,7 @@ public:
         }
     }
 
-    void solve(vector<vector<int>>& points, int n) {
+    void solve(vector <vector<int>> &points, int n) {
         pos.resize(n);
         for (int i = 0; i < n; i++) {
             pos[i].x = points[i][0];
@@ -201,14 +204,14 @@ public:
         build(n);
     }
 
-    int minCostConnectPoints(vector<vector<int>>& points) {
+    int minCostConnectPoints(vector <vector<int>> &points) {
         int n = points.size();
         solve(points, n);
 
         DisjointSetUnion dsu(n);
         sort(edges.begin(), edges.end());
         int ret = 0, num = 1;
-        for (auto& [len, x, y] : edges) {
+        for (auto&[len, x, y] : edges) {
             if (dsu.unionSet(x, y)) {
                 ret += len;
                 num++;

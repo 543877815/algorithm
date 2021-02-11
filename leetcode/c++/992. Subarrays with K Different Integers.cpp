@@ -23,6 +23,7 @@ public:
     }
 
     int subarraysWithKDistinct(vector<int> &A, int K) {
+        // 「最多存在 K 个不同整数的子区间的个数」与 「最多存在 K - 1 个不同整数的子区间的个数」的差
         return atMostKDistanct(A, K) - atMostKDistanct(A, K - 1);
     }
 };

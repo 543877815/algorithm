@@ -16,7 +16,7 @@ public:
             if (int num = envelopes[i][1]; num > f.back()) {
                 f.push_back(num);
             } else {
-                auto it = lower_bound(f.begin(), f.end(), num);
+                auto it = lower_bound(f.begin(), f.end(), num); // 第一个出现的位置
                 *it = num;
             }
         }

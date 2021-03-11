@@ -3,8 +3,8 @@
 // 空间复杂度：O(n)
 class Solution {
 public:
-    vector<int>fa;
-    vector<int>rank;
+    vector<int> fa;
+    vector<int> rank;
 
     int find(int x) {
         return x == fa[x] ? x : (fa[x] = find(fa[x]));
@@ -17,7 +17,7 @@ public:
         if (rank[x] == rank[y] && x != y) rank[y]++;
     }
 
-    vector<string> trulyMostPopular(vector<string>& names, vector<string>& synonyms) {
+    vector <string> trulyMostPopular(vector <string> &names, vector <string> &synonyms) {
         int n = names.size();
         int m = synonyms.size();
         unordered_map<string, int> record;
@@ -25,8 +25,13 @@ public:
 
         // 遍历 names 和 synonyms 根据 name 构造hashmap
         for (int i = 0; i < m; i++) {
-            int left_brackets = synonyms[i].find('('), right_brackets = synonyms[i].find(')'), comma = synonyms[i].find(',');
-            string left_name = synonyms[i].substr(left_brackets+1, comma-left_brackets-1), right_name = synonyms[i].substr(comma+1, right_brackets-comma-1);
+            int left_brackets = synonyms[i].find('('), right_brackets = synonyms[i].find(')'), comma = synonyms[i].find(
+                    ',');
+            string left_name = synonyms[i].substr(left_brackets + 1,
+                                                  comma - left_brackets - 1), right_name = synonyms[i].substr(comma + 1,
+                                                                                                              right_brackets -
+                                                                                                              comma -
+                                                                                                              1);
             if (record.count(left_name) == 0) record[left_name] = id++;
             if (record.count(right_name) == 0) record[right_name] = id++;
         }
@@ -44,8 +49,13 @@ public:
 
         // 初始化并查集
         for (int i = 0; i < m; i++) {
-            int left_brackets = synonyms[i].find('('), right_brackets = synonyms[i].find(')'), comma = synonyms[i].find(',');
-            string left_name = synonyms[i].substr(left_brackets+1, comma-left_brackets-1), right_name = synonyms[i].substr(comma+1, right_brackets-comma-1);
+            int left_brackets = synonyms[i].find('('), right_brackets = synonyms[i].find(')'), comma = synonyms[i].find(
+                    ',');
+            string left_name = synonyms[i].substr(left_brackets + 1,
+                                                  comma - left_brackets - 1), right_name = synonyms[i].substr(comma + 1,
+                                                                                                              right_brackets -
+                                                                                                              comma -
+                                                                                                              1);
             merge(record[left_name], record[right_name]); // 字典序靠前的做父节点
         }
 
@@ -55,7 +65,7 @@ public:
         for (int i = 0; i < n; i++) {
             int left_brackets = names[i].find('('), right_brackets = names[i].find(')');
             string name = names[i].substr(0, left_brackets);
-            int number = stoi(names[i].substr(left_brackets+1, right_brackets -left_brackets-1));
+            int number = stoi(names[i].substr(left_brackets + 1, right_brackets - left_brackets - 1));
             int index = find(record[name]);
             if (calcFreq.count(index) == 0) {
                 calcFreq[index] = number;
@@ -66,8 +76,8 @@ public:
             }
         }
 
-        vector<string> res;
-        for (auto& [key, value] : calcFreq) {
+        vector <string> res;
+        for (auto&[key, value] : calcFreq) {
             string tmp = id2Name[key] + "(" + to_string(value) + ")";
             res.push_back(tmp);
         }

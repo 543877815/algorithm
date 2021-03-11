@@ -17,7 +17,7 @@ public:
         if (rank[x] == rank[y] && x != y) rank[y]++;
     }
 
-    bool equationsPossible(vector<string>& equations) {
+    bool equationsPossible(vector <string> &equations) {
         int n = equations.size();
         unordered_map<char, int> record;
         int id = 0;

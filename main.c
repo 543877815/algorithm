@@ -103,13 +103,54 @@ void getDigits(char *buff, int *data) {
     int index = 0;
     for (int i = 0; i < len; i++) {
         int num = 0;
-        while (buff[i] != ' ' && buff[i] != '\0') {
-            num = num * 10 + (buff[i++] - '0');
+        if (buff[i] == '#') {
+            num = -1;
+            i++;
+        } else {
+            while (buff[i] != ' ' && buff[i] != '\0') {
+                num = num * 10 + (buff[i++] - '0');
+            }
         }
         data[index++] = num;
     }
 }
 
+// 创建 dot 可视化文件
+void createDotFile(const char *filename, TreeNodePtr root, int MaxSize) {
+    FILE *fp = fopen(filename, "w");    // 文件指针
+    if (fp == NULL) {   // 为NULL则返回
+        printf("File cannot open!");
+        exit(0);
+    }
+    fprintf(fp, "digraph G {\n");   // 开头
+    // 利用层次遍历构造
+    QueuePtr queue = Queue();
+    push(queue, root);
+    int id = 0;
+    while (!empty(queue)) { // 若队列不空，继续遍历。否则，遍历结束
+        TreeNodePtr curr = front(queue);
+        pop(queue);
+        printf("%d ", curr->val); // 访问刚出队的元素
+        fprintf(fp, "%d [shape=circle];\n", curr->val);
+        if (curr->left != NULL) { // 如果有左孩子，左孩子入队
+            push(queue, curr->left);
+            fprintf(fp, "%d->%d;\n", curr->val, curr->left->val);
+        }
+            // 创建虚拟节点并设置不可见
+//        else {
+//
+//            fprintf(fp, "_%d [shape=circle, width=0, style=invis];\n", curr->val);
+//            fprintf(fp, "%d->_%d [style=invis];\n", curr->val, curr->val);
+//        }
+
+        if (curr->right != NULL) { // 如果有右孩子，右孩子入队
+            push(queue, curr->right);
+            fprintf(fp, "%d->%d;\n", curr->val, curr->right->val);
+        }
+    }
+    fprintf(fp, "}\n"); // 结尾
+    fclose(fp); // 关闭IO
+}
 /**
  * 函数说明：
  *
@@ -125,45 +166,47 @@ void getDigits(char *buff, int *data) {
  * ||            Solution 1, 使用栈               ||
  * ================================================
  */
-//TreeNodePtr createTreeWithLevelOrder(int *data, int size) {
-//    TreeNodePtr root = createTreeNode(data[0], NULL, NULL);
-//    int index = 1;
-//    QueuePtr queue = Queue();
-//    push(queue, root);
-//    while (!empty(queue)) {
-//        TreeNodePtr curr = front(queue);
-//        pop(queue);
-//        if (index < size) {
-//            while (data[index] == -1) index++;
-//            curr->left = createTreeNode(data[index++], NULL, NULL);
-//            push(queue, curr->left);
-//        } else break;
-//        if (index < size) {
-//            while (data[index] == -1) index++;
-//            curr->right = createTreeNode(data[index++], NULL, NULL);
-//            push(queue, curr->right);
-//        } else break;
-//    }
-//    return root;
-//}
+TreeNodePtr createTreeWithLevelOrder(int *data, int size) {
+    TreeNodePtr root = createTreeNode(data[0], NULL, NULL);
+    int index = 1;
+    QueuePtr queue = Queue();
+    push(queue, root);
+    while (!empty(queue)) {
+        TreeNodePtr curr = front(queue);
+        pop(queue);
+        if (index < size) {
+            if (data[index] != -1) {
+                curr->left = createTreeNode(data[index++], NULL, NULL);
+                push(queue, curr->left);
+            } else index++;
+        } else break;
+        if (index < size) {
+            if (data[index] != -1) {
+                curr->right = createTreeNode(data[index++], NULL, NULL);
+                push(queue, curr->right);
+            } else index++;
+        } else break;
+    }
+    return root;
+}
 
 /**
  * ================================================
  * ||            Solution 2, 使用索引             ||
  * ================================================
  */
-TreeNodePtr createTreeWithLevelOrder(int *data, int size) {
-    TreeNodePtr nodes[size];
-    for (int i = 0; i < size; i++) {
-        while (data[i] == -1) i++;
-        nodes[i] = createTreeNode(data[i], NULL, NULL);
-        if (i != 0) {
-            if ((i - 1) % 2 == 0) nodes[(i - 1) / 2]->left = nodes[i];
-            else nodes[(i - 1) / 2]->right = nodes[i];
-        }
-    }
-    return nodes[0];
-}
+//TreeNodePtr createTreeWithLevelOrder(int *data, int size) {
+//    TreeNodePtr nodes[size];
+//    for (int i = 0; i < size; i++) {
+//        while (data[i] == -1) i++;
+//        nodes[i] = createTreeNode(data[i], NULL, NULL);
+//        if (i != 0) {
+//            if ((i - 1) % 2 == 0) nodes[(i - 1) / 2]->left = nodes[i];
+//            else nodes[(i - 1) / 2]->right = nodes[i];
+//        }
+//    }
+//    return nodes[0];
+//}
 
 /** TODO: 任务二：请你通过深度优先遍历来求取该二叉树的最大路径和 */
 /**
@@ -182,16 +225,16 @@ int maxPathSum(TreeNodePtr root, int sum) {
  * ||        Solution 1,  深度优先搜索             ||
  * ================================================
  */
-//int dfs(TreeNode *root, bool isLeft) {
-//    if (!root) return 0;
-//    if (!root->left && !root->right && isLeft) return root->val;
-//    return dfs(root->left, true) + dfs(root->right, false);
-//}
-//
-//int sumOfLeftLeaves(TreeNodePtr root) {
-//    if (!root) return 0;
-//    return dfs(root->left, true) + dfs(root->right, false);
-//}
+int dfs(TreeNode *root, bool isLeft) {
+    if (!root) return 0;
+    if (!root->left && !root->right && isLeft) return root->val;
+    return dfs(root->left, true) + dfs(root->right, false);
+}
+
+int sumOfLeftLeaves(TreeNodePtr root) {
+    if (!root) return 0;
+    return dfs(root->left, true) + dfs(root->right, false);
+}
 
 /**
  * ================================================
@@ -227,24 +270,24 @@ bool isLeafNode(struct TreeNode *node) {
     return !node->left && !node->right;
 }
 
-int sumOfLeftLeaves(TreeNodePtr root) {
-    if (!root) return 0;
-    QueuePtr queue = Queue();
-    push(queue, root);
-    int ret = 0;
-    while (!empty(queue)) {
-        TreeNodePtr curr = front(queue);
-        pop(queue);
-        if (curr->left) {
-            if (isLeafNode(curr->left)) ret += curr->left->val;
-            else push(queue, curr->left);
-        }
-        if (curr->right) {
-            if (!isLeafNode(curr->right)) push(queue, curr->right);
-        }
-    }
-    return ret;
-}
+//int sumOfLeftLeaves(TreeNodePtr root) {
+//    if (!root) return 0;
+//    QueuePtr queue = Queue();
+//    push(queue, root);
+//    int ret = 0;
+//    while (!empty(queue)) {
+//        TreeNodePtr curr = front(queue);
+//        pop(queue);
+//        if (curr->left) {
+//            if (isLeafNode(curr->left)) ret += curr->left->val;
+//            else push(queue, curr->left);
+//        }
+//        if (curr->right) {
+//            if (!isLeafNode(curr->right)) push(queue, curr->right);
+//        }
+//    }
+//    return ret;
+//}
 
 
 /**
@@ -353,19 +396,47 @@ int main() {
             int data[size];
             getDigits(buff, data);
 
+            /**
+             * ===============================================================
+             * ||       你的任务在这里，当然你也可以以任意方式修改函数的原型          ||
+             * ===============================================================
+             */
             /** 任务一 */
-            TreeNodePtr root = createTreeWithLevelOrder(data, size);
+            TreeNodePtr tree_root = createTreeWithLevelOrder(data, size);
 
             /** 任务二 */
-            int max_path_sum = maxPathSum(root, 0);
+            int max_path_sum = maxPathSum(tree_root, 0);
             printf("Answer for task 2 is : %d \n", max_path_sum);
 
             /** 任务三 */
-            int weight_sum = sumOfLeftLeaves(root);
+            int weight_sum = sumOfLeftLeaves(tree_root);
             printf("Answer for task 3 is : %d \n", weight_sum);
 
             /** 任务四 */
-            TreeNodePtr invert_tree = invertTree(root);
+            TreeNodePtr invert_tree_root = invertTree(tree_root);
+
+            /** 通过 graphviz 可视化 */
+            bool use_graphviz = true;
+            if (use_graphviz) {
+                char tree_filename[50], invert_tree_filename[50];
+                sprintf(tree_filename, "./tree_%d.dot", i);
+                sprintf(invert_tree_filename, "./invert_tree_%d.dot", i);
+                createDotFile(tree_filename, tree_root, size);
+                createDotFile(invert_tree_filename, invert_tree_root, size);
+
+                char paint_tree[100], paint_invert_tree[100];
+//                sprintf(paint_tree, "dot -Tpng %s -o ./tree_%d.png", tree_filename, i);
+                sprintf(paint_tree, "dot %s | gvpr -c -f ../binarytree.gvpr | neato -n -Tpng -o ./tree_%d.png",
+                        tree_filename, i);
+//                sprintf(paint_invert_tree, "dot -Tpng %s -o ./invert_tree_%d.png", invert_tree_filename, i);
+                sprintf(paint_invert_tree,
+                        "dot %s | gvpr -c -f ../binarytree.gvpr | neato -n -Tpng -o ./invert_tree_%d.png",
+                        invert_tree_filename, i);
+                puts(paint_tree);
+                puts(paint_invert_tree);
+                system(paint_tree);
+                system(paint_invert_tree);
+            }
 
             i++;
         }

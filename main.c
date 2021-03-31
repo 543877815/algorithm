@@ -130,27 +130,40 @@ void createDotFile(const char *filename, TreeNodePtr root, int MaxSize) {
     while (!empty(queue)) { // 若队列不空，继续遍历。否则，遍历结束
         TreeNodePtr curr = front(queue);
         pop(queue);
-        printf("%d ", curr->val); // 访问刚出队的元素
+//        printf("%d ", curr->val); // 访问刚出队的元素
         fprintf(fp, "%d [shape=circle];\n", curr->val);
         if (curr->left != NULL) { // 如果有左孩子，左孩子入队
             push(queue, curr->left);
             fprintf(fp, "%d->%d;\n", curr->val, curr->left->val);
+        } else { // 创建虚拟节点并设置不可见
+            fprintf(fp, "n%d [shape=circle];\n", id);
+            fprintf(fp, "%d->n%d ;\n", curr->val, id);
+            id++;
         }
-            // 创建虚拟节点并设置不可见
-//        else {
-//
-//            fprintf(fp, "_%d [shape=circle, width=0, style=invis];\n", curr->val);
-//            fprintf(fp, "%d->_%d [style=invis];\n", curr->val, curr->val);
-//        }
 
         if (curr->right != NULL) { // 如果有右孩子，右孩子入队
             push(queue, curr->right);
             fprintf(fp, "%d->%d;\n", curr->val, curr->right->val);
+        } else { // 创建虚拟节点并设置不可见
+            fprintf(fp, "n%d [shape=circle];\n", id);
+            fprintf(fp, "%d->n%d ;\n", curr->val, id);
+            id++;
         }
     }
     fprintf(fp, "}\n"); // 结尾
     fclose(fp); // 关闭IO
 }
+
+// 绘制二叉树图片
+void plot(TreeNodePtr tree_root, int i, int size, char *name) {
+    char tree_filename[50], paint_tree[100];
+    sprintf(tree_filename, "./%s_%d.dot", name, i);
+    createDotFile(tree_filename, tree_root, size);
+    sprintf(paint_tree, "exec: dot -Tpng %s -o ./%s_%d.png", tree_filename, name, i);
+    puts(paint_tree);
+    system(paint_tree);
+}
+
 /**
  * 函数说明：
  *
@@ -355,18 +368,16 @@ int main() {
     TreeNodePtr node2 = createTreeNode(2, NULL, NULL);
     TreeNodePtr node1 = createTreeNode(1, node2, node3);
 
-    node1->left = node2;
-    node1->right = node3;
-
     push(queue, node1);
+    printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
     push(queue, node2);
+    printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
     push(queue, node3);
-
-    pop(queue);
-
     printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
     pop(queue);
+    printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
     pop(queue);
+    printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
     pop(queue);
     /**
      * ===============================================================
@@ -374,16 +385,31 @@ int main() {
      * ===============================================================
      */
 
+
+    /**
+     * ===============================================================
+     * ||                       Configuration                        ||
+     * ===============================================================
+     */
     int SIZE = 128;
     int MAX_NUM = 10;
     char buff[SIZE];
     char num[MAX_NUM];
+    bool use_graphviz = true;
+    /**
+     * ===============================================================
+     * ||                   End Configuration                       ||
+     * ===============================================================
+     */
+
+    printf("Read data...\n");
     FILE *fp = fopen("../test.txt", "r");
     if (!fp) {
         perror("打开文件时发生错误");
         return -1;
     } else {
         int i = 0;
+        printf("success!\n");
         /**
          * ===============================================================
          * ||                   Read data here                          ||
@@ -391,18 +417,22 @@ int main() {
          */
         while (fgets(num, MAX_NUM, fp) && fgets(buff, SIZE, fp)) {
             printf("Case %d, data: %s, nodes number: %s", i, buff, num);
-
             int size = atoi(num);
             int data[size];
             getDigits(buff, data);
-
             /**
              * ===============================================================
              * ||       你的任务在这里，当然你也可以以任意方式修改函数的原型          ||
              * ===============================================================
              */
+
             /** 任务一 */
             TreeNodePtr tree_root = createTreeWithLevelOrder(data, size);
+
+            /** 通过 graphviz 可视化 */
+            if (use_graphviz) {
+                    plot(tree_root, i, size, "tree");
+            }
 
             /** 任务二 */
             int max_path_sum = maxPathSum(tree_root, 0);
@@ -416,26 +446,8 @@ int main() {
             TreeNodePtr invert_tree_root = invertTree(tree_root);
 
             /** 通过 graphviz 可视化 */
-            bool use_graphviz = true;
             if (use_graphviz) {
-                char tree_filename[50], invert_tree_filename[50];
-                sprintf(tree_filename, "./tree_%d.dot", i);
-                sprintf(invert_tree_filename, "./invert_tree_%d.dot", i);
-                createDotFile(tree_filename, tree_root, size);
-                createDotFile(invert_tree_filename, invert_tree_root, size);
-
-                char paint_tree[100], paint_invert_tree[100];
-//                sprintf(paint_tree, "dot -Tpng %s -o ./tree_%d.png", tree_filename, i);
-                sprintf(paint_tree, "dot %s | gvpr -c -f ../binarytree.gvpr | neato -n -Tpng -o ./tree_%d.png",
-                        tree_filename, i);
-//                sprintf(paint_invert_tree, "dot -Tpng %s -o ./invert_tree_%d.png", invert_tree_filename, i);
-                sprintf(paint_invert_tree,
-                        "dot %s | gvpr -c -f ../binarytree.gvpr | neato -n -Tpng -o ./invert_tree_%d.png",
-                        invert_tree_filename, i);
-                puts(paint_tree);
-                puts(paint_invert_tree);
-                system(paint_tree);
-                system(paint_invert_tree);
+                plot(invert_tree_root, i, size, "invert_tree");
             }
 
             i++;

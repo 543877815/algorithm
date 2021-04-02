@@ -4,6 +4,7 @@
 #include <string.h>
 
 typedef struct TreeNode {
+    int id;
     int val;
     struct TreeNode *left;
     struct TreeNode *right;
@@ -29,8 +30,11 @@ ListNodePtr createListNode(TreeNodePtr node, ListNodePtr next) {
 }
 
 // 创建树的节点
+int TreeId = 0;
+
 TreeNodePtr createTreeNode(int val, TreeNodePtr left, TreeNodePtr right) {
     TreeNodePtr curr = (TreeNodePtr) (malloc(sizeof(TreeNode)));
+    curr->id = TreeId++;
     curr->val = val;
     curr->left = left;
     curr->right = right;
@@ -126,29 +130,30 @@ void createDotFile(const char *filename, TreeNodePtr root, int MaxSize) {
     // 利用层次遍历构造
     QueuePtr queue = Queue();
     push(queue, root);
-    int id = 0;
+    int id = 1;
+    TreeNodePtr record[MaxSize];
     while (!empty(queue)) { // 若队列不空，继续遍历。否则，遍历结束
         TreeNodePtr curr = front(queue);
         pop(queue);
-//        printf("%d ", curr->val); // 访问刚出队的元素
-        fprintf(fp, "%d [shape=circle];\n", curr->val);
+        fprintf(fp, "%d [shape=circle, label=\"%d\"];\n", curr->id, curr->val);
+        record[id] = curr;
         if (curr->left != NULL) { // 如果有左孩子，左孩子入队
             push(queue, curr->left);
-            fprintf(fp, "%d->%d;\n", curr->val, curr->left->val);
-        } else { // 创建虚拟节点并设置不可见
-            fprintf(fp, "n%d [shape=circle];\n", id);
-            fprintf(fp, "%d->n%d ;\n", curr->val, id);
-            id++;
+            fprintf(fp, "%d->%d;\n", curr->id, curr->left->id);
+        } else if (id < MaxSize) { // 否则，创建虚拟节点
+            fprintf(fp, "_%d [shape=circle, label=\"#\"];\n", id);
+            fprintf(fp, "%d->_%d;\n", curr->id, id);
         }
+        id++;
 
         if (curr->right != NULL) { // 如果有右孩子，右孩子入队
             push(queue, curr->right);
-            fprintf(fp, "%d->%d;\n", curr->val, curr->right->val);
-        } else { // 创建虚拟节点并设置不可见
-            fprintf(fp, "n%d [shape=circle];\n", id);
-            fprintf(fp, "%d->n%d ;\n", curr->val, id);
-            id++;
+            fprintf(fp, "%d->%d;\n", curr->id, curr->right->id);
+        } else if (id < MaxSize) { // 否则，创建虚拟节点
+            fprintf(fp, "_%d [shape=circle, label=\"#\"];\n", id);
+            fprintf(fp, "%d->_%d;\n", curr->id, id);
         }
+        id++;
     }
     fprintf(fp, "}\n"); // 结尾
     fclose(fp); // 关闭IO
@@ -159,19 +164,10 @@ void plot(TreeNodePtr tree_root, int i, int size, char *name) {
     char tree_filename[50], paint_tree[100];
     sprintf(tree_filename, "./%s_%d.dot", name, i);
     createDotFile(tree_filename, tree_root, size);
-    sprintf(paint_tree, "exec: dot -Tpng %s -o ./%s_%d.png", tree_filename, name, i);
+    sprintf(paint_tree, "dot -Tpng %s -o ./%s_%d.png", tree_filename, name, i);
     puts(paint_tree);
     system(paint_tree);
 }
-
-/**
- * 函数说明：
- *
- *
- *
- *
- */
-
 
 /** TODO:  任务一：请你通过队列来实现层次遍历构建二叉树，并返回二叉树的头结点 */
 /**
@@ -220,6 +216,43 @@ TreeNodePtr createTreeWithLevelOrder(int *data, int size) {
 //    }
 //    return nodes[0];
 //}
+
+/** TODO: 任务一：请你输出该二叉树的前序遍历、中序遍历、后序遍历的序列 */
+/**
+ * ================================================
+ * ||                  前序遍历                   ||
+ * ================================================
+ */
+void preOrderTraverse(TreeNodePtr root) {
+    if (!root) return;
+    printf("%d ", root->val);
+    if (root->left) preOrderTraverse(root->left);
+    if (root->right) preOrderTraverse(root->right);
+}
+
+/**
+ * ================================================
+ * ||                  中序遍历                   ||
+ * ================================================
+ */
+void inOrderTraverse(TreeNodePtr root) {
+    if (!root) return;
+    if (root->left) inOrderTraverse(root->left);
+    printf("%d ", root->val);
+    if (root->right) inOrderTraverse(root->right);
+}
+
+/**
+ * ================================================
+ * ||                  后序遍历                   ||
+ * ================================================
+ */
+void postOrderTraverse(TreeNodePtr root) {
+    if (!root) return;
+    if (root->left) postOrderTraverse(root->left);
+    if (root->right) postOrderTraverse(root->right);
+    printf("%d ", root->val);
+}
 
 /** TODO: 任务二：请你通过深度优先遍历来求取该二叉树的最大路径和 */
 /**
@@ -339,12 +372,12 @@ bool isLeafNode(struct TreeNode *node) {
 
 
 /** TODO: 任务四：请你通过递归求取该树的镜像，即翻转该二叉树 */
+/**
+ * ================================================
+ * ||               Solution 1, 递归              ||
+ * ================================================
+ */
 TreeNodePtr invertTree(TreeNodePtr root) {
-    /**
-     * ================================================
-     * ||               Solution 1, 递归              ||
-     * ================================================
-     */
     if (!root) return NULL;
     if (!root->left && !root->right) return root;
     TreeNodePtr tmp = root->left;
@@ -431,7 +464,7 @@ int main() {
 
             /** 通过 graphviz 可视化 */
             if (use_graphviz) {
-                    plot(tree_root, i, size, "tree");
+                plot(tree_root, i, size, "tree");
             }
 
             /** 任务二 */

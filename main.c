@@ -141,8 +141,8 @@ void createDotFile(const char *filename, TreeNodePtr root, int MaxSize) {
             push(queue, curr->left);
             fprintf(fp, "%d->%d;\n", curr->id, curr->left->id);
         } else if (id < MaxSize) { // 否则，创建虚拟节点
-            fprintf(fp, "_%d [shape=circle, label=\"#\"];\n", id);
-            fprintf(fp, "%d->_%d;\n", curr->id, id);
+            fprintf(fp, "_%d [shape=circle, label=\"#\", style=invis];\n", id);
+            fprintf(fp, "%d->_%d [style=invis];\n", curr->id, id);
         }
         id++;
 
@@ -150,8 +150,8 @@ void createDotFile(const char *filename, TreeNodePtr root, int MaxSize) {
             push(queue, curr->right);
             fprintf(fp, "%d->%d;\n", curr->id, curr->right->id);
         } else if (id < MaxSize) { // 否则，创建虚拟节点
-            fprintf(fp, "_%d [shape=circle, label=\"#\"];\n", id);
-            fprintf(fp, "%d->_%d;\n", curr->id, id);
+            fprintf(fp, "_%d [shape=circle, label=\"#\", style=invis];\n", id);
+            fprintf(fp, "%d->_%d [style=invis];\n", curr->id, id);
         }
         id++;
     }
@@ -165,7 +165,7 @@ void plot(TreeNodePtr tree_root, int i, int size, char *name) {
     sprintf(tree_filename, "./%s_%d.dot", name, i);
     createDotFile(tree_filename, tree_root, size);
     sprintf(paint_tree, "dot -Tpng %s -o ./%s_%d.png", tree_filename, name, i);
-    puts(paint_tree);
+    // puts(paint_tree);
     system(paint_tree);
 }
 
@@ -180,21 +180,23 @@ TreeNodePtr createTreeWithLevelOrder(int *data, int size) {
     int index = 1;
     QueuePtr queue = Queue();
     push(queue, root);
-    while (!empty(queue)) {
+    while (!empty(queue) && index < size) {
         TreeNodePtr curr = front(queue);
         pop(queue);
-        if (index < size) {
-            if (data[index] != -1) {
-                curr->left = createTreeNode(data[index++], NULL, NULL);
-                push(queue, curr->left);
-            } else index++;
-        } else break;
-        if (index < size) {
-            if (data[index] != -1) {
-                curr->right = createTreeNode(data[index++], NULL, NULL);
-                push(queue, curr->right);
-            } else index++;
-        } else break;
+        TreeNodePtr new = createTreeNode(data[index], NULL, NULL);
+        if (index < size && curr->val != -1) {
+            if (data[index] != -1)
+                curr->left = new;
+        }
+        push(queue, new);
+        index++;
+        new = createTreeNode(data[index], NULL, NULL);
+        if (index < size && curr->val != -1) {
+            if (data[index] != -1)
+                curr->right = new;
+        }
+        push(queue, new);
+        index++;
     }
     return root;
 }
@@ -385,7 +387,8 @@ TreeNodePtr invertTree(TreeNodePtr root) {
     root->right = tmp;
     if (root->left) invertTree(root->left);
     if (root->right) invertTree(root->right);
-
+    // invertTree(root->left);
+    // invertTree(root->right);
     return root;
 }
 
@@ -402,15 +405,15 @@ int main() {
     TreeNodePtr node1 = createTreeNode(1, node2, node3);
 
     push(queue, node1);
-    printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
+    // printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
     push(queue, node2);
-    printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
+    // printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
     push(queue, node3);
-    printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
+    // printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
     pop(queue);
-    printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
+    // printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
     pop(queue);
-    printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
+    // printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
     pop(queue);
     /**
      * ===============================================================
@@ -435,20 +438,23 @@ int main() {
      * ===============================================================
      */
 
-    printf("Read data...\n");
+    // printf("Read data...\n");
     FILE *fp = fopen("../test.txt", "r");
     if (!fp) {
         perror("打开文件时发生错误");
         return -1;
     } else {
         int i = 0;
-        printf("success!\n");
+        // printf("success!\n");
         /**
          * ===============================================================
          * ||                   Read data here                          ||
          * ===============================================================
          */
         while (fgets(num, MAX_NUM, fp) && fgets(buff, SIZE, fp)) {
+            char *nextline = strchr(buff, '\n');          //查找换行符
+            if (nextline)                            //如果find不为空指针
+                *nextline = '\0';
             printf("Case %d, data: %s, nodes number: %s", i, buff, num);
             int size = atoi(num);
             int data[size];
@@ -461,7 +467,16 @@ int main() {
 
             /** 任务一 */
             TreeNodePtr tree_root = createTreeWithLevelOrder(data, size);
-
+            printf("Answer for task 1 is: \n");
+            printf("preOrderTraverse is:");
+            preOrderTraverse(tree_root);
+            printf("\n");
+            printf("inOrderTraverse is:");
+            inOrderTraverse(tree_root);
+            printf("\n");
+            printf("postOrderTraverse is:");
+            postOrderTraverse(tree_root);
+            printf("\n");
             /** 通过 graphviz 可视化 */
             if (use_graphviz) {
                 plot(tree_root, i, size, "tree");
@@ -477,7 +492,9 @@ int main() {
 
             /** 任务四 */
             TreeNodePtr invert_tree_root = invertTree(tree_root);
-
+            printf("inOrderTraverse for task 4 is:");
+            inOrderTraverse(invert_tree_root);
+            printf("\n\n");
             /** 通过 graphviz 可视化 */
             if (use_graphviz) {
                 plot(invert_tree_root, i, size, "invert_tree");

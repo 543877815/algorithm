@@ -131,28 +131,30 @@ void createDotFile(const char *filename, TreeNodePtr root, int MaxSize) {
     QueuePtr queue = Queue();
     push(queue, root);
     int id = 1;
-    TreeNodePtr record[MaxSize];
     while (!empty(queue)) { // 若队列不空，继续遍历。否则，遍历结束
         TreeNodePtr curr = front(queue);
         pop(queue);
         fprintf(fp, "%d [shape=circle, label=\"%d\"];\n", curr->id, curr->val);
-        record[id] = curr;
         if (curr->left != NULL) { // 如果有左孩子，左孩子入队
             push(queue, curr->left);
             fprintf(fp, "%d->%d;\n", curr->id, curr->left->id);
-        } else if (id < MaxSize) { // 否则，创建虚拟节点
-            fprintf(fp, "_%d [shape=circle, label=\"#\", style=invis];\n", id);
-            fprintf(fp, "%d->_%d [style=invis];\n", curr->id, id);
         }
+        // else if (id < MaxSize) { // 否则，创建虚拟节点
+        //    fprintf(fp, "_%d [shape=circle, label=\"#\", style=invis];\n", id);
+        //    fprintf(fp, "%d->_%d [style=invis];\n", curr->id, id);
+        //}
         id++;
-
+        // 中间虚拟节点
+        fprintf(fp, "_n%d [shape=circle, label=\"#\", style=invis];\n", id);
+        fprintf(fp, "%d->_n%d [style=invis, weight=10];\n", curr->id, id);
         if (curr->right != NULL) { // 如果有右孩子，右孩子入队
             push(queue, curr->right);
             fprintf(fp, "%d->%d;\n", curr->id, curr->right->id);
-        } else if (id < MaxSize) { // 否则，创建虚拟节点
-            fprintf(fp, "_%d [shape=circle, label=\"#\", style=invis];\n", id);
-            fprintf(fp, "%d->_%d [style=invis];\n", curr->id, id);
         }
+        // else if (id < MaxSize) { // 否则，创建虚拟节点
+        //     fprintf(fp, "_%d [shape=circle, label=\"#\", style=invis];\n", id);
+        //     fprintf(fp, "%d->_%d [style=invis];\n", curr->id, id);
+        // }
         id++;
     }
     fprintf(fp, "}\n"); // 结尾

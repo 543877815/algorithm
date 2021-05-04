@@ -1,0 +1,37 @@
+digraph G {
+132 [shape=circle, label="9"];
+132->135;
+_n2 [shape=circle, label="#", style=invis];
+132->_n2 [style=invis, weight=10];
+132->134;
+135 [shape=circle, label="7"];
+135->139;
+_n4 [shape=circle, label="#", style=invis];
+135->_n4 [style=invis, weight=10];
+135->138;
+134 [shape=circle, label="8"];
+134->137;
+_n6 [shape=circle, label="#", style=invis];
+134->_n6 [style=invis, weight=10];
+134->136;
+139 [shape=circle, label="3"];
+_n8 [shape=circle, label="#", style=invis];
+139->_n8 [style=invis, weight=10];
+138 [shape=circle, label="4"];
+_n10 [shape=circle, label="#", style=invis];
+138->_n10 [style=invis, weight=10];
+137 [shape=circle, label="5"];
+_n12 [shape=circle, label="#", style=invis];
+137->_n12 [style=invis, weight=10];
+136 [shape=circle, label="6"];
+136->141;
+_n14 [shape=circle, label="#", style=invis];
+136->_n14 [style=invis, weight=10];
+136->140;
+141 [shape=circle, label="1"];
+_n16 [shape=circle, label="#", style=invis];
+141->_n16 [style=invis, weight=10];
+140 [shape=circle, label="2"];
+_n18 [shape=circle, label="#", style=invis];
+140->_n18 [style=invis, weight=10];
+}

@@ -11,7 +11,7 @@ typedef struct TreeNode {
 } TreeNode, *TreeNodePtr;
 
 typedef struct ListNode {
-    struct TreeNode *node; // 队列的值的类型是树节点指针
+    struct TreeNode *node; // ���е�ֵ�����������ڵ�ָ��
     struct ListNode *next;
 } ListNode, *ListNodePtr;
 
@@ -21,7 +21,7 @@ typedef struct Queue {
     int size;
 } *QueuePtr;
 
-// 创建链表的节点
+// ��������Ľڵ�
 ListNodePtr createListNode(TreeNodePtr node, ListNodePtr next) {
     ListNodePtr curr = (ListNodePtr) (malloc(sizeof(ListNode)));
     curr->node = node;
@@ -29,7 +29,7 @@ ListNodePtr createListNode(TreeNodePtr node, ListNodePtr next) {
     return curr;
 }
 
-// 创建树的节点
+// �������Ľڵ�
 int TreeId = 0;
 
 TreeNodePtr createTreeNode(int val, TreeNodePtr left, TreeNodePtr right) {
@@ -41,7 +41,7 @@ TreeNodePtr createTreeNode(int val, TreeNodePtr left, TreeNodePtr right) {
     return curr;
 }
 
-// 单链表队列初始化
+// ��������г�ʼ��
 QueuePtr InitQueue() {
     QueuePtr queue = (QueuePtr) malloc(sizeof(struct Queue));
     TreeNodePtr dummyTreeNode = createTreeNode(-1, NULL, NULL);
@@ -51,7 +51,7 @@ QueuePtr InitQueue() {
     return queue;
 }
 
-// 在 queue 的尾部添加一个元素的副本
+// �� queue ��β�����һ��Ԫ�صĸ���
 void EnQueue(QueuePtr queue, TreeNodePtr node) {
     ListNodePtr curr = createListNode(node, NULL);
     queue->tail->next = curr;
@@ -59,7 +59,7 @@ void EnQueue(QueuePtr queue, TreeNodePtr node) {
     queue->size++;
 }
 
-// 删除 queue 中的第一个元素
+// ɾ�� queue �еĵ�һ��Ԫ��
 void DeQueue(QueuePtr queue) {
     if (queue->size == 0) {
         perror("error! the size of queue is zero when call DeQueue().");
@@ -72,12 +72,12 @@ void DeQueue(QueuePtr queue) {
     free(head);
 }
 
-// 如果 queue 中没有元素, 返回 true
+// ��� queue ��û��Ԫ��, ���� true
 bool QueueEmpty(QueuePtr queue) {
     return queue->size == 0;
 }
 
-// 返回 queue 中第一个元素的引用
+// ���� queue �е�һ��Ԫ�ص�����
 TreeNodePtr GetHead(QueuePtr queue) {
     if (QueueEmpty(queue)) {
         perror("error! the size of queue is zero when call front().");
@@ -91,7 +91,7 @@ int max(int a, int b) {
     return (a >= b) ? a : b;
 }
 
-// 将输入转换为数组
+// ������ת��Ϊ����
 void getDigits(char *buff, int *data) {
     int len = strlen(buff);
     int index = 0;
@@ -109,43 +109,43 @@ void getDigits(char *buff, int *data) {
     }
 }
 
-// 创建 dot 可视化文件
+// ���� dot ���ӻ��ļ�
 void createDotFile(const char *filename, TreeNodePtr root, int MaxSize) {
-    FILE *fp = fopen(filename, "w");    // 文件指针
-    if (fp == NULL) {   // 为NULL则返回
+    FILE *fp = fopen(filename, "w");    // �ļ�ָ��
+    if (fp == NULL) {   // ΪNULL�򷵻�
         printf("File cannot open!");
         exit(0);
     }
-    fprintf(fp, "digraph G {\n");   // 开头
-    // 利用层次遍历构造
+    fprintf(fp, "digraph G {\n");   // ��ͷ
+    // ���ò�α�������
     QueuePtr queue = InitQueue();
     EnQueue(queue, root);
     int id = 1;
-    while (!QueueEmpty(queue)) { // 若队列不空，继续遍历。否则，遍历结束
+    while (!QueueEmpty(queue)) { // �����в��գ��������������򣬱�������
         TreeNodePtr curr = GetHead(queue);
         DeQueue(queue);
         if (curr == NULL) continue;
         fprintf(fp, "%d [shape=circle, label=\"%d\"];\n", curr->id, curr->val);
-        if (curr->left != NULL) { // 如果有左孩子，左孩子入队
+        if (curr->left != NULL) { // ��������ӣ��������
             EnQueue(queue, curr->left);
             fprintf(fp, "%d->%d;\n", curr->id, curr->left->id);
         }
         id++;
-        // 中间虚拟节点
+        // �м�����ڵ�
         fprintf(fp, "_n%d [shape=circle, label=\"#\", style=invis];\n", id);
         fprintf(fp, "%d->_n%d [style=invis, weight=10];\n", curr->id, id);
-        if (curr->right != NULL) { // 如果有右孩子，右孩子入队
+        if (curr->right != NULL) { // ������Һ��ӣ��Һ������
             EnQueue(queue, curr->right);
             fprintf(fp, "%d->%d;\n", curr->id, curr->right->id);
         }
         id++;
     }
-    fprintf(fp, "}\n"); // 结尾
-    fclose(fp); // 关闭IO
+    fprintf(fp, "}\n"); // ��β
+    fclose(fp); // �ر�IO
 }
 
 
-// 绘制二叉树图片,调用 createDotFile 并使用 system 执行命令
+// ���ƶ�����ͼƬ,���� createDotFile ��ʹ�� system ִ������
 void plot(TreeNodePtr tree_root, int i, int size, char *name) {
     char tree_filename[50], paint_tree[100];
     sprintf(tree_filename, "./%s_%d.dot", name, i);
@@ -155,7 +155,8 @@ void plot(TreeNodePtr tree_root, int i, int size, char *name) {
     system(paint_tree);
 }
 
-// 删除二叉树
+
+// ɾ��������
 void destoryTree(TreeNodePtr root) {
     if (!root) return;
     if (root->left) {
@@ -169,38 +170,7 @@ void destoryTree(TreeNodePtr root) {
     free(root);
 }
 
-/** TODO:  任务一：请你通过队列来实现层次遍历构建二叉树，并返回二叉树的头结点 */
-/**
- * ================================================
- * ||            Solution 1, 使用栈               ||
- * ================================================
- */
-//TreeNodePtr createTreeWithLevelOrder(int *data, int size) {
-//    TreeNodePtr root = createTreeNode(data[0], NULL, NULL);
-//    int index = 1;
-//    QueuePtr queue = InitQueue();
-//    EnQueue(queue, root);
-//    while (!QueueEmpty(queue) && index < size) {
-//        TreeNodePtr curr = GetHead(queue);
-//        DeQueue(queue);
-//        TreeNodePtr new = createTreeNode(data[index], NULL, NULL);
-//        if (index < size && curr->val != -1) {
-//            if (data[index] != -1)
-//                curr->left = new;
-//        }
-//        EnQueue(queue, new);
-//        index++;
-//        new = createTreeNode(data[index], NULL, NULL);
-//        if (index < size && curr->val != -1) {
-//            if (data[index] != -1)
-//                curr->right = new;
-//        }
-//        EnQueue(queue, new);
-//        index++;
-//    }
-//    if (root->val == -1) return NULL;
-//    else return root;
-//}
+/** TODO:  ����һ������ͨ��������ʵ�ֲ�α��������������������ض�������ͷ��� */
 TreeNodePtr createTreeWithLevelOrder(int *data, int size) {
     int i=1;
     QueuePtr queue=InitQueue();
@@ -250,86 +220,58 @@ TreeNodePtr createTreeWithLevelOrder(int *data, int size) {
 
 /**
  * ================================================
- * ||            Solution 2, 使用索引             ||
- * ================================================
- */
-//TreeNodePtr createTreeWithLevelOrder(int *data, int size) {
-//    TreeNodePtr nodes[size];
-//    for (int i = 0; i < size; i++) {
-//        while (data[i] == -1) i++;
-//        nodes[i] = createTreeNode(data[i], NULL, NULL);
-//        if (i != 0) {
-//            if ((i - 1) % 2 == 0) nodes[(i - 1) / 2]->left = nodes[i];
-//            else nodes[(i - 1) / 2]->right = nodes[i];
-//        }
-//    }
-//    return nodes[0];
-//}
-
-/** TODO: 任务一：请你输出该二叉树的前序遍历、中序遍历、后序遍历的序列 */
-/**
- * ================================================
- * ||                  前序遍历                   ||
+ * ||                  ǰ�����                   ||
  * ================================================
  */
 void preOrderTraverse(TreeNodePtr root) {
-    if (!root) return;
-    printf("%d ", root->val);
-    if (root->left) preOrderTraverse(root->left);
-    if (root->right) preOrderTraverse(root->right);
+    if(root)
+    {
+        printf("%d ",root->val);
+        preOrderTraverse(root->left);
+        preOrderTraverse(root->right);
+    }
 }
 
 /**
  * ================================================
- * ||                  中序遍历                   ||
+ * ||                  �������                   ||
  * ================================================
  */
 void inOrderTraverse(TreeNodePtr root) {
-    if (!root) return;
-    if (root->left) inOrderTraverse(root->left);
-    printf("%d ", root->val);
-    if (root->right) inOrderTraverse(root->right);
+    if(root)
+    {
+        inOrderTraverse(root->left);
+        printf("%d ",root->val);
+        inOrderTraverse(root->right);
+    }
 }
 
 /**
  * ================================================
- * ||                  后序遍历                   ||
+ * ||                  �������                   ||
  * ================================================
  */
 void postOrderTraverse(TreeNodePtr root) {
-    if (!root) return;
-    if (root->left) postOrderTraverse(root->left);
-    if (root->right) postOrderTraverse(root->right);
-    printf("%d ", root->val);
+    if(root)
+    {
+        postOrderTraverse(root->left);
+        postOrderTraverse(root->right);
+        printf("%d ",root->val);
+    }
 }
 
-/** TODO: 任务二：请你通过深度优先遍历来求取该二叉树的最大路径和 */
-/**
- * ================================================
- * ||                 Solution 1                 ||
- * ================================================
- */
+/** TODO: �����������ͨ��������ȱ�������ȡ�ö����������·���� */
 int maxPathSum(TreeNodePtr root, int sum) {
-    if (!root) return sum;
-    return max(maxPathSum(root->left, sum + root->val), maxPathSum(root->right, sum + root->val));
+    if(root==NULL)
+    {
+        return;
+    }
+    int maxleft=maxPathSum(root->left,0);
+    int maxright=maxPathSum(root->right,0);
+    return   root->val+max(maxleft,maxright);
 }
 
-/** ToDO: 任务三：请你通过递归求取该二叉树的所有左子叶权重之和 */
-/**
- * ================================================
- * ||        Solution 1,  深度优先搜索             ||
- * ================================================
- */
-//int dfs(TreeNode *root, bool isLeft) {
-//    if (!root) return 0;
-//    if (!root->left && !root->right && isLeft) return root->val;
-//    return dfs(root->left, true) + dfs(root->right, false);
-//}
-//
-//int sumOfLeftLeaves(TreeNodePtr root) {
-//    if (!root) return 0;
-//    return dfs(root->left, true) + dfs(root->right, false);
-//}
+/** ToDO: ������������ͨ���ݹ���ȡ�ö���������������ҶȨ��֮�� */
 int sumOfLeftLeaves(TreeNodePtr root) {
     if(root==NULL)
     {
@@ -342,88 +284,28 @@ int sumOfLeftLeaves(TreeNodePtr root) {
     return  sumOfLeftLeaves(root->left)+sumOfLeftLeaves(root->right);
 }
 
-/**
- * ================================================
- * ||          Solution 2,  深度优先搜索           ||
- * ================================================
- */
-
-//bool isLeafNode(struct TreeNode *node) {
-//    return !node->left && !node->right;
-//}
-//
-//int dfs(struct TreeNode *node) {
-//    int ans = 0;
-//    if (node->left) {
-//        ans += isLeafNode(node->left) ? node->left->val : dfs(node->left);
-//    }
-//    if (node->right && !isLeafNode(node->right)) {
-//        ans += dfs(node->right);
-//    }
-//    return ans;
-//}
-//
-//int sumOfLeftLeaves(struct TreeNode *root) {
-//    return root ? dfs(root) : 0;
-//}
-
-
-/** TODO: 任务四：请你通过递归求取该树的镜像，即翻转该二叉树 */
-/**
- * ================================================
- * ||               Solution 1, 递归              ||
- * ================================================
- */
+/** TODO: �����ģ�����ͨ���ݹ���ȡ�����ľ��񣬼���ת�ö����� */
 TreeNodePtr invertTree(TreeNodePtr root) {
-    if (!root) return NULL;
-    if (!root->left && !root->right) return root;
-    TreeNodePtr tmp = root->left;
-    root->left = root->right;
-    root->right = tmp;
-    if (root->left) invertTree(root->left);
-    if (root->right) invertTree(root->right);
-    return root;
+    if(root==NULL)
+    {
+        return NULL;
+    }
+    else{
+        TreeNodePtr root2=createTreeNode(root->val,NULL,NULL);
+        root2->left=invertTree(root->right);
+        root2->right=invertTree(root->left);
+        return root2;
+    }
 }
 
 
 int main() {
-    /**
-     * ===============================================================
-     * ||                      Test for Queue                       ||
-     * ===============================================================
-     */
-//    QueuePtr queue = InitQueue();
-//    TreeNodePtr node3 = createTreeNode(3, NULL, NULL);
-//    TreeNodePtr node2 = createTreeNode(2, NULL, NULL);
-//    TreeNodePtr node1 = createTreeNode(1, node2, node3);
-//
-//    EnQueue(queue, node1);
-//    // printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
-//    EnQueue(queue, node2);
-//    // printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
-//    EnQueue(queue, node3);
-//    // printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
-//    DeQueue(queue);
-//    // printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
-//    DeQueue(queue);
-//    // printf("%d back: %d front: %d\n", empty(queue), back(queue)->val, front(queue)->val);
-//    DeQueue(queue);
-    /**
-     * ===============================================================
-     * ||                      End test                             ||
-     * ===============================================================
-     */
-    /**
-     * ===============================================================
-     * ||                       Configuration                        ||
-     * ===============================================================
-     */
 
     int SIZE = 128;
     int MAX_NUM = 10;
     char buff[SIZE];
     char num[MAX_NUM];
-    bool use_graphviz = true;
+    bool use_graphviz = false;
     /**
      * ===============================================================
      * ||                   End Configuration                       ||
@@ -431,9 +313,9 @@ int main() {
      */
 
     // printf("Read data...\n");
-    FILE *fp = fopen("../test.txt", "r");
+    FILE *fp = fopen("./test.txt", "r");
     if (!fp) {
-        perror("打开文件时发生错误");
+        perror("���ļ�ʱ��������");
         return -1;
     } else {
         int i = 0;
@@ -444,9 +326,12 @@ int main() {
          * ===============================================================
          */
         while (fgets(num, MAX_NUM, fp) && fgets(buff, SIZE, fp)) {
-            char *nextline = strchr(buff, '\n');          //查找换行符
-            if (nextline)                            //如果find不为空指针
-                *nextline = '\0';                    //就把一个空字符放在这里
+            char *nextline = strchr(buff, '\n');          //���һ��з�
+            if (nextline)                            //���find��Ϊ��ָ��
+                *nextline = '\0';                    //�Ͱ�һ�����ַ���������
+            nextline = strchr(buff,'\r');         //���һس���
+            if (nextline)                         //���find��Ϊ��ָ��
+                *nextline = '\0';                 //�Ͱ�һ�����ַ���������
             printf("Case %d, data: %s, nodes number: %s", i, buff, num);
             int size = atoi(num);
             int data[size];
@@ -454,11 +339,11 @@ int main() {
 
             /**
              * ===============================================================
-             * ||       你的任务在这里，当然你也可以以任意方式修改函数的原型          ||
+             * ||       ��������������Ȼ��Ҳ���������ⷽʽ�޸ĺ�����ԭ��          ||
              * ===============================================================
              */
 
-            /** 任务一 */
+            /** ����һ */
             TreeNodePtr tree_root = createTreeWithLevelOrder(data, size);
             printf("Answer for task 1 is: \n");
             printf("preOrderTraverse is:");
@@ -471,34 +356,34 @@ int main() {
             postOrderTraverse(tree_root);
             printf("\n");
 
-            /** 通过 graphviz 可视化 */
+            /** ͨ�� graphviz ���ӻ��������⣬��ɾ�����̲���ʹ�� */
             if (use_graphviz) {
                 plot(tree_root, i, size, "tree");
             }
 
-            /** 任务二 */
+            /** ����� */
             int max_path_sum = maxPathSum(tree_root, 0);
             printf("Answer for task 2 is : %d \n", max_path_sum);
 
-            /** 任务三 */
+            /** ������ */
             int weight_sum = sumOfLeftLeaves(tree_root);
             printf("Answer for task 3 is : %d \n", weight_sum);
 
-            /** 任务四 */
+            /** ������ */
             TreeNodePtr invert_tree_root = invertTree(tree_root);
             printf("inOrderTraverse for task 4 is:");
             inOrderTraverse(invert_tree_root);
             printf("\n\n");
 
-            /** 通过 graphviz 可视化 */
+            /** ͨ�� graphviz ���ӻ��������⣬��ɾ�����̲���ʹ�� */
             if (use_graphviz) {
                 plot(invert_tree_root, i, size, "invert_tree");
             }
 
-            destoryTree(tree_root);
             destoryTree(invert_tree_root);
             tree_root = invert_tree_root = NULL;
             i++;
+
         }
 
         /**

@@ -41,7 +41,7 @@ public:
 class Solution {
 public:
     int widthOfBinaryTree(TreeNode *root) {
-        queue <pair<TreeNode *, int>> q;
+        queue<pair<TreeNode *, int>> q;
         if (!root) return 0;
         int begin = 1;
         q.push(make_pair(root, 0));
@@ -53,8 +53,8 @@ public:
                 if (i == 0) begin = id;
                 q.pop();
                 res = max(res, id - begin + 1);
-                if (curr->left) q.push(make_pair(curr->left, id * 2 - 1 - begin * 2));
-                if (curr->right) q.push(make_pair(curr->right, id * 2 - begin * 2));
+                if (curr->left) q.push(make_pair(curr->left, id * 2 - 1 - begin * 2)); // 防止越界
+                if (curr->right) q.push(make_pair(curr->right, id * 2 - begin * 2)); // 防止越界
             }
         }
         return res;

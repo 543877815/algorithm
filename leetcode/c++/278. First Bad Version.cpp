@@ -1,6 +1,8 @@
 // The API isBadVersion is defined for you.
 // bool isBadVersion(int version);
-
+// 二分查找法
+// 时间复杂度：O(logn)
+// 空间复杂度：O(1)
 class Solution {
 public:
     int firstBadVersion(int n) {

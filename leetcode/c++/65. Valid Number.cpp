@@ -46,7 +46,7 @@ public:
         }
 
         // 如果出现'e'或者'E', 则接下来是数字的指数部分
-        if (s[index] == 'e') {
+        if (s[index] == 'e' || s[index] == 'E') {
             index++;
             numeric = numeric && scanInteger(s);
         }

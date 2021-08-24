@@ -51,7 +51,9 @@ int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes
 }
 
 
-
+// 双指针
+// 时间复杂度：O(n^2)
+// 空间复杂度：O(1)
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {

@@ -4,11 +4,6 @@
 // 进时间复杂度为 O(C|s|+|t|)
 // 空间复杂度：这里用了两张哈希表作为辅助空间，每张哈希表最多不会存放超过字
 // 符集大小的键值对，我们设字符集大小为 C ，则渐进空间复杂度为 O(C)。
-//
-//作者：LeetCode-Solution
-//链接：https://leetcode-cn.com/problems/minimum-window-substring/solution/zui-xiao-fu-gai-zi-chuan-by-leetcode-solution/
-//来源：力扣（LeetCode）
-//著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 class Solution {
 private:
@@ -16,9 +11,9 @@ private:
     vector<int> freq_t;
 
 public:
-    Solution(): freq_s(vector(58,0)), freq_t(vector(58,0)) {}
+    Solution() : freq_s(vector(58, 0)), freq_t(vector(58, 0)) {}
 
-    bool check(){
+    bool check() {
         for (int i = 0; i < freq_s.size(); i++) {
             if (freq_s[i] < freq_t[i]) return false;
         }
@@ -46,7 +41,7 @@ public:
         if (res_right == s.size() + 1) {
             res = "";
         } else {
-            res = s.substr(res_left,res_right-res_left+1);
+            res = s.substr(res_left, res_right - res_left + 1);
         }
         return res;
     }

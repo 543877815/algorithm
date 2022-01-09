@@ -10,32 +10,22 @@
  * };
  */
 
-// 中序遍历
+// 反向中序遍历
 // 时间复杂度：O(n)
-// 空间复杂度：O(1)
+// 空间复杂度：O(n)
 class Solution {
 public:
-    TreeNode *pre;
-    TreeNode *head;
-
-    void inorder(TreeNode *root) {
+    void verseInorder(TreeNode *root, int &sum) {
         if (!root) return;
-        inorder(root->left);
-        root->left = nullptr;
-        if (!head) {
-            head = root;
-            pre = root;
-        } else {
-            pre->right = root;
-            pre = root;
-        }
-
-
-        inorder(root->right);
+        verseInorder(root->right, sum);
+        sum += root->val;
+        root->val = sum;
+        verseInorder(root->left, sum);
     }
 
-    TreeNode *increasingBST(TreeNode *root) {
-        inorder(root);
-        return head;
+    TreeNode *convertBST(TreeNode *root) {
+        int sum = 0;
+        verseInorder(root, sum);
+        return root;
     }
 };

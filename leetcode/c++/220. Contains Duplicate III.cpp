@@ -1,5 +1,5 @@
-// 空间复杂度：O(1)
-// 时间复杂度：O(n)
+// 空间复杂度：O(min(n, k))
+// 时间复杂度：O(nlog(min(n, k)))
 class Solution {
 public:
     bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {

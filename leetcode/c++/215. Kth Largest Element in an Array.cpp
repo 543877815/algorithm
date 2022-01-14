@@ -75,3 +75,10 @@ int findKthLargest(int* nums, int numsSize, int k) {
 // 快排序partition思路
 // 时间复杂度：O(n)
 // 空间复杂度：O(1)
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end(), greater<int>());
+        return nums[k-1];
+    }
+};

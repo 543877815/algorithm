@@ -46,6 +46,23 @@ right:[2 , 2, 3, 8, 7, 7, 7, 8]
 - 从小到大遍历，有元素进入，该元素的计数+1，有元素退出，该元素的计数-1。
 - 通过一个计数变量来维护当前时间有多少元素。
 
+## 二分查找
+
+### 中等
+
+在矩阵中应用二分查找
+
+[373. 查找和最小的 K 对数字](https://leetcode-cn.com/problems/find-k-pairs-with-smallest-sums/)
+
+[378. 有序矩阵中第 K 小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix/)
+
+思路：
+
+- 前提条件是矩阵每行每列具有单调性
+- 将最小值设为 `left`，将最大值设为 `right`
+- 将猜测的答案作为mid进行二分查找
+- 用一个计数变量来判断满足条件的数量
+
 ## 前缀树
 
 ### 中等
@@ -130,3 +147,18 @@ unordered_set<pair<int, int>, decltype(hash_fn)> hash_blocked(0, hash_fn);
 
 思路二：对横纵坐标进行离散化，再用基本的广度优先搜索来建模。
 
+## 水塘抽样
+
+[382. 链表随机节点](https://leetcode-cn.com/problems/linked-list-random-node/)
+
+[398. 随机数索引](https://leetcode-cn.com/problems/random-pick-index/) (保存迭代器)
+
+[497. 非重叠矩形中的随机点](https://leetcode-cn.com/problems/random-point-in-non-overlapping-rectangles/)（前缀和）
+
+[519. 随机翻转矩阵](https://leetcode-cn.com/problems/random-flip-matrix/) （拒绝采样）
+
+## 随机化
+
+[710. 黑名单中的随机数](https://leetcode-cn.com/problems/random-pick-with-blacklist/)（范围映射）
+
+[384. 打乱数组](https://leetcode-cn.com/problems/shuffle-an-array/)（Fisher-Yates 洗牌算法）

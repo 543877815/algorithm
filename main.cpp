@@ -55,37 +55,33 @@ struct ListNode {
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-struct cmp {
-    bool operator()(ListNode*a, ListNode*b) {
-        return a->val > b->val;
-    }
-};
 
 class Solution {
 public:
-    ListNode *mergeKLists(vector<ListNode *> &lists) {
-        if (lists.empty()) return nullptr;
-
-        ListNode *dummyHead = new ListNode(-1001);
-        ListNode *curr = dummyHead;
-
-        priority_queue<ListNode*, vector<ListNode*>, cmp> pq;
-        for (ListNode *node: lists) {
-            if (node) {
-                pq.push(node);
-            }
+    stack<int> sk;
+    priority_queue<int, vector<int>, greater<> > pq1;
+    priority_queue<int, vector<int>, greater<> > pq2;
+    void push(int value) {
+        sk.push(value);
+        pq1.push(value);
+    }
+    void pop() {
+        if (sk.top() == pq1.top()) {
+            pq1.pop();
+        } else {
+            pq2.push(sk.top());
         }
-
-
-        while (!pq.empty()) {
-            curr->next = pq.top();
-            pq.pop();
-            curr = curr->next;
-            if (curr->next) pq.push(curr->next);
+        while (!pq1.empty() && !pq2.empty() && pq1.top() == pq2.top()) {
+            pq1.pop();
+            pq2.pop();
         }
-
-        return dummyHead->next;
-
+        sk.pop();
+    }
+    int top() {
+        return sk.top();
+    }
+    int min() {
+        return pq1.top();
     }
 };
 
@@ -110,5 +106,11 @@ int main() {
     vector<ListNode*> lists = {one, one1, two};
 
     vector<int> rotateArray = {1, 0, 1, 1, 1};
-    a->mergeKLists(lists);
+    a->push(9);
+    a->push(6);
+    a->push(1);
+    cout << a->min() << endl;
+    a->pop();
+    cout << a->min() << endl;
 }
+

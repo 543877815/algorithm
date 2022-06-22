@@ -1,0 +1,24 @@
+// 二分查找
+// 空间复杂度：O(logn)
+// 时间复杂度：O(nlogn x logD), D = max(nums) - min(nums
+class Solution {
+public:
+    int smallestDistancePair(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end());
+        int n = nums.size(), left = 0, right = nums.back() - nums.front();
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            int cnt = 0;
+            for (int j = 0; j < n; j++) {
+                int i = lower_bound(nums.begin(), nums.begin() + j, nums[j] - mid) - nums.begin();
+                cnt += j - i;
+            }
+            if (cnt >= k) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+};

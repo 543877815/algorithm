@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Administrator/Desktop/algorithm/main.cpp" "CMakeFiles/algorithm.dir/main.cpp.obj" "gcc" "CMakeFiles/algorithm.dir/main.cpp.obj.d"
+  "D:/jupyter/algorithm/main.cpp" "CMakeFiles/algorithm.dir/main.cpp.obj" "gcc" "CMakeFiles/algorithm.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

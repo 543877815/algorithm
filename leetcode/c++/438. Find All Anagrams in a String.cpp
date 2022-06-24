@@ -34,7 +34,6 @@ public:
     }
 };
 
-
 // 时间复杂度: O(n)
 // 空间复杂度: O(1)
 class Solution {
@@ -60,3 +59,36 @@ public:
     }
 };
 
+// 2022.06.23
+// 时间复杂度: O(n)
+// 空间复杂度: O(1)
+class Solution {
+public:
+    vector<int> res;
+    vector<int> findAnagrams(string s, string p) {
+        int n = s.size(), m = p.size();
+        if (n < m) return res;
+        vector<int> s_m (26, 0);
+        vector<int> p_m (26, 0);
+        for (int i = 0; i < m; i++) {
+            p_m[p[i] - 'a']++;
+        }
+
+        int left = 0, right = 0;
+        while (right < m) {
+            s_m[s[right] - 'a']++;
+            right++;
+        }
+        while (right < n) {
+            if (s_m == p_m) res.push_back(left);
+            s_m[s[left] - 'a']--;
+            s_m[s[right] - 'a']++;
+            left++;
+            right++;
+        }
+
+        if (s_m == p_m) res.push_back(left);
+
+        return res;
+    }
+};

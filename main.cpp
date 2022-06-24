@@ -56,99 +56,47 @@ struct ListNode {
  * };
  */
 
-
-
-
-
-//class Solution {
-//public:
-//    /**
-//     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
-//     *
-//     * s1和s2最长公共子序列的长度
-//     * @param s1 string字符串
-//     * @param s2 string字符串
-//     * @return int整型
-//     */
-//
-//    vector<vector<int>> dp;
-//
-//    int search(string &s1, string &s2, int i, int j) {
-//        if (i == 0 || j == 0) {
-//            if (s1[i] == s2[j]) {
-//                return 1;
-//            } else return 0;
-//        }
-//        if (s1[i] == s2[j]) dp[i][j] = search(s1, s2, i - 1, j - 1) + 1;
-//        else dp[i][j] = max(search(s1, s2, i - 1, j), search(s1, s2, i, j - 1));
-//
-//        return 0;
-//    }
-//
-//    int LCS(string s1, string s2) {
-//        // write code here
-//        int n = s1.size(), m = s2.size();
-//        string res = "";
-//        if (n == 0 || m == 0) return 0;
-//        // dp[i][j] 表示 s1 前 i 个字符和 s2 前 j 个字符的最长公共子序列
-//        vector<vector<int>> dp = vector<vector<int>>(n + 1, vector<int>(m + 1, 0));
-//        dp[n - 1][m - 1] = search(s1, s2, n - 1, m - 1);
-//
-//        return dp[n - 1][m - 1];
-//    }
-//};
-
-
 class Solution {
 public:
     /**
-     *
-     * @param s string字符串
-     * @return string字符串vector
+     * ��ת����
+     * @param n int���� ���鳤��
+     * @param m int���� ���ƾ���
+     * @param a int����vector ��������
+     * @return int����vector
      */
-    vector<string> res;
-
-    bool isValid(string &s) {
-        if ((s.size() > 1 && s[0] == '0') || s.size() > 3)
-            return false;
-        return stoi(s) < 256;
-    }
-
-    void backtrack(string &s, vector<string> curr, int idx) {
-        int n = s.size();
-        if (curr.size() == 4) {
-            if (n == idx) res.push_back(curr[0] + "." + curr[1] + "." + curr[2] + "." + curr[3]);
-            return;
-        }
-
-        int i = 1;
-        while (i <= 3 && idx + i < n) {
-            string temp = s.substr(idx, i);
-            if (isValid(temp)) {
-                curr.push_back(temp);
-                backtrack(s, curr, idx + i);
-                curr.pop_back();
-
-                i++;
-            } else break;
-        }
-
-    }
-
-    vector<string> restoreIpAddresses(string s) {
+    vector<int> solve(int n, int m, vector<int>& a) {
         // write code here
-        vector<string> curr;
-        backtrack(s, curr, 0);
-        return res;
+        if (m == 0) return a;
+        m = m % n;
+        int tmp = -1;
+        int last = n - 1;
+        while (last >= n - m) {
+            int idx = last - (n - m);
+            if (tmp == -1) tmp = a[idx];
+            a[idx] = a[last--];
+            while(idx < n - m) {
+                idx += m;
+                swap(tmp, a[idx]);
+            }
+        }
+
+        return a;
     }
 };
 
 int main() {
-    vector<int> aa = {8, 4, 5, 0, 0, 0, 0, 7};
-    vector<int> bb = {-2, -8, -1, -5, -9};
+    vector<int> aa = {2, 3, 1, 1, 4};
+    vector<int> bb = {1,2,3,4,5,6,7};
+    vector<vector<int>> ss = {{5, 4},
+                              {6, 4},
+                              {6, 7},
+                              {2, 3}};
     auto *a = new Solution();
-    string s = "1111";
-    a->restoreIpAddresses(s);
+    string stra = "dbbca";
+    string strb = "aabcc";
+    string strc = "aadbbcbcac";
+    a->solve(7, 2, bb);
 
     ListNode *one = new ListNode(1);
     ListNode *one1 = new ListNode(1);

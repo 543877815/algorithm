@@ -79,3 +79,33 @@ public:
         return dp_i_0[k];
     }
 };
+
+// 动态规划
+// 时间复杂度：O(nk)
+// 空间复杂度：O(nk)
+class Solution {
+public:
+    int maxProfit(int k, vector<int> &prices) {
+        int n = prices.size();
+        int res = 0;
+        if (n == 0 || k == 0) return res;
+        // dp[i][0]表示到第i天为止没有买过股票的最大收益
+        // dp[i][2k-1]表示到第i天为止买过k次股票卖出k-1次股票最大收益
+        // dp[i][2k]表示到第i天为止买过k次也卖出过k次股票的最大收益
+        vector <vector<int>> dp(n, vector<int>(2 * k + 1, -1000 * k));
+        dp[0][0] = 0;
+        dp[0][1] = -prices[0];
+        for (int i = 1; i < n; i++) {
+            dp[i][0] = dp[i - 1][0];
+            for (int j = 1; j <= k; j++) {
+                dp[i][2 * j - 1] = max(dp[i - 1][2 * j - 1], dp[i - 1][2 * j - 1 - 1] - prices[i]);
+                dp[i][2 * j] = max(dp[i - 1][2 * j], dp[i - 1][2 * j - 1] + prices[i]);
+            }
+        }
+        for (int i = 1; i <= k; i++) {
+            res = max(res, dp[n - 1][2 * i]);
+        }
+
+        return res;
+    }
+};

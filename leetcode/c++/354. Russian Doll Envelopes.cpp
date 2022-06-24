@@ -24,3 +24,31 @@ public:
     }
 };
 
+
+// 空间复杂度：O(n)
+// 时间复杂度：O(n^2)
+class Solution {
+public:
+    int maxEnvelopes(vector<vector<int>>& envelopes) {
+        sort(envelopes.begin(), envelopes.end(), [&](vector<int>&x, vector<int>&y) {
+            if (x[0] != y[0]) return x[0] < y[0];
+            else return x[1] < y[1];
+        });
+        int n = envelopes.size();
+        vector<int> dp(n, 1);
+        for (int i = 1; i < n; i++) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (envelopes[i][0] > envelopes[j][0] && envelopes[i][1] > envelopes[j][1]) {
+                    dp[i] = max(dp[i], dp[j] + 1);
+                }
+            }
+        }
+
+        int res = 1;
+        for (int i = 0; i < n; i++) {
+            res = max(res, dp[i]);
+        }
+
+        return res;
+    }
+};

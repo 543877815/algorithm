@@ -58,45 +58,58 @@ struct ListNode {
 
 class Solution {
 public:
-    /**
-     * 旋转数组
-     * @param n int整型 数组长度
-     * @param m int整型 右移距离
-     * @param a int整型vector 给定数组
-     * @return int整型vector
-     */
-    vector<int> solve(int n, int m, vector<int>& a) {
-        // write code here
-        if (m == 0) return a;
-        m = m % n;
-        int tmp = -1;
-        int last = n - 1;
-        while (last >= n - m) {
-            int idx = last - (n - m);
-            if (tmp == -1) tmp = a[idx];
-            a[idx] = a[last--];
-            while(idx < n - m) {
-                idx += m;
-                swap(tmp, a[idx]);
+    int maximumsSplicedArray(vector<int>& nums1, vector<int>& nums2) {
+        int n = nums1.size();
+        int sum1 = 0, sum2 = 0;
+
+
+        vector<int> diff(n, 0);
+        for (int i = 0; i < n; i++) {
+            sum1 += nums1[i];
+            sum2 += nums2[i];
+            diff[i] = nums1[i] - nums2[i];
+        }
+
+
+        int res = max(sum1, sum2);
+        int accu = diff[0];
+        for (int i = 1; i < n; i++) {
+            if (accu > 0) {
+                if (diff[i] > 0) accu += diff[i];
+                else {
+                    res = max(res, sum2 + abs(accu));
+                    accu = diff[i];
+                }
+            } else {
+                if (diff[i] < 0) accu += diff[i];
+                else {
+                    res = max(res, sum1 + abs(accu));
+                    accu = diff[i];
+                }
             }
         }
 
-        return a;
+
+
+        return res;
     }
 };
 
+
 int main() {
-    vector<int> aa = {2, 3, 1, 1, 4};
-    vector<int> bb = {1,2,3,4,5,6,7};
-    vector<vector<int>> ss = {{5, 4},
-                              {6, 4},
-                              {6, 7},
-                              {2, 3}};
+    vector<int> aa = {60,60,60};
+    vector<int> bb = {10,90,10};
+//    vector<vector<int>> ss = {{0,1}, {0,2}, {1,2}};
+    vector<vector<int>> ss = {{0, 2},
+                              {0, 5},
+                              {2, 4},
+                              {1, 6},
+                              {5, 4}};
     auto *a = new Solution();
     string stra = "dbbca";
     string strb = "aabcc";
     string strc = "aadbbcbcac";
-    a->solve(7, 2, bb);
+    a->maximumsSplicedArray(aa, bb);
 
     ListNode *one = new ListNode(1);
     ListNode *one1 = new ListNode(1);

@@ -5,9 +5,10 @@
 //     ListNode(int x) : val(x), next(NULL) {}
 // };
 
+
 class MyLinkedList {
 private:
-    ListNode *dummyNode;
+    ListNode* dummyNode;
 
 public:
     /** Initialize your data structure here. */
@@ -17,18 +18,18 @@ public:
 
     /** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
     int get(int index) {
-        ListNode *root = dummyNode->next;
+        ListNode* root = dummyNode->next;
         while (index != 0 && root) {
             root = root->next;
-            index--;
+            index --;
         }
         return (index == 0 && root) ? root->val : -1;
     }
 
     /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
     void addAtHead(int val) {
-        ListNode *root = dummyNode->next;
-        ListNode *newNode = new ListNode(val);
+        ListNode* root = dummyNode->next;
+        ListNode* newNode = new ListNode(val);
         newNode->next = root;
         dummyNode->next = newNode;
     }
@@ -37,11 +38,11 @@ public:
     void addAtTail(int val) {
         ListNode *pre = dummyNode;
         ListNode *curr = dummyNode->next;
-        while (curr) {
+        while(curr) {
             pre = curr;
             curr = curr->next;
         }
-        ListNode *newNode = new ListNode(val);
+        ListNode* newNode = new ListNode(val);
         pre->next = newNode;
     }
 
@@ -49,21 +50,22 @@ public:
     void addAtIndex(int index, int val) {
         ListNode *pre = dummyNode;
         ListNode *curr = dummyNode->next;
-        while (index != 0 && curr) {
+        while(index != 0 && curr) {
             pre = curr;
             curr = curr->next;
-            index--;
+            index --;
         }
-        ListNode *newNode = new ListNode(val);
+        if (index != 0) return;
+        ListNode* newNode = new ListNode(val);
         pre->next = newNode;
         newNode->next = curr;
     }
 
     /** Delete the index-th node in the linked list, if the index is valid. */
     void deleteAtIndex(int index) {
-        ListNode *pre = dummyNode;
-        ListNode *curr = dummyNode->next;
-        while (index != 0 && curr) {
+        ListNode* pre = dummyNode;
+        ListNode* curr = dummyNode->next;
+        while(index != 0 && curr) {
             pre = curr;
             curr = curr->next;
             index--;
